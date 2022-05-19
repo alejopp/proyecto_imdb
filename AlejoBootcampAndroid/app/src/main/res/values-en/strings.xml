@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AlejoBootcampAndroid</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="txt_title"> IMDb</string>
+    <string name="txt_user"> User </string>
+    <string name="txt_password"> Password </string>
+    <string name="txt_forgot_pwd"> Forgot password? </string>
+    <string name="txt_join_with"> Login also with</string>
+    <string name="txt_have_account">¿Don\'t have an account? </string>
+    <string name="txt_signup"> Sign up </string>
+    <string name="txt_guest"> Continue as a guest </string>
+    <string name="btn_login"> Login </string>
+</resources>

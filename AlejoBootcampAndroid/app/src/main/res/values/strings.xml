@@ -2,5 +2,15 @@
     <string name="app_name">AlejoBootcampAndroid</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_notifications">Notificaciones</string>
+    <string name="txt_title"> IMDb</string>
+    <string name="txt_user"> Usuario </string>
+    <string name="txt_password"> Contraseña </string>
+    <string name="txt_forgot_pwd"> ¿Olvidaste la contraseña? </string>
+    <string name="txt_join_with"> O podes ingresar con</string>
+    <string name="txt_have_account">¿No tienes cuenta? </string>
+    <string name="txt_signup"> Regístrate </string>
+    <string name="txt_guest"> Continuar como invitado </string>
+    <string name="btn_login"> Login </string>
+
 </resources>

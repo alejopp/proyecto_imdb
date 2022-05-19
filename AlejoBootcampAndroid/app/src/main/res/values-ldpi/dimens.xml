@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tv_userdata">12sp</dimen>
+    <dimen name="zero_dp">0dp</dimen>
+    <dimen name="ev_height">25dp</dimen>
+    <dimen name="bt_text">12sp</dimen>
+    <dimen name="ev_padding_left">10dp</dimen>
+    <dimen name="civ_width">50dp</dimen>
+    <dimen name="civ_height">60dp</dimen>
+    <dimen name="civ_border_size">2dp</dimen>
+    <dimen name="civ_margin_bottom">116dp</dimen>
+    <dimen name="et_corner_radius">16dp</dimen>
+    <dimen name="bt_corner_radius">16dp</dimen>
+    <dimen name="tv_login_text_size">14sp</dimen>
+    <dimen name="margin_bottom_10">10dp</dimen>
+    <dimen name="margin_bottom_16">16dp</dimen>
+    <dimen name="margin_bottom_24">24dp</dimen>
+    <dimen name="margin_bottom_32">32dp</dimen>
+</resources>
