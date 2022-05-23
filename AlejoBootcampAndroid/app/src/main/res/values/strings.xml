@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">AlejoBootcampAndroid</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notificaciones</string>
+    <string name="title_home">Inicio</string>
+    <string name="title_search">Buscar</string>
+    <string name="title_play">Vídeo</string>
     <string name="txt_title"> IMDb</string>
     <string name="txt_user"> Usuario </string>
     <string name="txt_password"> Contraseña </string>
@@ -12,5 +12,8 @@
     <string name="txt_signup"> Regístrate </string>
     <string name="txt_guest"> Continuar como invitado </string>
     <string name="btn_login"> Login </string>
+    <string name="title_activity_search"> Actividad buscar </string>
+    <string name="title_user_account"> Alejo </string>
+    <string name="action_search"> Buscar IMDb </string>
 
 </resources>
