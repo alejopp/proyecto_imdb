@@ -15,7 +15,13 @@
         android:id="@+id/navigation_search"
         android:name="com.example.alejobootcampandroid.ui.dashboard.SearchFragment"
         android:label="@string/title_search"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_search" >
+        <argument
+            android:name="userName"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="Alejo" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_play"
@@ -27,5 +33,10 @@
         android:id="@+id/navigation_login"
         android:name="com.example.alejobootcampandroid.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/navigation_search" />
+    </fragment>
+
 </navigation>
