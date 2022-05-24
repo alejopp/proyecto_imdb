@@ -13,8 +13,10 @@
     <string name="txt_guest"> Continuar como invitado </string>
     <string name="btn_login"> Login </string>
     <string name="title_activity_search"> Actividad buscar </string>
-    <string name="title_user_account"> Alejo </string>
+    <string name="title_default_user"> Usted </string>
     <string name="action_search"> Buscar IMDb </string>
     <string name="default_star"> Daniel Radcliffe, Emma Watson </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

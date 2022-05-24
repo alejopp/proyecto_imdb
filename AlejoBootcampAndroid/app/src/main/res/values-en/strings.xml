@@ -14,7 +14,7 @@
     <string name="txt_guest"> Continue as a guest </string>
     <string name="btn_login"> Login </string>
     <string name="title_activity_search"> Search activity </string>
-    <string name="title_user_account"> Alejo </string>
+    <string name="title_default_user"> You </string>
     <string name="action_search"> Search IMDb</string>
     <string name="default_star"> Daniel Radcliffe, Emma Watson </string>
 </resources>

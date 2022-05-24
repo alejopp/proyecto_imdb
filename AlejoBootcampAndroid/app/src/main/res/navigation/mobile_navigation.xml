@@ -22,4 +22,10 @@
         android:name="com.example.alejobootcampandroid.ui.notifications.NotificationsFragment"
         android:label="@string/title_play"
         tools:layout="@layout/fragment_play" />
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.example.alejobootcampandroid.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
 </navigation>
