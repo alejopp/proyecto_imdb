@@ -1,14 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SignUp">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_signup"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layoutDirection="rtl"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/top_bar_menu" />
+
+
+    <ImageView
+        android:id="@+id/iv_signup_imdb_logo"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="@dimen/margin_bottom_24"
+        app:layout_constraintBottom_toTopOf="@id/tv_signup_create_account"
+        app:layout_constraintEnd_toEndOf="@id/gl_signup_3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/gl_signup_1"
+        app:srcCompat="@drawable/imdb_logo" />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/tv_signup_create_account"
+        style="@style/login_subtitles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_bottom_10"
+        android:text="@string/create_account"
+        app:layout_constraintBottom_toTopOf="@id/til_signup_name"
+        app:layout_constraintStart_toStartOf="@id/gl_signup_1" />
 
-</FrameLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_signup_name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_bottom_10"
+        android:hint="@string/name"
+        app:layout_constraintBottom_toTopOf="@id/til_signup_email"
+        app:layout_constraintEnd_toEndOf="@id/gl_signup_2"
+        app:layout_constraintStart_toStartOf="@id/gl_signup_1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_signup_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_signup_email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_bottom_10"
+        android:hint="@string/email"
+        app:layout_constraintBottom_toTopOf="@id/til_signup_password"
+        app:layout_constraintEnd_toEndOf="@id/gl_signup_2"
+        app:layout_constraintStart_toStartOf="@id/gl_signup_1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_signup_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textWebEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_signup_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_bottom_10"
+        android:hint="@string/txt_password"
+        app:layout_constraintBottom_toTopOf="@id/tv_signup_pwd_restriction"
+        app:layout_constraintEnd_toEndOf="@id/gl_signup_2"
+        app:layout_constraintStart_toStartOf="@id/gl_signup_1"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_signup_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_signup_pwd_restriction"
+        android:layout_width="@dimen/zero_dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_bottom_32"
+        android:text="@string/pwd_restriction"
+        app:layout_constraintBottom_toTopOf="@id/bt_signup_action"
+        app:layout_constraintStart_toStartOf="@id/gl_signup_1" />
+
+    <!-- Guidelines -->
+
+    <!--   <Button
+           android:id="@+id/bt_signup_action"
+           style="@style/login_button"
+           android:layout_marginBottom="212dp"
+           android:text="@string/accept"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="@id/gl_signup_2"
+           app:layout_constraintHorizontal_bias="0.0"
+           app:layout_constraintStart_toStartOf="@id/gl_signup_1" />-->
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_signup_action"
+        style="@style/login_button"
+        android:layout_marginBottom="64dp"
+        android:text="@string/accept"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/gl_signup_2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/gl_signup_1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_signup_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_signup_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_signup_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.43" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

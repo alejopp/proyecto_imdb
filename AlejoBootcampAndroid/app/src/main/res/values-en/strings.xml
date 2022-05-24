@@ -15,6 +15,12 @@
     <string name="btn_login"> Login </string>
     <string name="title_activity_search"> Search activity </string>
     <string name="title_default_user"> You </string>
-    <string name="action_search"> Search IMDb</string>
+    <string name="action_back"> Return </string>
+    <string name="action_search"> Search </string>
     <string name="default_star"> Daniel Radcliffe, Emma Watson </string>
+    <string name="create_account"> Create account </string>
+    <string name="name"> Name </string>
+    <string name="email"> email </string>
+    <string name="pwd_restriction"> Password must contain 8 characters </string>
+    <string name="accept"> Accept </string>
 </resources>

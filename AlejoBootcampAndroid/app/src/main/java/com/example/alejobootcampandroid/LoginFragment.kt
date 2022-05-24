@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 
 // TODO: Rename parameter arguments, choose names that match
@@ -52,6 +53,10 @@ class LoginFragment : Fragment() {
         tvGuest?.setOnClickListener {
             findNavController().navigate(R.id.navigation_search, null)
         }
+
+        view.findViewById<TextView>(R.id.tv_signup)?.setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.next_action_signup, null)
+        )
     }
     companion object {
         /**

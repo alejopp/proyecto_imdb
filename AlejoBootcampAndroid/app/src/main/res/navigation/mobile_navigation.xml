@@ -37,6 +37,23 @@
         <action
             android:id="@+id/next_action"
             app:destination="@id/navigation_search" />
+        <action
+            android:id="@+id/next_action_signup"
+            app:destination="@id/navigation_signup"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_signup"
+        android:name="com.example.alejobootcampandroid.SignUp"
+        android:label="SignUp"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/action_signUp_to_navigation_search"
+            app:destination="@id/navigation_search" />
     </fragment>
 
 </navigation>
