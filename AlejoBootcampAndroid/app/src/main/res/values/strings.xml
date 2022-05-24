@@ -15,5 +15,6 @@
     <string name="title_activity_search"> Actividad buscar </string>
     <string name="title_user_account"> Alejo </string>
     <string name="action_search"> Buscar IMDb </string>
+    <string name="default_star"> Daniel Radcliffe, Emma Watson </string>
 
 </resources>

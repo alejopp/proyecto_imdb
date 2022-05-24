@@ -17,4 +17,13 @@
     <dimen name="margin_bottom_24">24dp</dimen>
     <dimen name="margin_bottom_32">32dp</dimen>
     <dimen name="margin_bottom_144">144dp</dimen>
+
+    <!-- item_movies dims -->
+    <dimen name="iv_itemmovie_width">90dp</dimen>
+    <dimen name="tv_margin_8">8dp</dimen>
+    <dimen name="iv_itemmovie_padding">2dp</dimen>
+    <dimen name="tv_textsize_18">18dp</dimen>
+    <dimen name="iv_margintop_8">8dp</dimen>
+    <dimen name="tv_margintop_24">24dp</dimen>
+    <dimen name="tv_text_size_16">16sp</dimen>
 </resources>
