@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="txt_format">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/layout_height</item>>
+        <item name="android:background">@drawable/edit_txt_background</item>
+        <item name="android:textSize">16sp</item>
+        
+    </style>
+    <style name="style_button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="textAllCaps">false</item>
+        <item name="background">@drawable/button_form_background</item>
+    </style>
+</resources>
