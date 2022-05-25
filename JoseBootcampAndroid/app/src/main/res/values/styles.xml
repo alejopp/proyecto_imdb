@@ -14,4 +14,9 @@
         <item name="textAllCaps">false</item>
         <item name="background">@drawable/button_form_background</item>
     </style>
+    <style name="style_social_botton">
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
 </resources>
