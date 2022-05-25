@@ -5,7 +5,88 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Mustang"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    tools:layout_editor_absoluteX="-9dp"
+    tools:layout_editor_absoluteY="17dp">
+
+    <TextView
+        android:id="@+id/txtUsuario"
+        android:layout_width="@dimen/layout_width_txtview"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/Usuario"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/etUsuario"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline1" />
+
+    <EditText
+        android:id="@+id/etUsuario"
+        style="@style/txt_format"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/txtContrasena"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline1" />
+
+    <TextView
+        android:id="@+id/txtOPodesIngresarCon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="@string/O_podes_ingresar_con"
+        app:layout_constraintBottom_toTopOf="@+id/imaButtonFacebook"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@id/guideline1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonLogin"
+        style="@style/style_button"
+        android:layout_marginBottom="8dp"
+        android:text="@string/Login"
+        app:layout_constraintBottom_toTopOf="@+id/txtOPodesIngresarCon"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline1" />
+
+    <TextView
+        android:id="@+id/txtOlvidateContrasena"
+        android:layout_width="@dimen/layout_width_txtview"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/Olvidaste_contrasena"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:layout_constraintBottom_toBottomOf="@id/buttonLogin"/>
+
+    <EditText
+        android:id="@+id/etContrasena"
+        style="@style/txt_format"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/txtOlvidateContrasena"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline1" />
+
+    <TextView
+        android:id="@+id/txtContrasena"
+        android:layout_width="@dimen/layout_width_txtview"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:text="@string/Contrasena"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/etContrasena"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline1" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -14,54 +95,10 @@
         android:layout_marginTop="4dp"
         app:layout_constraintBottom_toTopOf="@+id/txtUsuario"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.63"
         app:srcCompat="@drawable/imdb_logo" />
-
-    <TextView
-        android:id="@+id/txtUsuario"
-        android:layout_width="@dimen/layout_width_txtview"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="@string/Usuario"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.165"
-        app:layout_constraintStart_toStartOf="@+id/guideline1" />
-
-    <TextView
-        android:id="@+id/txtContrasena"
-        android:layout_width="@dimen/layout_width_txtview"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
-        android:text="@string/Contrasena"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.196"
-        app:layout_constraintStart_toStartOf="@+id/guideline1" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_marginBottom="5dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/txtContrasena"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
-        app:layout_constraintStart_toStartOf="@id/guideline1"
-        style="@style/txt_format"/>
-
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
-        android:layout_marginBottom="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/txtOlvidateContrasena"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
-        app:layout_constraintStart_toStartOf="@id/guideline1"
-        style="@style/txt_format"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline1"
@@ -76,27 +113,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.85" />
-
-    <TextView
-        android:id="@+id/txtOlvidateContrasena"
-        android:layout_width="@dimen/layout_width_txtview"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="@string/Olvidaste_contrasena"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintStart_toStartOf="@+id/guideline1" />
-
-    <TextView
-        android:id="@+id/txtOlvidateContrasena2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="120dp"
-        android:text="@string/O_podes_ingresar_con"
-        app:layout_constraintBottom_toTopOf="@id/txtTienesCuenta"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
-        app:layout_constraintHorizontal_bias="0.49"
-        app:layout_constraintStart_toStartOf="@id/guideline1" />
 
     <TextView
         android:id="@+id/txtOlvidateContrasena4"
@@ -114,11 +130,10 @@
         android:id="@+id/txtTienesCuenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
+        android:layout_marginStart="36dp"
         android:layout_marginBottom="8dp"
         android:text="@string/No_tienes_cuenta"
         app:layout_constraintBottom_toTopOf="@+id/txtOlvidateContrasena4"
-        app:layout_constraintEnd_toStartOf="@+id/txtOlvidateContrasena6"
         app:layout_constraintStart_toStartOf="@id/guideline1" />
 
     <TextView
@@ -131,15 +146,40 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/txtOlvidateContrasena4"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toEndOf="@+id/txtTienesCuenta" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button"
-        style="@style/style_button"
-        android:layout_marginBottom="10dp"
-        android:text="@string/Login"
-        app:layout_constraintBottom_toTopOf="@+id/txtOlvidateContrasena2"
-        app:layout_constraintEnd_toEndOf="@id/guideline2"
-        app:layout_constraintStart_toStartOf="@id/guideline1" />
+    <ImageButton
+        android:id="@+id/imaButtonGoogle"
+        style="@style/style_social_botton"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/botton_social"
+        app:layout_constraintBottom_toTopOf="@+id/txtTienesCuenta"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:srcCompat="@drawable/google_1"
+        tools:srcCompat="@drawable/google_1" />
+
+    <ImageButton
+        android:id="@+id/imgButtonApple"
+        style="@style/style_social_botton"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/botton_social"
+        app:layout_constraintBottom_toTopOf="@+id/txtTienesCuenta"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
+        app:srcCompat="@drawable/apple_negro"
+        tools:srcCompat="@drawable/apple_negro" />
+
+    <ImageButton
+        android:id="@+id/imaButtonFacebook"
+        style="@style/style_social_botton"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/botton_social"
+        app:layout_constraintBottom_toTopOf="@+id/txtTienesCuenta"
+        app:layout_constraintEnd_toStartOf="@+id/imaButtonGoogle"
+        app:layout_constraintStart_toEndOf="@+id/imgButtonApple"
+        app:srcCompat="@drawable/facebook_1"
+        tools:srcCompat="@drawable/facebook_1" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
