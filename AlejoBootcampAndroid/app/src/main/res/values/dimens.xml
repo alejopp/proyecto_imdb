@@ -34,5 +34,11 @@
     <dimen name="iv_margintop_8">8dp</dimen>
     <dimen name="tv_margintop_24">24dp</dimen>
     <dimen name="tv_text_size_16">16sp</dimen>
+    <dimen name="dimen_8">8dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="dimen_40">40dp</dimen>
+    <dimen name="dimen8">8dp</dimen>
+    <dimen name="dimen24">24dp</dimen>
+    <dimen name="dimen10dp">10dp</dimen>
 
 </resources>
