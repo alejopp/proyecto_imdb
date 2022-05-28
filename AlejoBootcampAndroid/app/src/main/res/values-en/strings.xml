@@ -23,4 +23,13 @@
     <string name="email"> email </string>
     <string name="pwd_restriction"> Password must contain 8 characters </string>
     <string name="accept"> Accept </string>
+    <string name="lista_de_seguimiento">Watchlist</string>
+    <string name="watchlist_description">Crea una lista de seguimiento para no perderte ninguna pelicula o serie de tv.</string>
+    <string name="recently_viewed_title">Vistas recientes</string>
+    <string name="recently_viewed_description">No has visitado ninguna página reientemente.</string>
+    <string name="favourite_people_title">Personas favoritas</string>
+    <string name="favourite_people_description">Aqui van tus personas favoritas</string>
+    <string name="user_button_text">Empieza tu lista de seguimiento</string>
+    <string name="rate_movie">Calificar y obtener recomendaciones</string>
+    <string name="ratings">Calificaciones</string>
 </resources>

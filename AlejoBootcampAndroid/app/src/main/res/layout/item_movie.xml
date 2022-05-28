@@ -5,9 +5,9 @@
     android:id="@+id/carView"
     android:layout_width="match_parent"
     android:layout_height="128dp"
-    android:layout_margin="8dp"
-    cardView:cardCornerRadius="8dp"
-    cardView:cardElevation="8dp">
+    android:layout_margin="@dimen/dimen_8"
+    cardView:cardCornerRadius="@dimen/dimen_8"
+    cardView:cardElevation="@dimen/dimen_8">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

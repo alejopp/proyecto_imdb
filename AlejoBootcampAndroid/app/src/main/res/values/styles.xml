@@ -38,4 +38,36 @@
         <item name="civ_border_width">@dimen/civ_border_size</item>
         <item name="android:layout_marginBottom">@dimen/civ_margin_bottom</item>
     </style>
+
+    <style name="horizontal_line_gray_24">
+        <item name="android:layout_width">@dimen/zero_dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:background">@color/smooth_gray</item>
+    </style>
+
+    <style name="vertical_line_yellow_40">
+        <item name="android:layout_width">@dimen/dimen8</item>
+        <item name="android:layout_height">@dimen/dimen_40</item>
+        <item name="android:background">@color/gold_yellow</item>
+        <item name="android:layout_marginStart">@dimen/dimen24</item>
+    </style>
+
+    <style name="user_titles">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="user_text_descriptions">
+        <item name="android:layout_width">@dimen/zero_dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginEnd">@dimen/dimen24</item>
+    </style>
+
+
+
 </resources>
