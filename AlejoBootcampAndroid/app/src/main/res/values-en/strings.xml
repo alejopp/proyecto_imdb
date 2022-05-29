@@ -34,4 +34,7 @@
     <string name="ratings">Calificaciones</string>
     <string name="best_selected"> Best selected</string>
     <string name="trailer">Trailer oficial</string>
+    <string name="detail">Detalle</string>
+    <string name="episodes_guide">Guía de episodios</string>
+    <string name="add_to_watchlist">Agregar a mi lista de seguimiento</string>
 </resources>

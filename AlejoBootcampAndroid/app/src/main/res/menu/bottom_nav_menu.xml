@@ -17,7 +17,7 @@
         android:title="@string/title_play" />
 
     <item
-        android:id="@+id/navigation_login"
+        android:id="@+id/navigation_detail"
         android:icon="@drawable/ic_user_circle"
         android:title="@string/title_default_user" />
 

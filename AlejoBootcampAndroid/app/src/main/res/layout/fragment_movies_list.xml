@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="400dp"
+    android:layout_height="600dp"
     android:orientation="horizontal">
 
     <TextView
@@ -17,4 +17,12 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
         android:textAppearance="?attr/textAppearanceListItem" />
+
+
+    <View
+        android:id="@+id/v_detail_vertical_line1"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:background="@drawable/view_vertical_line_background"
+        android:rotation="90" />
 </LinearLayout>

@@ -67,7 +67,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <View
-        android:id="@+id/v_user_horizontal_line2"
+        android:id="@+id/v_detail_horizontal_line2"
         style="@style/horizontal_line_gray_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,11 +97,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/v_user_horizontal_line2"
+        app:layout_constraintTop_toBottomOf="@+id/v_detail_horizontal_line2"
         app:layout_constraintVertical_bias="0.0">
 
         <View
-            android:id="@+id/v_user_vertical_line1"
+            android:id="@+id/v_detail_vertical_line1"
             style="@style/vertical_line_yellow_40"
             android:layout_marginTop="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -115,11 +115,11 @@
             android:id="@+id/tv_user_watchlist"
             style="@style/user_titles"
             android:text="@string/lista_de_seguimiento"
-            app:layout_constraintBottom_toBottomOf="@+id/v_user_vertical_line1"
+            app:layout_constraintBottom_toBottomOf="@+id/v_detail_vertical_line1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/v_user_vertical_line1"
-            app:layout_constraintTop_toTopOf="@+id/v_user_vertical_line1"
+            app:layout_constraintStart_toEndOf="@+id/v_detail_vertical_line1"
+            app:layout_constraintTop_toTopOf="@+id/v_detail_vertical_line1"
             app:layout_constraintVertical_bias="0.5" />
 
         <TextView
@@ -133,8 +133,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/v_user_vertical_line1"
-            app:layout_constraintTop_toBottomOf="@+id/v_user_vertical_line1"
+            app:layout_constraintStart_toStartOf="@+id/v_detail_vertical_line1"
+            app:layout_constraintTop_toBottomOf="@+id/v_detail_vertical_line1"
             app:layout_constraintVertical_bias="0.0" />
 
         <Button
@@ -152,7 +152,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/v_user_vertical_line1"
+            app:layout_constraintStart_toStartOf="@+id/v_detail_vertical_line1"
             app:layout_constraintTop_toBottomOf="@+id/tv_user_watchlist_description" />
 
                 <androidx.recyclerview.widget.RecyclerView
