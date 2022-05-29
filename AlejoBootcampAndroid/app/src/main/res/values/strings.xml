@@ -32,6 +32,8 @@
     <string name="rate_movie">Calificar y obtener recomendaciones</string>
     <string name="ratings_value">0</string>
     <string name="ratings">Calificaciones</string>
+    <string name="best_selected">Las mejores selecciones</string>
+    <string name="trailer">Trailer oficial</string>
 
 
 </resources>

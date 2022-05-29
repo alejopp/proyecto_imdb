@@ -32,4 +32,6 @@
     <string name="user_button_text">Empieza tu lista de seguimiento</string>
     <string name="rate_movie">Calificar y obtener recomendaciones</string>
     <string name="ratings">Calificaciones</string>
+    <string name="best_selected"> Best selected</string>
+    <string name="trailer">Trailer oficial</string>
 </resources>

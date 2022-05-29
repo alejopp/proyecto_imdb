@@ -12,7 +12,6 @@
     android:background="@color/white"
     tools:context=".ui.notifications.NotificationsFragment">
 
-
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/civ_user"
         android:layout_width="64dp"
@@ -38,7 +37,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/civ_user"
         android:background="@drawable/ic_settings" />
-
 
     <TextView
         android:id="@+id/tv_user_username"
@@ -70,9 +68,7 @@
 
     <View
         android:id="@+id/v_user_horizontal_line2"
-        android:layout_width="0dp"
-        android:layout_height="24dp"
-        android:background="@color/smooth_gray"
+        style="@style/horizontal_line_gray_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -310,13 +306,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-    </ScrollView>
+</ScrollView>
