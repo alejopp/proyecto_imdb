@@ -7,7 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
+import com.example.alejobootcampandroid.databinding.FragmentLoginBinding
+import com.example.alejobootcampandroid.databinding.FragmentSignUpBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 // TODO: Rename parameter arguments, choose names that match
@@ -21,6 +25,13 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class SignUp : Fragment() {
+
+    private var _binding: FragmentSignUpBinding? = null
+
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -38,7 +49,19 @@ class SignUp : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sign_up, container, false)
+        _binding = FragmentSignUpBinding.inflate(inflater,container,false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.btSignupAction.setOnClickListener {
+            val userName = binding.etSignupName.text.toString()
+            val bundle = bundleOf("user_name" to userName )
+            findNavController().navigate(R.id.navigation_user, bundle )
+        }
+
     }
 
     override fun onResume() {
@@ -49,6 +72,11 @@ class SignUp : Fragment() {
     override fun onStop() {
         super.onStop()
         activity?.findViewById<BottomNavigationView>(R.id.nav_view)?.visibility = View.VISIBLE
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     companion object {

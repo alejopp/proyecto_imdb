@@ -7,11 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.PagerSnapHelper
+import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.adapters.BestSelectionAdapter
 import com.example.alejobootcampandroid.adapters.MovieTrailerAdapter
 import com.example.alejobootcampandroid.databinding.FragmentHomeBinding
 import com.example.alejobootcampandroid.providers.BestSelectionProvider
 import com.example.alejobootcampandroid.providers.MovieTrailerProvider
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class HomeFragment : Fragment() {
 

@@ -6,9 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.adapters.UserOptionsAdapter
 import com.example.alejobootcampandroid.databinding.FragmentUserBinding
 import com.example.alejobootcampandroid.providers.UserOptionsProvider
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class UserFragment : Fragment() {
 
@@ -31,9 +33,15 @@ class UserFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val menuBottomNavbar = activity?.findViewById<BottomNavigationView>(R.id.nav_view)?.menu
+        menuBottomNavbar?.findItem(R.id.navigation_user)?.setTitle(arguments?.getString("user_name"))
+
+        binding.tvUserUsername.text = arguments?.getString("user_name")
+
         // Filling the UserOptions RecyclerView
         val rvUserOptions = binding.rvUserOptions
         rvUserOptions.adapter = UserOptionsAdapter(UserOptionsProvider.userOptionsList)
+
     }
 
     override fun onDestroyView() {

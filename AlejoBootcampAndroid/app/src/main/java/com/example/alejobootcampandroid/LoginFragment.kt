@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import com.example.alejobootcampandroid.databinding.FragmentLoginBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -55,7 +56,9 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btLogin.setOnClickListener {
-            findNavController().navigate(R.id.navigation_search, null )
+            val userName = binding.evUser.text.toString()
+            val bundle = bundleOf("user_name" to userName )
+            findNavController().navigate(R.id.navigation_user, bundle )
         }
 
         binding.tvSignup.setOnClickListener {
@@ -63,7 +66,7 @@ class LoginFragment : Fragment() {
         }
 
         binding.tvGuest.setOnClickListener {
-            findNavController().navigate(R.id.navigation_search, null)
+            findNavController().navigate(R.id.navigation_home, null)
         }
     }
 

@@ -49,7 +49,6 @@ class SearchFragment : Fragment() {
 
         //Recycler
         movieList = ArrayList()
-        //recyclerView = findViewById<View>(R.id.rv_movies) as RecyclerView?
         recyclerView = binding.rvUserOptions
         recyclerViewAdapter = ListAdapter(movieList)
         val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(context)

@@ -5,8 +5,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.cardview.widget.CardView
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.alejobootcampandroid.databinding.ItemMovieBinding
 import com.example.alejobootcampandroid.models.Movie
 
 class ListAdapter constructor(private val movieList: List<Movie>) :
@@ -20,10 +25,7 @@ class ListAdapter constructor(private val movieList: List<Movie>) :
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val movie = movieList[position]
-        holder.title.text = movie.title
-        holder.image.setBackgroundResource(movie.image)
-        holder.year.text = "${movie.year}"
-        holder.star.text = "${movie.protagonist}"
+        holder.render(movie)
     }
 
     override fun getItemCount(): Int {
@@ -31,11 +33,18 @@ class ListAdapter constructor(private val movieList: List<Movie>) :
     }
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val title: TextView = itemView.findViewById(R.id.tv_movie_title)
-        val year: TextView = itemView.findViewById(R.id.tv_year)
-        val image: ImageView = itemView.findViewById(R.id.iv_movie)
-        val cardView: CardView = itemView.findViewById(R.id.carView)
-        val star: TextView = itemView.findViewById(R.id.tv_star)
+        val binding = ItemMovieBinding.bind(itemView)
+
+        fun render(movieModel: Movie){
+            binding.tvMovieTitle.text = movieModel.title
+            binding.tvYear.text = movieModel.year
+            binding.ivMovie.setImageResource(movieModel.image)
+            binding.tvStar.text = movieModel.protagonist
+
+            itemView.setOnClickListener{
+                itemView.findNavController().navigate(R.id.navigation_detail)
+            }
+        }
 
     }
 }
