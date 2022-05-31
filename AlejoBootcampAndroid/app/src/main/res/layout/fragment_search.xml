@@ -37,7 +37,7 @@
     </com.google.android.material.appbar.MaterialToolbar>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_movies"
+        android:id="@+id/rv_user_options"
         android:background="@android:color/white"
         android:layout_width="0dp"
         android:layout_height="0dp"

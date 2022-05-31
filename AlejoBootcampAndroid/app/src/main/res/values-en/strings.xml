@@ -37,4 +37,14 @@
     <string name="detail">Detalle</string>
     <string name="episodes_guide">Guía de episodios</string>
     <string name="add_to_watchlist">Agregar a mi lista de seguimiento</string>
+    <string name="user">Usuario</string>
+
+
+    <!-- User options -->
+    <string name="user_options_ratings_description"> Calificar y obtener recomendaciones</string>
+    <string name="user_options_ratings_title">Calificaciones</string>
+    <string name="user_options_lists_description">Agregar a listas</string>
+    <string name="user_options_lists_title">Listas</string>
+    <string name="user_options_comments_description">Aún no has hecho comentarios</string>
+    <string name="user_options_comments_title">Comentarios</string>
 </resources>

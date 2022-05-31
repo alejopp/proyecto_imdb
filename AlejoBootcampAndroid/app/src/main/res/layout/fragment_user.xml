@@ -10,7 +10,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ui.notifications.NotificationsFragment">
+    tools:context=".ui.user.UserFragment">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/civ_user"
@@ -72,11 +72,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_movies"
+        app:layout_constraintTop_toBottomOf="@+id/rv_user_options"
         app:layout_constraintVertical_bias="0.0" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_movies"
+        android:id="@+id/rv_user_options"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -87,7 +87,7 @@
         app:layout_constraintStart_toStartOf="@id/civ_user"
         app:layout_constraintTop_toBottomOf="@+id/v_user_horizontal_line1"
         app:layout_constraintVertical_bias="0.0"
-        tools:listitem="@layout/recommendation_item" />
+        tools:listitem="@layout/item_recommendation" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_user_watchlist"
@@ -144,7 +144,7 @@
             android:layout_height="60dp"
             android:layout_marginTop="24dp"
             android:layout_marginEnd="24dp"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:layout_marginBottom="32dp"
