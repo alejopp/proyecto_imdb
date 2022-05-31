@@ -48,5 +48,6 @@
     <string name="user_options_lists_title">Listas</string>
     <string name="user_options_comments_description">Aún no has hecho comentarios</string>
     <string name="user_options_comments_title">Comentarios</string>
+    <string name="login">Login</string>
 
 </resources>

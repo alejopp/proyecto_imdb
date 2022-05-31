@@ -1,4 +1,4 @@
-package com.example.alejobootcampandroid.ui.dashboard
+package com.example.alejobootcampandroid.ui.search
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -17,14 +17,16 @@ class SearchFragment : Fragment() {
 
     private var _binding: FragmentSearchBinding? = null
 
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
+
     //Recycler variables
     private var recyclerView: RecyclerView? = null
     private var recyclerViewAdapter: ListAdapter? = null
     private var movieList = mutableListOf<Movie>()
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
