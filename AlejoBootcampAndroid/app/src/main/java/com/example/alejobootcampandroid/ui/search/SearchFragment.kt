@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alejobootcampandroid.ListAdapter
-import com.example.alejobootcampandroid.Movie
+import com.example.alejobootcampandroid.models.Movie
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.FragmentSearchBinding
 

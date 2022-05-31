@@ -40,4 +40,10 @@
         android:name="com.example.alejobootcampandroid.LoginFragment"
         android:label="@string/login"
         tools:layout="@layout/fragment_login"/>
+
+    <fragment
+        android:id="@+id/navigation_signup"
+        android:name="com.example.alejobootcampandroid.SignUp"
+        android:label="@string/txt_signup"
+        tools:layout="@layout/fragment_sign_up"/>
 </navigation>

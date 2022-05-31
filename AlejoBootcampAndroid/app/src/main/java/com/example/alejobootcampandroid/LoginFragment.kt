@@ -46,21 +46,25 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+
+        _binding = FragmentLoginBinding.inflate(inflater,container,false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val button = view.findViewById<Button>(R.id.bt_login)
-        button?.setOnClickListener {
-            findNavController().navigate(R.id.navigation_search,  )
+
+        binding.btLogin.setOnClickListener {
+            findNavController().navigate(R.id.navigation_search, null )
         }
 
-        val tvGuest = view.findViewById<TextView>(R.id.tv_guest)
-        tvGuest?.setOnClickListener {
+        binding.tvSignup.setOnClickListener {
+            findNavController().navigate(R.id.navigation_signup, null )
+        }
+
+        binding.tvGuest.setOnClickListener {
             findNavController().navigate(R.id.navigation_search, null)
         }
-
     }
 
     override fun onResume() {
@@ -71,6 +75,11 @@ class LoginFragment : Fragment() {
     override fun onStop() {
         super.onStop()
         activity?.findViewById<BottomNavigationView>(R.id.nav_view)?.visibility = View.VISIBLE
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
     
     companion object {

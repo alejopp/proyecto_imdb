@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.alejobootcampandroid.models.Movie
 
 class ListAdapter constructor(private val movieList: List<Movie>) :
     RecyclerView.Adapter<ListAdapter.MyViewHolder>() {

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.Navigation
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -40,6 +41,15 @@ class SignUp : Fragment() {
         return inflater.inflate(R.layout.fragment_sign_up, container, false)
     }
 
+    override fun onResume() {
+        super.onResume()
+        activity?.findViewById<BottomNavigationView>(R.id.nav_view)?.visibility = View.GONE
+    }
+
+    override fun onStop() {
+        super.onStop()
+        activity?.findViewById<BottomNavigationView>(R.id.nav_view)?.visibility = View.VISIBLE
+    }
 
     companion object {
         /**
