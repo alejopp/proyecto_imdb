@@ -11,4 +11,14 @@
     <string name="No_tienes_cuenta">No tienes en cuenta?</string>
     <string name="Registrate">Registrate</string>
     <string name="Continuar_como_invitado">Continuar como invitado</string>
+    <string name="Correo_electronico">Correo Electronico</string>
+    <string name="Nombre">Nombre</string>
+    <string name="Nombres">Nombres</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="user">User</string>
+    <string name="Aceptar">Aceptar</string>
+    <string name="Crear_una_cuenta">Crear una cuenta</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
 </resources>

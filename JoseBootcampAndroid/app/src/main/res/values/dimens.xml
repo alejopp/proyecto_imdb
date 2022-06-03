@@ -4,4 +4,6 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="layout_height">40dp</dimen>
     <dimen name="layout_width_txtview">0dp</dimen>
+    <dimen name="dimen_9">9dp</dimen>
+    <dimen name="dimen_40">40dp</dimen>
 </resources>
