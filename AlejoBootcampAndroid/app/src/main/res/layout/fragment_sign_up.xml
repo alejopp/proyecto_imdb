@@ -7,7 +7,7 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_signup"
-        android:layout_width="@dimen/zero_dp"
+        android:layout_width="@dimen/dimen_0dp"
         android:layout_height="wrap_content"
         android:background="@color/white"
         android:layoutDirection="rtl"
@@ -21,9 +21,9 @@
 
     <ImageView
         android:id="@+id/iv_signup_imdb_logo"
-        android:layout_width="120dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="150dp"
+        android:layout_width="@dimen/iv_signup_imdblogo_width"
+        android:layout_height="@dimen/iv_signup_imdblogo_height"
+        android:layout_marginTop="@dimen/iv_signup_imdblogo_margintop"
         android:layout_marginBottom="@dimen/margin_bottom_24"
         app:layout_constraintBottom_toTopOf="@id/tv_signup_create_account"
         app:layout_constraintEnd_toEndOf="@id/gl_signup_3"
@@ -44,7 +44,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_signup_name"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dimen_0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_bottom_10"
         android:hint="@string/name"
@@ -63,7 +63,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_signup_email"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="@dimen/zero_dp"
+        android:layout_width="@dimen/dimen_0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_bottom_10"
         android:hint="@string/email"
@@ -82,7 +82,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_signup_password"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="@dimen/zero_dp"
+        android:layout_width="@dimen/dimen_0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_bottom_10"
         android:hint="@string/txt_password"
@@ -101,30 +101,17 @@
 
     <TextView
         android:id="@+id/tv_signup_pwd_restriction"
-        android:layout_width="@dimen/zero_dp"
+        android:layout_width="@dimen/dimen_0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_bottom_32"
         android:text="@string/pwd_restriction"
         app:layout_constraintBottom_toTopOf="@id/bt_signup_action"
         app:layout_constraintStart_toStartOf="@id/gl_signup_1" />
 
-    <!-- Guidelines -->
-
-    <!--   <Button
-           android:id="@+id/bt_signup_action"
-           style="@style/login_button"
-           android:layout_marginBottom="212dp"
-           android:text="@string/accept"
-           app:layout_constraintBottom_toBottomOf="parent"
-           app:layout_constraintEnd_toEndOf="@id/gl_signup_2"
-           app:layout_constraintHorizontal_bias="0.0"
-           app:layout_constraintStart_toStartOf="@id/gl_signup_1" />-->
-
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_signup_action"
         style="@style/login_button"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="@dimen/dimen_64dp"
         android:text="@string/accept"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/gl_signup_2"

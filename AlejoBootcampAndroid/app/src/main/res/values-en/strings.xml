@@ -24,28 +24,34 @@
     <string name="pwd_restriction"> Password must contain 8 characters </string>
     <string name="accept"> Accept </string>
     <string name="lista_de_seguimiento">Watchlist</string>
-    <string name="watchlist_description">Crea una lista de seguimiento para no perderte ninguna pelicula o serie de tv.</string>
+    <string name="watchlist_description">Create a watchlist so you don\'t lose any movie o tv serie.</string>
     <string name="recently_viewed_title">Vistas recientes</string>
-    <string name="recently_viewed_description">No has visitado ninguna página reientemente.</string>
-    <string name="favourite_people_title">Personas favoritas</string>
-    <string name="favourite_people_description">Aqui van tus personas favoritas</string>
-    <string name="user_button_text">Empieza tu lista de seguimiento</string>
+    <string name="recently_viewed_description">You havenn\'t visitted any page recently.</string>
+    <string name="favourite_people_title"> Favourite people</string>
+    <string name="favourite_people_description">Add favourite people</string>
+    <string name="user_button_text">Start watchlist</string>
     <string name="rate_movie">Calificar y obtener recomendaciones</string>
-    <string name="ratings">Calificaciones</string>
+    <string name="ratings">Ratings</string>
     <string name="best_selected"> Best selected</string>
-    <string name="trailer">Trailer oficial</string>
-    <string name="detail">Detalle</string>
-    <string name="episodes_guide">Guía de episodios</string>
-    <string name="add_to_watchlist">Agregar a mi lista de seguimiento</string>
-    <string name="user">Usuario</string>
-
-
-    <!-- User options -->
-    <string name="user_options_ratings_description"> Calificar y obtener recomendaciones</string>
-    <string name="user_options_ratings_title">Calificaciones</string>
-    <string name="user_options_lists_description">Agregar a listas</string>
-    <string name="user_options_lists_title">Listas</string>
-    <string name="user_options_comments_description">Aún no has hecho comentarios</string>
-    <string name="user_options_comments_title">Comentarios</string>
+    <string name="trailer">Oficial trailer</string>
+    <string name="detail">Detail</string>
+    <string name="episodes_guide">Episodes guide</string>
+    <string name="add_to_watchlist">Add to watchlist</string>
+    <string name="user">User</string>
+    <string name="ratings_value">0</string>
+    <string name="user_options_ratings_description"> Rate and get recommendations</string>
+    <string name="user_options_ratings_title">Ratings</string>
+    <string name="user_options_lists_description">Add to lists</string>
+    <string name="user_options_lists_title">Lists</string>
+    <string name="user_options_comments_description">You still don\'t have comments</string>
+    <string name="user_options_comments_title">Comments</string>
     <string name="login">Login</string>
+    <string name="movie_example_text">Queens Gambit</string>
+    <string name="movie_description_example">Set in cold war; An orphan named Beth Harmon with a gidt for chess strugle against adictions while...</string>
+    <string name="movie_category_example">Drama</string>
+    <string name="number_of_episodes_example">7 episodes</string>
+    <string name="score_example">7.6</string>
+    <string name="movie_title_example">Light Year</string>
+    <string name="year_example">1900</string>
+    <string name="star_name_example">Buzz Light year</string>
 </resources>
