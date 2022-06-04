@@ -14,10 +14,10 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/civ_user"
-        android:layout_width="64dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="@dimen/dimen_64dp"
+        android:layout_height="@dimen/dimen_48dp"
+        android:layout_marginStart="@dimen/dimen_24dp"
+        android:layout_marginTop="@dimen/dimen_24dp"
         android:src="@drawable/no_avatar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,8 +28,8 @@
 
     <ImageView
         android:id="@+id/iv_user_settings"
-        android:layout_width="40dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/dimen_40dp"
+        android:layout_height="@dimen/dimen_32dp"
         android:layout_marginEnd="24dp"
         app:layout_constraintBottom_toBottomOf="@+id/civ_user"
         app:layout_constraintEnd_toEndOf="parent"
@@ -42,8 +42,8 @@
         android:id="@+id/tv_user_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:textSize="22sp"
+        android:layout_marginStart="@dimen/dimen_16dp"
+        android:textSize="@dimen/dimen_22sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/civ_user"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,10 +55,10 @@
     <View
         android:id="@+id/v_user_horizontal_line1"
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="32dp"
+        android:layout_height="@dimen/dimen_2dp"
+        android:layout_marginStart="@dimen/dimen_32dp"
+        android:layout_marginTop="@dimen/dimen_24dp"
+        android:layout_marginEnd="@dimen/dimen_32dp"
         android:background="@color/light_gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -77,9 +77,9 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_user_options"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dimen_0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/dimen_24dp"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -91,7 +91,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_user_watchlist"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dimen_0dp"
         android:layout_height="wrap_content"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -103,7 +103,7 @@
         <View
             android:id="@+id/v_detail_vertical_line1"
             style="@style/vertical_line_yellow_40"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -124,11 +124,11 @@
 
         <TextView
             android:id="@+id/tv_user_watchlist_description"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
+            android:textSize="@dimen/dimen_16sp"
+            android:layout_marginTop="@dimen/dimen_16dp"
+            android:layout_marginEnd="@dimen/dimen_24dp"
             android:text="@string/watchlist_description"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -140,14 +140,14 @@
         <Button
             android:id="@+id/elevatedButton"
             android:background="@drawable/bt_user_background"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="24dp"
-            android:textSize="18sp"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="@dimen/dimen_64dp"
+            android:layout_marginTop="@dimen/dimen_24dp"
+            android:layout_marginEnd="@dimen/dimen_24dp"
+            android:textSize="@dimen/dimen_18sp"
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="@dimen/dimen_32dp"
             android:text="@string/user_button_text"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -157,11 +157,11 @@
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/rv_user_watchlist"
-                    android:layout_width="0dp"
-                    android:layout_height="150dp"
-                    android:layout_marginTop="48dp"
-                    android:layout_marginEnd="1dp"
-                    android:layout_marginBottom="16dp"
+                    android:layout_width="@dimen/dimen_0dp"
+                    android:layout_height="@dimen/rv_height_medium"
+                    android:layout_marginTop="@dimen/dimen_48dp"
+                    android:layout_marginEnd="@dimen/dimen_1dp"
+                    android:layout_marginBottom="@dimen/dimen_16dp"
                     android:orientation="horizontal"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -184,7 +184,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_user_recently_viewed"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dimen_0dp"
         android:layout_height="wrap_content"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -196,7 +196,7 @@
         <View
             android:id="@+id/v_user_vertical_line2"
             style="@style/vertical_line_yellow_40"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -215,7 +215,7 @@
         <TextView
             android:id="@+id/tv_user_recently_viewed_description"
             style="@style/user_text_descriptions"
-            android:layout_marginBottom="@dimen/dimen24"
+            android:layout_marginBottom="@dimen/dimen_24dp"
             android:text="@string/recently_viewed_description"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -226,9 +226,9 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_user_recently_viewed"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
             android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -249,7 +249,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_user_favourite_people"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dimen_0dp"
         android:layout_height="wrap_content"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -262,7 +262,7 @@
         <View
             android:id="@+id/v_user_vertical_line3"
             style="@style/vertical_line_yellow_40"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -282,11 +282,11 @@
 
         <TextView
             android:id="@+id/tv_user_favourite_people_description"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/dimen_16dp"
             android:text="@string/favourite_people_description"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="@dimen/dimen_32dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/v_user_vertical_line3"
@@ -295,9 +295,9 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_user_favourite_people"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
             app:layout_constraintStart_toStartOf="parent"
             android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"

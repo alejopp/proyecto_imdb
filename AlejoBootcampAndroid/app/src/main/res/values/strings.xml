@@ -34,14 +34,10 @@
     <string name="ratings">Calificaciones</string>
     <string name="best_selected">Las mejores selecciones</string>
     <string name="trailer">Trailer oficial</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="detail">Detalle</string>
     <string name="episodes_guide">Guía de episodios</string>
     <string name="add_to_watchlist">Agregar a mi lista de seguimiento</string>
     <string name="user">Usuario</string>
-
-    <!-- User options -->
     <string name="user_options_ratings_description"> Calificar y obtener recomendaciones</string>
     <string name="user_options_ratings_title">Calificaciones</string>
     <string name="user_options_lists_description">Agregar a listas</string>
@@ -49,5 +45,13 @@
     <string name="user_options_comments_description">Aún no has hecho comentarios</string>
     <string name="user_options_comments_title">Comentarios</string>
     <string name="login">Login</string>
+    <string name="movie_example_text">Queens Gambit</string>
+    <string name="movie_description_example">Ambientada en la Guerra fría; una huérfana llamada Beth Harmon con un don para el ajedrez lucha contra las adicciones mientras...</string>
+    <string name="movie_category_example">Drama</string>
+    <string name="number_of_episodes_example">7 episodios</string>
+    <string name="score_example">7.6</string>
+    <string name="movie_title_example">Light Year</string>
+    <string name="year_example">1900</string>
+    <string name="star_name_example">Buzz Light year</string>
 
 </resources>
