@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.ItemBestSelectionsBinding
-import com.example.alejobootcampandroid.models.BestSelection
+import com.example.alejobootcampandroid.model.BestSelection
 
 class BestSelectionAdapter(val bestSelectionList: List<BestSelection>):RecyclerView.Adapter<BestSelectionAdapter.BestSelectionViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BestSelectionViewHolder  {

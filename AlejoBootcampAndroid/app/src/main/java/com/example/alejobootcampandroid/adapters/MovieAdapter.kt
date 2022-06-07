@@ -1,21 +1,16 @@
-package com.example.alejobootcampandroid
+package com.example.alejobootcampandroid.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
-import androidx.cardview.widget.CardView
 import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment.findNavController
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.ItemMovieBinding
-import com.example.alejobootcampandroid.models.Movie
+import com.example.alejobootcampandroid.model.Movie
 
-class ListAdapter constructor(private val movieList: List<Movie>) :
-    RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
+class MovieAdapter constructor(private val movieList: List<Movie>) :
+    RecyclerView.Adapter<MovieAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(parent.context)

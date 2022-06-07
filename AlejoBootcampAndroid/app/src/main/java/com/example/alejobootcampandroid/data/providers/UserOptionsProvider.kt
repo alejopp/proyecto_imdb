@@ -1,8 +1,6 @@
 package com.example.alejobootcampandroid.providers
 
-import android.content.res.Resources
-import com.example.alejobootcampandroid.R
-import com.example.alejobootcampandroid.models.UserOptions
+import com.example.alejobootcampandroid.model.UserOptions
 
 class UserOptionsProvider {
     companion object{

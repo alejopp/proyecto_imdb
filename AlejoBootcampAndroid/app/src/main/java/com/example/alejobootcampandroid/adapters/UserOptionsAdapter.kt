@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.ItemRecommendationBinding
-import com.example.alejobootcampandroid.models.UserOptions
+import com.example.alejobootcampandroid.model.UserOptions
 
 class UserOptionsAdapter(val userOptionsList : List<UserOptions>): RecyclerView.Adapter<UserOptionsAdapter.UserOptionsViewHolder>() {
 

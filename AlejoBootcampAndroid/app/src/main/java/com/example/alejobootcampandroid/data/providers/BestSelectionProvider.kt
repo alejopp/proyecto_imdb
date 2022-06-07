@@ -1,7 +1,7 @@
 package com.example.alejobootcampandroid.providers
 
 import com.example.alejobootcampandroid.R
-import com.example.alejobootcampandroid.models.BestSelection
+import com.example.alejobootcampandroid.model.BestSelection
 
 
 class BestSelectionProvider {

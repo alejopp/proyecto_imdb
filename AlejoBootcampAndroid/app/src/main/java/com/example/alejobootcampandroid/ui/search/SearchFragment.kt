@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.alejobootcampandroid.ListAdapter
-import com.example.alejobootcampandroid.models.Movie
+import com.example.alejobootcampandroid.adapters.MovieAdapter
+import com.example.alejobootcampandroid.model.Movie
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.FragmentSearchBinding
 
@@ -23,7 +23,7 @@ class SearchFragment : Fragment() {
 
     //Recycler variables
     private var recyclerView: RecyclerView? = null
-    private var recyclerViewAdapter: ListAdapter? = null
+    private var recyclerViewAdapter: MovieAdapter? = null
     private var movieList = mutableListOf<Movie>()
 
 
@@ -50,7 +50,7 @@ class SearchFragment : Fragment() {
         //Recycler
         movieList = ArrayList()
         recyclerView = binding.rvUserOptions
-        recyclerViewAdapter = ListAdapter(movieList)
+        recyclerViewAdapter = MovieAdapter(movieList)
         val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(context)
         recyclerView!!.layoutManager = layoutManager
         recyclerView!!.adapter = recyclerViewAdapter

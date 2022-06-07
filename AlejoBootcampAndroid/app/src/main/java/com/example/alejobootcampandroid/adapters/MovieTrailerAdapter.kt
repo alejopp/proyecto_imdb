@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.ItemMovieTrailerBinding
-import com.example.alejobootcampandroid.models.MovieTrailer
+import com.example.alejobootcampandroid.model.MovieTrailer
 
 class MovieTrailerAdapter(val movieTrailerList: List<MovieTrailer>): RecyclerView.Adapter<MovieTrailerAdapter.MovieTrailerViewHolder>() {
 
