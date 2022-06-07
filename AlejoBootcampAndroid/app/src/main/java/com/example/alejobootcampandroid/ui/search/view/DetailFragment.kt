@@ -1,4 +1,4 @@
-package com.example.alejobootcampandroid.ui
+package com.example.alejobootcampandroid.ui.search.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

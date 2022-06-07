@@ -1,4 +1,4 @@
-package com.example.alejobootcampandroid.adapters
+package com.example.alejobootcampandroid.ui.user.view.adapters
 
 import android.view.LayoutInflater
 import android.view.View

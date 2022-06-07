@@ -1,17 +1,18 @@
-package com.example.alejobootcampandroid.ui.search
+package com.example.alejobootcampandroid.ui.search.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.alejobootcampandroid.adapters.MovieAdapter
 import com.example.alejobootcampandroid.model.Movie
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.FragmentSearchBinding
+import com.example.alejobootcampandroid.ui.search.view.adapters.MovieAdapter
+import com.example.alejobootcampandroid.ui.search.viewmodel.SearchViewModel
 
 class SearchFragment : Fragment() {
 
@@ -41,41 +42,26 @@ class SearchFragment : Fragment() {
         //Add Toolbar
         val toolbar = binding.toolbarSearchFragment
         toolbar.inflateMenu(R.menu.top_bar_menu)
+
+        val searchViewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
+
+        searchViewModel.movieList.observe(viewLifecycleOwner, Observer {movie ->
+            binding.rvSearchMovies.adapter = MovieAdapter(searchViewModel.movieList as List<Movie>)
+        })
         return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        //Recycler
-        movieList = ArrayList()
-        recyclerView = binding.rvUserOptions
+
+/*        recyclerView = binding.rvUserOptions
         recyclerViewAdapter = MovieAdapter(movieList)
         val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(context)
         recyclerView!!.layoutManager = layoutManager
-        recyclerView!!.adapter = recyclerViewAdapter
-        prepareMovie()
+        recyclerView!!.adapter = recyclerViewAdapter*/
+
     }
-
-    private fun prepareMovie() {
-        var movie = Movie("Star Wars The Last Jedi", R.drawable.harry_potter, "2001",getString(R.string.default_star))
-        movieList.add(movie)
-        movie = Movie("Coco", R.drawable.harry_potter,"2001",getString(R.string.default_star))
-        movieList.add(movie)
-        movie = Movie("Justice League", R.drawable.harry_potter,"2001",getString(R.string.default_star))
-        movieList.add(movie)
-        movie = Movie("Thor: Ragnarok", R.drawable.harry_potter, "2001",getString(R.string.default_star))
-        movieList.add(movie)
-        movie = Movie("Star Wars The Last Jedi", R.drawable.harry_potter, "2001",getString(R.string.default_star))
-        movieList.add(movie)
-        movie = Movie("Coco", R.drawable.harry_potter,"2001",getString(R.string.default_star))
-        movieList.add(movie)
-        movie = Movie("Justice League", R.drawable.harry_potter,"2001",getString(R.string.default_star))
-        movieList.add(movie)
-
-        recyclerViewAdapter?.notifyDataSetChanged()
-    }
-
 
     override fun onDestroyView() {
         super.onDestroyView()

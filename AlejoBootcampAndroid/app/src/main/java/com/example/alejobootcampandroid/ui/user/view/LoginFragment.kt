@@ -1,15 +1,16 @@
-package com.example.alejobootcampandroid
+package com.example.alejobootcampandroid.ui.user.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
 import androidx.core.os.bundleOf
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.FragmentLoginBinding
+import com.example.alejobootcampandroid.ui.user.viewmodel.UserViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 // TODO: Rename parameter arguments, choose names that match
@@ -28,11 +29,8 @@ class LoginFragment : Fragment() {
     private var param2: String? = null
 
     private var _binding: FragmentLoginBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
-
+    private  val userViewModel: UserViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

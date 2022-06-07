@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.search.SearchFragment">
+    tools:context=".ui.search.view.SearchFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar_search_fragment"
@@ -37,7 +37,7 @@
     </com.google.android.material.appbar.MaterialToolbar>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_user_options"
+        android:id="@+id/rv_search_movies"
         android:background="@android:color/white"
         android:layout_width="@dimen/dimen_0dp"
         android:layout_height="@dimen/dimen_0dp"

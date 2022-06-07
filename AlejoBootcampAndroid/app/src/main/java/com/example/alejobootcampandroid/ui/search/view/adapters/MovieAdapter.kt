@@ -1,4 +1,4 @@
-package com.example.alejobootcampandroid.adapters
+package com.example.alejobootcampandroid.ui.search.view.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.ItemMovieBinding
 import com.example.alejobootcampandroid.model.Movie
+import com.example.alejobootcampandroid.ui.search.viewmodel.SearchViewModel
 
 class MovieAdapter constructor(private val movieList: List<Movie>) :
     RecyclerView.Adapter<MovieAdapter.MyViewHolder>() {

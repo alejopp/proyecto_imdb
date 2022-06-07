@@ -1,4 +1,4 @@
-package com.example.alejobootcampandroid
+package com.example.alejobootcampandroid.ui.user.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
+import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.FragmentLoginBinding
 import com.example.alejobootcampandroid.databinding.FragmentSignUpBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView

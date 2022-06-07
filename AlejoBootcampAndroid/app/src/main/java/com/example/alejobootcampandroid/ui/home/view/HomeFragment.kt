@@ -1,4 +1,4 @@
-package com.example.alejobootcampandroid.ui.home
+package com.example.alejobootcampandroid.ui.home.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,13 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.PagerSnapHelper
-import com.example.alejobootcampandroid.R
-import com.example.alejobootcampandroid.adapters.BestSelectionAdapter
-import com.example.alejobootcampandroid.adapters.MovieTrailerAdapter
+import com.example.alejobootcampandroid.ui.home.view.adapters.BestSelectionAdapter
+import com.example.alejobootcampandroid.ui.home.view.adapters.MovieTrailerAdapter
 import com.example.alejobootcampandroid.databinding.FragmentHomeBinding
 import com.example.alejobootcampandroid.providers.BestSelectionProvider
 import com.example.alejobootcampandroid.providers.MovieTrailerProvider
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.example.alejobootcampandroid.ui.home.viewmodel.HomeViewModel
 
 class HomeFragment : Fragment() {
 

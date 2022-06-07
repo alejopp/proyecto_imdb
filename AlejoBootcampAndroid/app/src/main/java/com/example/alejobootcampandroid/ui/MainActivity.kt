@@ -1,23 +1,16 @@
-package com.example.alejobootcampandroid
+package com.example.alejobootcampandroid.ui
 
 import android.os.Bundle
-import android.view.Menu
-import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.SearchView
-import androidx.core.view.MenuItemCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
+import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.ActivitySearchBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
-class SearchActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySearchBinding
 
@@ -40,25 +33,5 @@ class SearchActivity : AppCompatActivity() {
         //setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
-
-/*    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        val inflater = menuInflater
-        inflater.inflate(R.menu.top_bar_menu, menu)
-        val searchItem = menu?.findItem(R.id.action_search)
-        val searchView = searchItem?.actionView as SearchView
-        searchView.setQueryHint(getText(R.string.action_search));
-        searchView.setOnQueryTextListener(SearchView.OnQueryTextListener(){
-             fun onQueryTextSubmit(query:String):Boolean{
-                Toast.makeText(this, "Submited", Toast.LENGTH_SHORT).show();
-                //se oculta el EditText
-                searchView.setQuery("", false);
-                searchView.setIconified(true);
-                return true;
-            }
-        })
-        return super.onCreateOptionsMenu(menu)
-
-    }*/
-
 
 }
