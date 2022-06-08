@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.josebootcampandroid.R
 import com.example.josebootcampandroid.databinding.ItemPrincipalImagesBinding
-import com.example.josebootcampandroid.databinding.ItemRecommendationBinding
 import com.example.josebootcampandroid.model.Actions
+import com.example.josebootcampandroid.model.ListMovieProfile
 import com.example.josebootcampandroid.model.MovieProfile
 
 

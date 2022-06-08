@@ -17,4 +17,6 @@
     <string name="Nombres">Names</string>
     <string name="Aceptar">Submit</string>
     <string name="Crear_una_cuenta">Create Account</string>
+    <string name="las_mejores_selecciones">Top Picks</string>
+    <string name="La_contrasena_debe_contener_8_catacteres">Password must contain 8 characters</string>
 </resources>

@@ -11,11 +11,11 @@
 
     <TextView
         android:id="@+id/txtUsuario"
-        android:layout_width="@dimen/layout_width_txtview"
+        android:layout_width="@dimen/dimen_0"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="@dimen/dimen_16"
         android:text="@string/Usuario"
-        android:textSize="16sp"
+        android:textSize="@dimen/dimenText_16"
         app:layout_constraintBottom_toTopOf="@+id/etUsuario"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
@@ -24,7 +24,7 @@
     <EditText
         android:id="@+id/etUsuario"
         style="@style/txt_format"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="@dimen/dimen_16"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/txtContrasena"
@@ -36,17 +36,16 @@
         android:id="@+id/txtOPodesIngresarCon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="@dimen/dimen_40"
         android:text="@string/O_podes_ingresar_con"
         app:layout_constraintBottom_toTopOf="@+id/imaButtonFacebook"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@id/guideline1" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonLogin"
         style="@style/style_button"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="@dimen/dimen_16"
         android:text="@string/Login"
         app:layout_constraintBottom_toTopOf="@+id/txtOPodesIngresarCon"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
@@ -57,7 +56,7 @@
         android:id="@+id/txtOlvidateContrasena"
         android:layout_width="@dimen/layout_width_txtview"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="@dimen/dimen_16"
         android:text="@string/Olvidaste_contrasena"
         app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
@@ -68,7 +67,7 @@
     <EditText
         android:id="@+id/etContrasena"
         style="@style/txt_format"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="@dimen/dimen_16"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/txtOlvidateContrasena"
@@ -80,9 +79,9 @@
         android:id="@+id/txtContrasena"
         android:layout_width="@dimen/layout_width_txtview"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
+        android:layout_marginBottom="@dimen/dimen_16"
         android:text="@string/Contrasena"
-        android:textSize="16sp"
+        android:textSize="@dimen/dimenText_16"
         app:layout_constraintBottom_toTopOf="@+id/etContrasena"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
@@ -90,14 +89,13 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="187dp"
-        android:layout_height="146dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="@dimen/dimen_187"
+        android:layout_height="@dimen/dimen_146"
+        android:layout_marginTop="@dimen/dimen_4"
         app:layout_constraintBottom_toTopOf="@+id/txtUsuario"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.63"
         app:srcCompat="@drawable/imdb_logo" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -118,20 +116,19 @@
         android:id="@+id/txtContinuarComoInvitado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="@dimen/dimen_40"
         android:text="@string/Continuar_como_invitado"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/guideline2"
-        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@id/guideline1" />
 
     <TextView
         android:id="@+id/txtNoTienesCuenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="@dimen/dimen_36"
+        android:layout_marginBottom="@dimen/dimen_8"
         android:text="@string/No_tienes_cuenta"
         app:layout_constraintBottom_toTopOf="@+id/txtContinuarComoInvitado"
         app:layout_constraintStart_toStartOf="@id/guideline1" />
@@ -140,20 +137,20 @@
         android:id="@+id/txtRegistrate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="@dimen/dimen_12"
+        android:layout_marginBottom="@dimen/dimen_8"
         android:text="@string/Registrate"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/txtContinuarComoInvitado"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
-        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintHorizontal_bias="0.20"
         app:layout_constraintStart_toEndOf="@+id/txtNoTienesCuenta" />
 
     <ImageButton
         android:id="@+id/imaButtonGoogle"
         style="@style/style_social_botton"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginEnd="@dimen/dimen_40"
+        android:layout_marginBottom="@dimen/dimen_80"
         android:background="@drawable/botton_social"
         app:layout_constraintBottom_toTopOf="@+id/txtNoTienesCuenta"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
@@ -163,8 +160,8 @@
     <ImageButton
         android:id="@+id/imgButtonApple"
         style="@style/style_social_botton"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginStart="@dimen/dimen_40"
+        android:layout_marginBottom="@dimen/dimen_80"
         android:background="@drawable/botton_social"
         app:layout_constraintBottom_toTopOf="@+id/txtNoTienesCuenta"
         app:layout_constraintStart_toStartOf="@+id/guideline1"
@@ -174,7 +171,7 @@
     <ImageButton
         android:id="@+id/imaButtonFacebook"
         style="@style/style_social_botton"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="@dimen/dimen_80"
         android:background="@drawable/botton_social"
         app:layout_constraintBottom_toTopOf="@+id/txtNoTienesCuenta"
         app:layout_constraintEnd_toStartOf="@+id/imaButtonGoogle"
