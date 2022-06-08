@@ -32,9 +32,9 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="71dp"
-        android:layout_height="66dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="@dimen/dimen_71"
+        android:layout_height="@dimen/dimen_66"
+        android:layout_marginTop="@dimen/dimen_28"
         android:src="@drawable/imdb_logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
@@ -45,10 +45,10 @@
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dimen_0"
         android:layout_height="wrap_content"
         android:text="@string/Crear_una_cuenta"
-        android:textSize="24sp"
+        android:textSize="@dimen/dimenText_24"
         app:layout_constraintBottom_toBottomOf="@+id/textView8"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.0"
@@ -59,7 +59,7 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonAceptar"
         style="@style/style_button"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/dimen_16"
         android:text="@string/Aceptar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
@@ -70,9 +70,9 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="25dp"
-        android:layout_height="27dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="@dimen/dimen_25"
+        android:layout_height="@dimen/dimen_27"
+        android:layout_marginTop="@dimen/dimen_16"
         android:background="@color/white"
         android:scaleType="fitCenter"
         android:src="@drawable/atras"
@@ -85,9 +85,9 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textFieldName"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dimen_0"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/dimen_16"
         android:hint="@string/Nombre"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
@@ -108,9 +108,9 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textFieldEmail"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dimen_0"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/dimen_16"
         android:hint="@string/Correo_electronico"
         app:layout_constraintBottom_toBottomOf="@+id/textView8"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
@@ -130,11 +130,11 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textFieldPass"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dimen_0"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/dimen_16"
         android:hint="@string/Contrasena"
-        app:helperText="La contraseña debe contener 8 caracteres"
+        app:helperText="@string/La_contrasena_debe_contener_8_catacteres"
         app:endIconMode="password_toggle"
         app:layout_constraintBottom_toBottomOf="@+id/textView8"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"

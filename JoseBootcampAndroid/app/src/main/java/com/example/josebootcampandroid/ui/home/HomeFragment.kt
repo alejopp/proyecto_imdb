@@ -9,10 +9,12 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.josebootcampandroid.adapter.ActionAdapter
+import com.example.josebootcampandroid.adapter.ListMovieAdapter
 import com.example.josebootcampandroid.adapter.MovieProfileAdapater
 import com.example.josebootcampandroid.databinding.FragmentHomeBinding
 import com.example.josebootcampandroid.model.MovieProfile
 import com.example.josebootcampandroid.provider.ActionProvider
+import com.example.josebootcampandroid.provider.ListMovieProvider
 import com.example.josebootcampandroid.provider.MovieProfileProvider
 
 class HomeFragment : Fragment() {
@@ -45,6 +47,8 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val imageMovieProfile = binding.rvimageMovieProfile
         imageMovieProfile.adapter = MovieProfileAdapater(MovieProfileProvider.listMovieProfile)
+        val imageListMovie = binding.rvLasMejores
+        imageListMovie.adapter = ListMovieAdapter(ListMovieProvider.listMovieProfile)
     }
 
     override fun onDestroyView() {

@@ -8,7 +8,7 @@
     <string name="Olvidaste_contrasena">Olvidaste Contraseña</string>
     <string name="Login">Login</string>
     <string name="O_podes_ingresar_con">O podes ingresar con</string>
-    <string name="No_tienes_cuenta">No tienes en cuenta?</string>
+    <string name="No_tienes_cuenta">No tenes cuenta?</string>
     <string name="Registrate">Registrate</string>
     <string name="Continuar_como_invitado">Continuar como invitado</string>
     <string name="Correo_electronico">Correo Electronico</string>
@@ -19,6 +19,8 @@
     <string name="user">User</string>
     <string name="Aceptar">Aceptar</string>
     <string name="Crear_una_cuenta">Crear una cuenta</string>
+    <string name="las_mejores_selecciones">Las mejores selecciones</string>
+    <string name="La_contrasena_debe_contener_8_catacteres">La contraseña debe contener 8 caracteres</string>
     <!-- TODO: Remove or change this placeholder text -->
 
 </resources>
