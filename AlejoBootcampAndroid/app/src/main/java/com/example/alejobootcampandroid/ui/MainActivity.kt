@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySearchBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
+        setTheme(R.style.SplashTheme)
         super.onCreate(savedInstanceState)
         binding = ActivitySearchBinding.inflate(layoutInflater)
         setContentView(binding.root)
