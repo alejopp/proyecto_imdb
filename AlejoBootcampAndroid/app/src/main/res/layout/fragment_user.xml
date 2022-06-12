@@ -10,7 +10,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ui.user.view.UserFragment">
+    tools:context=".presentation.ui.user.view.UserFragment">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/civ_user"

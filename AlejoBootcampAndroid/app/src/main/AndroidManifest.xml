@@ -11,7 +11,7 @@
         android:theme="@style/Theme.PracticeGroupApplication">
 
         <activity
-            android:name=".ui.MainActivity"
+            android:name="com.example.alejobootcampandroid.presentation.ui.MainActivity"
             android:theme="@style/SplashTheme"
             android:exported="true">
             <intent-filter>
