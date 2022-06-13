@@ -7,16 +7,20 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alejobootcampandroid.data.movie.Movie
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.FragmentSearchBinding
-import com.example.alejobootcampandroid.presentation.ui.movie.search.view.adapters.MovieSearchAdapter
-import com.example.alejobootcampandroid.presentation.ui.movie.search.viewmodel.SearchViewModel
+import com.example.alejobootcampandroid.presentation.ui.movie.view.MovieSearchAdapter
+import com.example.alejobootcampandroid.presentation.ui.movie.viewmodel.MovieViewModel
+import com.example.alejobootcampandroid.presentation.ui.movie.viewmodel.MovieViewModelFactory
 
 class SearchFragment : Fragment() {
 
     private var _binding: FragmentSearchBinding? = null
+    private lateinit var movieViewModel: MovieViewModel
+    private lateinit var movieViewModelFactory: MovieViewModelFactory
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -27,39 +31,34 @@ class SearchFragment : Fragment() {
     private var recyclerViewAdapter: MovieSearchAdapter? = null
     private var movieList = mutableListOf<Movie>()
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val dashboardViewModel =
-            ViewModelProvider(this).get(SearchViewModel::class.java)
-
         _binding = FragmentSearchBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
         //Add Toolbar
         val toolbar = binding.toolbarSearchFragment
         toolbar.inflateMenu(R.menu.top_bar_menu)
 
-        val searchViewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
-
-        searchViewModel.movieList.observe(viewLifecycleOwner, Observer {movie ->
-            binding.rvSearchMovies.adapter = MovieSearchAdapter(searchViewModel.movieList as List<Movie>)
+        //Set movie recyclerview
+        movieViewModelFactory = MovieViewModelFactory()
+        movieViewModel = ViewModelProvider(this,movieViewModelFactory).get(MovieViewModel::class.java)
+        movieViewModel.getMovies()
+        movieViewModel.movie.observe(viewLifecycleOwner, Observer { movies ->
+            binding.rvSearchMovies.also {
+                it.layoutManager = LinearLayoutManager(requireContext())
+                it.adapter = MovieSearchAdapter(movies)
+            }
         })
+
         return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
-/*        recyclerView = binding.rvUserOptions
-        recyclerViewAdapter = MovieAdapter(movieList)
-        val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(context)
-        recyclerView!!.layoutManager = layoutManager
-        recyclerView!!.adapter = recyclerViewAdapter*/
 
     }
 

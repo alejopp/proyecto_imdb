@@ -1,4 +1,4 @@
-package com.example.alejobootcampandroid.presentation.ui.movie.search.view.adapters
+package com.example.alejobootcampandroid.presentation.ui.movie.view
 
 import android.view.LayoutInflater
 import android.view.View
