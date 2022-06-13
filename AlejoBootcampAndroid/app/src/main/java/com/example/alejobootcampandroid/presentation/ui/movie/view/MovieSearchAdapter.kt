@@ -7,9 +7,9 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.ItemMovieBinding
-import com.example.alejobootcampandroid.data.movie.Movie
+import com.example.alejobootcampandroid.data.movie.MovieModel
 
-class MovieSearchAdapter constructor(private val movieList: List<Movie>) :
+class MovieSearchAdapter constructor(private val movieList: List<MovieModel>) :
     RecyclerView.Adapter<MovieSearchAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -30,7 +30,7 @@ class MovieSearchAdapter constructor(private val movieList: List<Movie>) :
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val binding = ItemMovieBinding.bind(itemView)
 
-        fun render(movieModel: Movie){
+        fun render(movieModel: MovieModel){
             binding.tvMovieTitle.text = movieModel.title
             binding.tvYear.text = movieModel.year
             binding.ivMovie.setImageResource(movieModel.image)

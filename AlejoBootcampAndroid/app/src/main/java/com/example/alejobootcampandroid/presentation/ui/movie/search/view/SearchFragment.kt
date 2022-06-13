@@ -9,7 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.alejobootcampandroid.data.movie.Movie
+import com.example.alejobootcampandroid.data.movie.MovieModel
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.FragmentSearchBinding
 import com.example.alejobootcampandroid.presentation.ui.movie.view.MovieSearchAdapter
@@ -29,7 +29,7 @@ class SearchFragment : Fragment() {
     //Recycler variables
     private var recyclerView: RecyclerView? = null
     private var recyclerViewAdapter: MovieSearchAdapter? = null
-    private var movieList = mutableListOf<Movie>()
+    private var movieList = mutableListOf<MovieModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,

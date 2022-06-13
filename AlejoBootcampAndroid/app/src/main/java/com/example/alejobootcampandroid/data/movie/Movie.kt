@@ -1,3 +1,0 @@
-package com.example.alejobootcampandroid.data.movie
-
-data class Movie(var title: String, var image: Int, var year: String, var protagonist:String)
