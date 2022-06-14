@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_search"
         android:name="com.example.josebootcampandroid.presentation.ui.movie.search.SearchFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_search" />
@@ -40,12 +40,6 @@
         android:name="com.example.josebootcampandroid.presentation.ui.register.fragment_sing_up"
         android:label="@string/Registrate"
         tools:layout="@layout/fragment_sing_up"/>
-
-    <fragment
-        android:id="@+id/navigation_splash"
-        android:name="com.example.josebootcampandroid.SplashFragment"
-        android:label="Splash"
-        tools:layout="@layout/fragment_splash"/>
 
 
 </navigation>
