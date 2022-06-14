@@ -15,15 +15,19 @@
         <entry key="..\:/Users/jomeg/Documents/AndroidBootcampProjects/JoseBootcampAndroid/app/src/main/res/drawable/ic_info_24.xml" value="0.2485" />
         <entry key="..\:/Users/jomeg/Documents/AndroidBootcampProjects/JoseBootcampAndroid/app/src/main/res/drawable/ic_person_identity_24.xml" value="0.309" />
         <entry key="..\:/Users/jomeg/Documents/AndroidBootcampProjects/JoseBootcampAndroid/app/src/main/res/drawable/ic_person_outlet_24.xml" value="0.309" />
+        <entry key="..\:/Users/jomeg/Documents/AndroidBootcampProjects/JoseBootcampAndroid/app/src/main/res/drawable/ic_search.xml" value="0.2845" />
         <entry key="..\:/Users/jomeg/Documents/AndroidBootcampProjects/JoseBootcampAndroid/app/src/main/res/drawable/ic_settings_24.xml" value="0.309" />
         <entry key="..\:/Users/jomeg/Documents/AndroidBootcampProjects/JoseBootcampAndroid/app/src/main/res/drawable/ic_star_rating.xml" value="0.2845" />
         <entry key="..\:/Users/jomeg/Documents/AndroidBootcampProjects/JoseBootcampAndroid/app/src/main/res/drawable/ic_stars_24.xml" value="0.2485" />
+        <entry key="..\:/Users/jomeg/Documents/AndroidBootcampProjects/JoseBootcampAndroid/app/src/main/res/drawable/splash_ajuste.xml" value="0.19" />
         <entry key="..\:/Users/jomeg/Documents/AndroidBootcampProjects/JoseBootcampAndroid/app/src/main/res/drawable/view_vertical_line_background.xml" value="0.2845" />
         <entry key="..\:/Users/jomeg/Documents/AndroidBootcampProjects/JoseBootcampAndroid/app/src/main/res/layout/activity_login.xml" value="0.3088768115942029" />
         <entry key="..\:/Users/jomeg/Documents/AndroidBootcampProjects/JoseBootcampAndroid/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/jomeg/Documents/AndroidBootcampProjects/JoseBootcampAndroid/app/src/main/res/layout/button_rounded.xml" value="0.3614583333333333" />
         <entry key="..\:/Users/jomeg/Documents/AndroidBootcampProjects/JoseBootcampAndroid/app/src/main/res/layout/ev_search.xml" value="0.3614583333333333" />
         <entry key="..\:/Users/jomeg/Documents/AndroidBootcampProjects/JoseBootcampAndroid/app/src/main/res/layout/fragment_dashboard.xml" value="0.25" />
+        <entry key="..\:/Users/jomeg/Documents/AndroidBootcampProjects/JoseBootcampAndroid/app/src/main/res/layout/fragment_detail.xml" value="0.3484375" />
+        <entry key="..\:/Users/jomeg/Documents/AndroidBootcampProjects/JoseBootcampAndroid/app/src/main/res/layout/fragment_detail2.xml" value="0.3625" />
         <entry key="..\:/Users/jomeg/Documents/AndroidBootcampProjects/JoseBootcampAndroid/app/src/main/res/layout/fragment_home.xml" value="0.264" />
         <entry key="..\:/Users/jomeg/Documents/AndroidBootcampProjects/JoseBootcampAndroid/app/src/main/res/layout/fragment_log.xml" value="0.25" />
         <entry key="..\:/Users/jomeg/Documents/AndroidBootcampProjects/JoseBootcampAndroid/app/src/main/res/layout/fragment_login.xml" value="0.3484375" />
