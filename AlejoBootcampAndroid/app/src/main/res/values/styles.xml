@@ -32,8 +32,8 @@
     </style>
 
     <style name="login_circle_images">
-        <item name="android:layout_width">@dimen/civ_width</item>
-        <item name="android:layout_height">@dimen/civ_height</item>
+        <item name="android:layout_width">@dimen/dimen_56dp</item>
+        <item name="android:layout_height">@dimen/dimen_56dp</item>
         <item name="civ_border_color">@color/white</item>
         <item name="civ_border_width">@dimen/civ_border_size</item>
         <item name="android:layout_marginBottom">@dimen/civ_login_marginbottom</item>

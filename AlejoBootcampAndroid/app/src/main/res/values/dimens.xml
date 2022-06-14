@@ -43,6 +43,7 @@
     <dimen name="dimen_48dp">48dp</dimen>
     <dimen name="dimen_56dp">56dp</dimen>
     <dimen name="dimen_64dp">64dp</dimen>
+    <dimen name="dimen_128dp">128dp</dimen>
 
     <!-- Text measures -->
     <dimen name="dimen_12sp">12sp</dimen>
@@ -78,9 +79,6 @@
     <dimen name="iv_secondary_image_width">110dp</dimen>
     <dimen name="ic_star_width">35dp</dimen>
     <dimen name="iv_itemmovie_width">90dp</dimen>
-
-
-
 
 
 

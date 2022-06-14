@@ -5,7 +5,9 @@ import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.core.os.bundleOf
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.navOptions
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.FragmentSignUpBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -45,7 +47,8 @@ class SignUp : Fragment() {
         //Set arrow back event
         binding.toolbarSignup.setOnMenuItemClickListener{ arrowBack ->
             onOptionsItemSelected(arrowBack).also {
-                findNavController().navigate(R.id.navigation_login)
+                findNavController().navigate(R.id.action_to_navigation_login)
+                //Navigation.createNavigateOnClickListener(R.id.action_to_navigation_login)
             }
         }
     }

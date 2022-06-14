@@ -10,7 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.FragmentLoginBinding
-import com.example.alejobootcampandroid.presentation.ui.user.viewmodel.UserViewModel
+import com.example.alejobootcampandroid.presentation.ui.profile.viewmodel.ProfileViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 // TODO: Rename parameter arguments, choose names that match
@@ -30,7 +30,7 @@ class LoginFragment : Fragment() {
 
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
-    private  val userViewModel: UserViewModel by viewModels()
+    private  val userViewModel: ProfileViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

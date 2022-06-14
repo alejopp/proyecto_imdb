@@ -1,19 +1,19 @@
 package com.example.alejobootcampandroid.data.profile
 
-class UserOptionsProvider {
+class ProfileOptionsProvider {
     companion object{
-        val userOptionsList = listOf<UserOptionsModel>(
-            UserOptionsModel(
+        val userOptionsList = listOf<ProfileOptionsModel>(
+            ProfileOptionsModel(
                     "Example text",
                     "Calificaciones",
                 0
             ),
-            UserOptionsModel(
+            ProfileOptionsModel(
                 "Example tex 2",
                 "Listas",
                 0
             ),
-            UserOptionsModel(
+            ProfileOptionsModel(
                 "Example text 3",
                 "Comentarios",
                 0

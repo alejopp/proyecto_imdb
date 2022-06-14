@@ -26,13 +26,14 @@
         android:id="@+id/tv_login_with"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dimen_12dp"
+        android:layout_marginBottom="28dp"
         android:text="@string/txt_join_with"
         android:textColor="@color/dark_gray"
         android:textSize="@dimen/dimen_20sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@id/civ_facebook"
+        app:layout_constraintBottom_toTopOf="@+id/civ_facebook"
         app:layout_constraintEnd_toEndOf="@id/guideline3"
+        app:layout_constraintHorizontal_bias="0.677"
         app:layout_constraintStart_toStartOf="@id/guideline2" />
 
     <TextView
@@ -82,7 +83,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_bottom_24"
         android:text="@string/txt_have_account"
-        android:textSize="@dimen/dimen_18sp"
+        android:textSize="@dimen/dimen_15sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/tv_guest"
         app:layout_constraintEnd_toStartOf="@+id/tv_signup"
@@ -94,7 +95,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/txt_signup"
-        android:textSize="18sp"
+        android:textSize="@dimen/dimen_15sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/tv_guest"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
@@ -107,7 +108,7 @@
         android:id="@+id/tv_guest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dimen_4dp"
+        android:layout_marginBottom="36dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/txt_guest"
         android:textColor="@color/black"
@@ -115,29 +116,27 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/guideline3"
-        app:layout_constraintHorizontal_bias="0.739"
+        app:layout_constraintHorizontal_bias="0.826"
         app:layout_constraintStart_toStartOf="@id/guideline2" />
 
     <ImageView
         android:id="@+id/iv_title"
-        android:layout_width="@dimen/iv_login_logo_width"
+        android:layout_width="@dimen/dimen_0dp"
         android:layout_height="@dimen/iv_login_imdblogo_height"
-        android:layout_marginTop="@dimen/dimen_8dp"
-        android:layout_marginBottom="@dimen/margin_bottom_16"
-        app:layout_constraintBottom_toTopOf="@id/tv_login_user"
+        app:layout_constraintBottom_toTopOf="@+id/tv_login_user"
         app:layout_constraintDimensionRatio="3:1"
-        app:layout_constraintEnd_toEndOf="@id/guideline4"
-        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintEnd_toStartOf="@id/guideline4"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/imdb_logo" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/civ_facebook"
         style="@style/login_circle_images"
+        android:layout_marginBottom="32dp"
         android:src="@drawable/facebook_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_have_account"
         app:layout_constraintEnd_toStartOf="@+id/civ_google"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/civ_apple" />
@@ -145,8 +144,9 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/civ_apple"
         style="@style/login_circle_images"
+        android:layout_marginBottom="32dp"
         android:src="@drawable/apple_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_have_account"
         app:layout_constraintEnd_toStartOf="@+id/civ_facebook"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@id/guideline2" />
@@ -154,8 +154,9 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/civ_google"
         style="@style/login_circle_images"
+        android:layout_marginBottom="32dp"
         android:src="@drawable/google_logo"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_have_account"
         app:layout_constraintEnd_toEndOf="@id/guideline3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/civ_facebook" />
