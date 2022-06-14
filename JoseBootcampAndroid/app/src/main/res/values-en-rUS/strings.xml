@@ -19,4 +19,24 @@
     <string name="Crear_una_cuenta">Create Account</string>
     <string name="las_mejores_selecciones">Top Picks</string>
     <string name="La_contrasena_debe_contener_8_catacteres">Password must contain 8 characters</string>
+    <string name="Buscar">Search</string>
+    <string name="Ano_ejemplo">2000</string>
+    <string name="Nombre_inicio_ejemplo">Transformer</string>
+    <string name="lista_de_seguimiento">Watch list</string>
+    <string name="watchlist_description">Create a watchlist so you dont miss any movie or TV series.</string>
+    <string name="user_button_text">Start your watch list</string>
+    <string name="recently_viewed_title">Recent views</string>
+    <string name="recently_viewed_description">You havent visited any page lately.</string>
+    <string name="favourite_people_title">Favorite people</string>
+    <string name="favourite_people_description">Here are your favorite people</string>
+    <string name="rate_movie">Rate and get recommendations</string>
+    <string name="ratings">Ratings</string>
+    <string name="ratings_value">0</string>
+    <string name="action_back">Back</string>
+    <string name="movie_example_text">Queens Gambit</string>
+    <string name="movie_description_example">Set in the Cold War, An orphan named Beth Harmon with a gift for chess struggles with addiction while...</string>
+    <string name="movie_category_example">Drama</string>
+    <string name="episodes_guide">Episode guide</string>
+    <string name="number_of_episodes_example">7 episodes</string>
+    <string name="add_to_watchlist">Add to my watch list</string>
 </resources>
