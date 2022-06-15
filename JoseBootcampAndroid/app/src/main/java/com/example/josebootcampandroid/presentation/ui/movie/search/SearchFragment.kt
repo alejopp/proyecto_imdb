@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.josebootcampandroid.data.movie.search.SearchProvider
 import com.example.josebootcampandroid.databinding.FragmentSearchBinding
 
 class SearchFragment : Fragment() {
@@ -32,6 +33,12 @@ class SearchFragment : Fragment() {
 //            textView.text = it
 //        }
         return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val searchMovie = binding.rvSearchMovies
+        searchMovie.adapter = SearchAdapter(SearchProvider.SearchOfMovie)
     }
 
     override fun onDestroyView() {

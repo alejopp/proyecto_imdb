@@ -20,7 +20,7 @@
             android:scaleType="centerCrop"
             cardView:layout_constraintStart_toStartOf="parent"
             cardView:layout_constraintTop_toTopOf="parent"
-            tools:background="@tools:sample/backgrounds/scenic" />
+            android:src="@drawable/transformer1_movie" />
 
         <TextView
             android:id="@+id/tv_movie_title"
@@ -34,7 +34,7 @@
             cardView:layout_constraintLeft_toRightOf="@id/iv_movie"
             cardView:layout_constraintRight_toRightOf="parent"
             cardView:layout_constraintTop_toTopOf="parent"
-            tools:text="@tools:sample/full_names" />
+            android:text="@string/transformer_title_movie"/>
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_year"
@@ -46,7 +46,7 @@
             android:padding="@dimen/dimen_2"
             cardView:layout_constraintStart_toStartOf="@id/tv_movie_title"
             cardView:layout_constraintTop_toBottomOf="@id/tv_movie_title"
-            tools:text="@string/Ano_ejemplo" />
+            android:text="@string/transformer_year_movie" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/tv_star"
@@ -58,7 +58,7 @@
             android:textColor="@color/gris"
             cardView:layout_constraintStart_toStartOf="@id/tv_movie_title"
             cardView:layout_constraintTop_toBottomOf="@+id/tv_year"
-            tools:text="@string/Nombre_inicio_ejemplo" />
+            android:text="@string/transformet_cast_movie" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

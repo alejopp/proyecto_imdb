@@ -72,7 +72,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/v_detail_vertical_line1"
             app:layout_constraintTop_toTopOf="@+id/v_detail_vertical_line1"
-            android:text="Gambito de dama" />
+            android:text="@string/gambito_de_dama_nombre" />
 
         <TextView
             android:id="@+id/tv_detail_original_title"
@@ -85,7 +85,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tv_detail_movie_title"
             app:layout_constraintTop_toBottomOf="@+id/v_detail_vertical_line1"
-            android:text="The queens Gambit (título original)" />
+            android:text="@string/gambito_de_dama_titulo_original" />
 
         <TextView
             android:id="@+id/tv_detail_movie_year"
@@ -98,7 +98,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tv_detail_movie_title"
             app:layout_constraintTop_toBottomOf="@+id/tv_detail_original_title"
-            android:text="Miniserie de TV 2020-2020 16" />
+            android:text="@string/gambito_de_dama_fecha" />
 
         <ImageView
             android:id="@+id/iv_detail_movie_trailer"

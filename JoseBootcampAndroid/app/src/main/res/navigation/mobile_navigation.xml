@@ -41,5 +41,11 @@
         android:label="@string/Registrate"
         tools:layout="@layout/fragment_sing_up"/>
 
+    <fragment
+        android:id="@+id/navigation_detail"
+        android:name="com.example.josebootcampandroid.presentation.ui.movie.detail.DetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_detail"/>
+
 
 </navigation>

@@ -39,4 +39,10 @@
     <string name="episodes_guide">Episode guide</string>
     <string name="number_of_episodes_example">7 episodes</string>
     <string name="add_to_watchlist">Add to my watch list</string>
+    <string name="transformer_title_movie">Transformer</string>
+    <string name="transformer_year_movie">2007</string>
+    <string name="transformet_cast_movie">Shia LaBeouf - Megan Fox</string>
+    <string name="gambito_de_dama_nombre">The queens Gambit</string>
+    <string name="gambito_de_dama_titulo_original">The queens Gambit (título original)</string>
+    <string name="gambito_de_dama_fecha">Miniserie de TV 2020-2020 16</string>
 </resources>
