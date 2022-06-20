@@ -27,11 +27,11 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/dimen_16dp"
             android:background="@drawable/ev_search"
-            android:paddingLeft="@dimen/dimen_16dp"
+            android:drawableLeft="@drawable/ic_search"
             android:drawablePadding="@dimen/margin_bottom_8"
             android:hint="@string/action_search"
             android:padding="@dimen/margin_bottom_8"
-            android:drawableLeft="@drawable/ic_search"
+            android:paddingLeft="@dimen/dimen_16dp"
             android:textColor="@color/light_gray" />
 
     </com.google.android.material.appbar.MaterialToolbar>

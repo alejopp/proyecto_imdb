@@ -9,7 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.alejobootcampandroid.data.movie.MovieModel
+import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.FragmentSearchBinding
 import com.example.alejobootcampandroid.presentation.ui.movie.view.MovieSearchAdapter
@@ -46,13 +46,14 @@ class SearchFragment : Fragment() {
         //Set movie recyclerview
         movieViewModelFactory = MovieViewModelFactory()
         movieViewModel = ViewModelProvider(this,movieViewModelFactory).get(MovieViewModel::class.java)
-        movieViewModel.getMovies()
+        movieViewModel.getMoviesFromRepository()
         movieViewModel.movie.observe(viewLifecycleOwner, Observer { movies ->
             binding.rvSearchMovies.also {
                 it.layoutManager = LinearLayoutManager(requireContext())
                 it.adapter = MovieSearchAdapter(movies)
             }
         })
+
 
         return root
     }
