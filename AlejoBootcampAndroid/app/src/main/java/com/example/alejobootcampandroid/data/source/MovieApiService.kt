@@ -1,6 +1,7 @@
 package com.example.alejobootcampandroid.data.source
 
-import com.example.alejobootcampandroid.data.movie.models.MovieListResponse
+import com.example.alejobootcampandroid.data.movie.model.MovieListResponse
+import com.example.alejobootcampandroid.data.movie.model.MovieTopRatedListResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -15,5 +16,5 @@ interface MovieApiService {
     @GET("movie/top_rated")
     suspend fun getTopRatedMoviesList(
         @Query("api_key") apiKey: String?
-    ): MovieListResponse
+    ): MovieTopRatedListResponse
 }
