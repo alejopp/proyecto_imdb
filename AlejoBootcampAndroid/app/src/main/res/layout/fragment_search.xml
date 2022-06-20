@@ -49,4 +49,17 @@
         app:layout_constraintVertical_bias="0.0"
         tools:listitem="@layout/item_movie" />
 
+    <ImageView
+        android:id="@+id/iv_search_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:src="@drawable/ic_movie"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar_search_fragment"
+         />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

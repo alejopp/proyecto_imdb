@@ -1,12 +1,14 @@
 package com.example.alejobootcampandroid.presentation.ui.home.view
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.alejobootcampandroid.app.MovieApiStatus
 import com.example.alejobootcampandroid.presentation.ui.home.view.adapters.TopRatedMovieAdapter
 import com.example.alejobootcampandroid.presentation.ui.home.view.adapters.MovieTrailerAdapter
 import com.example.alejobootcampandroid.databinding.FragmentHomeBinding
@@ -31,6 +33,13 @@ class HomeFragment : Fragment() {
         homeViewModel.movieTrailer.observe(viewLifecycleOwner, Observer { movieTrailers ->
             binding.rvHomeMovieTrailer.also {
                 it.adapter = MovieTrailerAdapter(movieTrailers)
+            }
+        })
+
+        homeViewModel.status.observe(viewLifecycleOwner, Observer { status ->
+            when(status){
+                MovieApiStatus.LOADING -> binding.ivHomeStatus.visibility = View.VISIBLE
+                MovieApiStatus.DONE -> binding.ivHomeStatus.visibility = View.GONE
             }
         })
 

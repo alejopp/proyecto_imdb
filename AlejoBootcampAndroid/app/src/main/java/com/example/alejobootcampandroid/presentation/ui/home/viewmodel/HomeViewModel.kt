@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.alejobootcampandroid.app.MovieApiStatus
 import com.example.alejobootcampandroid.data.home.MovieTrailerModel
 import com.example.alejobootcampandroid.data.home.MovieTrailerProvider
 import com.example.alejobootcampandroid.domain.movie.model.TopRatedMovieModel
@@ -23,8 +24,8 @@ class HomeViewModel : ViewModel() {
 
     private val getTopRatedMovieUseCase = GetTopRatedMovieUseCase()
 
-    private val _status = MutableLiveData<String>()
-    val status : LiveData<String>
+    private val _status = MutableLiveData<MovieApiStatus>()
+    val status : LiveData<MovieApiStatus>
         get() = _status
 
     fun getMovieTrailers(){
@@ -35,11 +36,13 @@ class HomeViewModel : ViewModel() {
         Log.i("INFO","Entro aquí")
 
         viewModelScope.launch {
+            _status.value = MovieApiStatus.LOADING
             try {
                 val listResult = getTopRatedMovieUseCase()
                 _topRatedMovies.value = listResult.topRatedMoviesList
+                _status.value = MovieApiStatus.DONE
             } catch (e: Exception) {
-                _status.value = e.message
+                _status.value = MovieApiStatus.ERROR
             }
         }
 

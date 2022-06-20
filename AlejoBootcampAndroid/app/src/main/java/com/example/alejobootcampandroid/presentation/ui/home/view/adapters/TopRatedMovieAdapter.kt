@@ -10,10 +10,12 @@ import com.example.alejobootcampandroid.databinding.ItemBestSelectionsBinding
 import com.example.alejobootcampandroid.domain.movie.model.TopRatedMovieModel
 import com.squareup.picasso.Picasso
 
-class TopRatedMovieAdapter(val topRatedMoviesList: List<TopRatedMovieModel>):RecyclerView.Adapter<TopRatedMovieAdapter.BestSelectionViewHolder>() {
+class TopRatedMovieAdapter(val topRatedMoviesList: List<TopRatedMovieModel>):
+    RecyclerView.Adapter<TopRatedMovieAdapter.BestSelectionViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BestSelectionViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        return BestSelectionViewHolder(layoutInflater.inflate(R.layout.item_best_selections,parent,false))
+        return BestSelectionViewHolder(layoutInflater
+            .inflate(R.layout.item_best_selections,parent,false))
     }
 
     override fun onBindViewHolder(holder: BestSelectionViewHolder, position: Int) {
@@ -28,7 +30,8 @@ class TopRatedMovieAdapter(val topRatedMoviesList: List<TopRatedMovieModel>):Rec
         fun render(bestSelectionItem: TopRatedMovieModel) {
             binding.tvHomeMovieScore.text = bestSelectionItem.vote_average.toString()
             binding.tvHomeBestselectionMovieTitle.text = bestSelectionItem.title
-            Picasso.get().load("${Constants.BASE_IMAGE_URL}${bestSelectionItem.backdrop_path}").into(binding.ivHomeBestSelection)
+            Picasso.get().load("${Constants.BASE_IMAGE_URL}${bestSelectionItem.poster_path}")
+                .into(binding.ivHomeBestSelection)
         }
 
     }
