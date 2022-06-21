@@ -22,7 +22,6 @@
     <string name="name"> Name </string>
     <string name="email"> email </string>
     <string name="pwd_restriction"> Password must contain 8 characters </string>
-    <string name="accept"> Accept </string>
     <string name="lista_de_seguimiento">Watchlist</string>
     <string name="watchlist_description">Create a watchlist so you don\'t lose any movie o tv serie.</string>
     <string name="recently_viewed_title">Vistas recientes</string>
@@ -56,4 +55,9 @@
     <string name="star_name_example">Buzz Light year</string>
     <string name="original_title">Original title</string>
     <string name="film_from">Film from</string>
+    <string name="login_error"> Wrong email o password </string>
+    <string name="error"> Error</string>
+    <string name="accept"> Accept</string>
+    <string name="success"> Success</string>
+    <string name="user_registered_successfully"> User registered successfully</string>
 </resources>

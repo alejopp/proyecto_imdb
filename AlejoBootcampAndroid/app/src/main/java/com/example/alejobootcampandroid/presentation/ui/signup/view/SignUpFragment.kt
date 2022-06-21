@@ -1,5 +1,6 @@
 package com.example.alejobootcampandroid.presentation.ui.signup.view
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.util.Log
 import android.view.*
@@ -11,6 +12,8 @@ import androidx.navigation.navOptions
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.FragmentSignUpBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.ktx.Firebase
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -39,9 +42,23 @@ class SignUp : Fragment() {
 
         //Set the Action botton event
         binding.btSignupAction.setOnClickListener {
-            val userName = binding.etSignupName.text.toString()
+            val userName = binding.etvSignupName.text.toString()
             val bundle = bundleOf("user_name" to userName )
-            findNavController().navigate(R.id.navigation_user, bundle )
+            val userEmail = binding.etvSignupEmail.text
+            val userPassword = binding.etvSignupPassword.text
+            if(!userEmail.isNullOrEmpty() && !userPassword.isNullOrEmpty()){
+                FirebaseAuth.getInstance()
+                    .createUserWithEmailAndPassword(userEmail.toString(),userPassword.toString())
+                    .addOnCompleteListener {
+                        if (it.isSuccessful){
+                            showSuccessMessage()
+                            findNavController().navigate(R.id.navigation_user, bundle )
+                        }
+                        else{
+                            showErrorMessage()
+                        }
+                    }
+            }
         }
 
         //Set arrow back event
@@ -51,6 +68,24 @@ class SignUp : Fragment() {
                 //Navigation.createNavigateOnClickListener(R.id.action_to_navigation_login)
             }
         }
+    }
+
+    private fun showSuccessMessage() {
+        val builder = AlertDialog.Builder(context)
+            .setTitle("Success")
+            .setMessage("User created successfully")
+            .setPositiveButton(getString(R.string.accept),null)
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
+    }
+
+    private fun showErrorMessage() {
+        val builder = AlertDialog.Builder(context)
+            .setTitle(getString(R.string.error))
+            .setMessage(getString(R.string.login_error))
+            .setPositiveButton(getString(R.string.accept),null)
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
     }
 
     override fun onResume() {

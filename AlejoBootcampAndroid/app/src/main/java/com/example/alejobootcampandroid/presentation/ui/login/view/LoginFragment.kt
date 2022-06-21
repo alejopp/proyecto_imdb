@@ -1,5 +1,6 @@
 package com.example.alejobootcampandroid.presentation.ui.login.view
 
+import android.app.AlertDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -12,6 +13,7 @@ import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.FragmentLoginBinding
 import com.example.alejobootcampandroid.presentation.ui.profile.viewmodel.ProfileViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -53,10 +55,22 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //Set the Action botton event
         binding.btLogin.setOnClickListener {
-            val userName = binding.evUser.text.toString()
-            val bundle = bundleOf("user_name" to userName )
-            findNavController().navigate(R.id.navigation_user, bundle )
+            val userEmail = binding.etvUserEmail.text
+            val userPassword = binding.etvPassword.text
+            if(!userEmail.isNullOrEmpty() && !userPassword.isNullOrEmpty()){
+                FirebaseAuth.getInstance()
+                    .signInWithEmailAndPassword(userEmail.toString(),userPassword.toString())
+                    .addOnCompleteListener {
+                        if (it.isSuccessful){
+                            findNavController().navigate(R.id.navigation_user )
+                        }
+                        else{
+                            showErrorMessage()
+                        }
+                    }
+            }
         }
 
         binding.tvSignup.setOnClickListener {
@@ -66,6 +80,15 @@ class LoginFragment : Fragment() {
         binding.tvGuest.setOnClickListener {
             findNavController().navigate(R.id.navigation_home, null)
         }
+    }
+
+    private fun showErrorMessage() {
+        val builder = AlertDialog.Builder(context)
+            .setTitle(getString(R.string.error))
+            .setMessage(getString(R.string.login_error))
+            .setPositiveButton(getString(R.string.accept),null)
+        val dialog: AlertDialog = builder.create()
+        dialog.show()
     }
 
     override fun onResume() {
@@ -82,24 +105,5 @@ class LoginFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-    
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment LoginFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            LoginFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
+
 }
