@@ -54,4 +54,6 @@
     <string name="movie_title_example">Light Year</string>
     <string name="year_example">1900</string>
     <string name="star_name_example">Buzz Light year</string>
+    <string name="original_title">Original title</string>
+    <string name="film_from">Film from</string>
 </resources>

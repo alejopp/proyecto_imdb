@@ -4,6 +4,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alejobootcampandroid.R
@@ -39,7 +40,8 @@ class MovieSearchAdapter constructor(private val movieList: List<MovieModel>) :
             Picasso.get().load("${Constants.BASE_IMAGE_URL}${movieModel.backdrop_path}").into(binding.ivMovie)
             binding.tvStar.text = movieModel.protagonist
             itemView.setOnClickListener{
-                itemView.findNavController().navigate(R.id.navigation_detail)
+                val bundle = bundleOf("movieItem" to movieModel)
+                itemView.findNavController().navigate(R.id.navigation_detail,bundle)
             }
         }
 
