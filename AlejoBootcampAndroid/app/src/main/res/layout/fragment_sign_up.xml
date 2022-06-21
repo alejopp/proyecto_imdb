@@ -54,7 +54,7 @@
         app:layout_constraintStart_toStartOf="@id/gl_signup_1">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_signup_name"
+            android:id="@+id/etv_signup_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName" />
@@ -73,7 +73,7 @@
         app:layout_constraintStart_toStartOf="@id/gl_signup_1">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_signup_email"
+            android:id="@+id/etv_signup_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textWebEmailAddress" />
@@ -93,7 +93,7 @@
         app:passwordToggleEnabled="true">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_signup_password"
+            android:id="@+id/etv_signup_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword" />

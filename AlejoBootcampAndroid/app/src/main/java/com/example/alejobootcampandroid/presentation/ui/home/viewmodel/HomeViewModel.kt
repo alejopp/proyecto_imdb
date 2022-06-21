@@ -1,12 +1,16 @@
 package com.example.alejobootcampandroid.presentation.ui.home.viewmodel
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.alejobootcampandroid.data.home.BestSelectionModel
-import com.example.alejobootcampandroid.data.home.BestSelectionProvider
+import androidx.lifecycle.viewModelScope
+import com.example.alejobootcampandroid.app.MovieApiStatus
 import com.example.alejobootcampandroid.data.home.MovieTrailerModel
 import com.example.alejobootcampandroid.data.home.MovieTrailerProvider
+import com.example.alejobootcampandroid.domain.movie.model.TopRatedMovieModel
+import com.example.alejobootcampandroid.domain.use_case.movie.GetTopRatedMovieUseCase
+import kotlinx.coroutines.launch
 
 class HomeViewModel : ViewModel() {
 
@@ -14,15 +18,34 @@ class HomeViewModel : ViewModel() {
     val movieTrailer: LiveData<List<MovieTrailerModel>>
         get() = _movieTrailer
 
-    private val _movieBestSelection = MutableLiveData<List<BestSelectionModel>>()
-    val movieBestSelection: LiveData<List<BestSelectionModel>>
-        get() = _movieBestSelection
+    private val _topRatedMovies = MutableLiveData<List<TopRatedMovieModel>>()
+    val topRatedMovie: LiveData<List<TopRatedMovieModel>>
+        get() = _topRatedMovies
+
+    private val getTopRatedMovieUseCase = GetTopRatedMovieUseCase()
+
+    private val _status = MutableLiveData<MovieApiStatus>()
+    val status : LiveData<MovieApiStatus>
+        get() = _status
 
     fun getMovieTrailers(){
         _movieTrailer.value = MovieTrailerProvider.movieTrailerList
     }
 
-    fun getBestSelections(){
-        _movieBestSelection.value = BestSelectionProvider.bestSelectionList
+    fun getTopRatedMoviesFromRepository(){
+        Log.i("INFO","Entro aquí")
+
+        viewModelScope.launch {
+            _status.value = MovieApiStatus.LOADING
+            try {
+                val listResult = getTopRatedMovieUseCase()
+                _topRatedMovies.value = listResult.topRatedMoviesList
+                _status.value = MovieApiStatus.DONE
+            } catch (e: Exception) {
+                _status.value = MovieApiStatus.ERROR
+            }
+        }
+
     }
+
 }

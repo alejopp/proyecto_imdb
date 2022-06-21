@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "830015719855",
+    "project_id": "alejobootcampandroid",
+    "storage_bucket": "alejobootcampandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:830015719855:android:2c11d58c044b1c8bfbc75a",
+        "android_client_info": {
+          "package_name": "com.example.alejobootcampandroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "830015719855-ltaici23mkb0pc5qtu6fnbjjumdrnema.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALb8O2nJbXzhVx6g2clwBlE3lMpzQ9FLY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "830015719855-ltaici23mkb0pc5qtu6fnbjjumdrnema.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

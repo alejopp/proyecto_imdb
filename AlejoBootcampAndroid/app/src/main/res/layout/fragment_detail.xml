@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.ui.DetailFragment">
+    tools:context=".presentation.ui.movie.detail.DetailFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -71,7 +71,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/v_detail_vertical_line1"
             app:layout_constraintTop_toTopOf="@+id/v_detail_vertical_line1"
-            android:text="Gambito de dama" />
+            tools:text="Gambito de dama" />
 
         <TextView
             android:id="@+id/tv_detail_original_title"
