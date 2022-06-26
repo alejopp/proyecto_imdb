@@ -1,9 +1,8 @@
 package com.example.alejobootcampandroid.domain.use_case.movie
 
-import com.example.alejobootcampandroid.data.movie.repository.MovieRemoteRepositoryImpl
-import com.example.alejobootcampandroid.data.movie.repository.TopRatedMovieRepositoryImpl
+import com.example.alejobootcampandroid.domain.movie.repository.TopRatedMovieRepository
+import javax.inject.Inject
 
-class GetTopRatedMovieUseCase {
-    private val topRatedMovieRepository = TopRatedMovieRepositoryImpl()
+class GetTopRatedMovieUseCase @Inject constructor(private val topRatedMovieRepository: TopRatedMovieRepository) {
     suspend operator fun invoke() = topRatedMovieRepository.getAllToRatedMovies()
 }

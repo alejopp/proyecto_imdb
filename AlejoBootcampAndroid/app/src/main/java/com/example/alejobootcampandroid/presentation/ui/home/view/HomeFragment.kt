@@ -1,11 +1,11 @@
 package com.example.alejobootcampandroid.presentation.ui.home.view
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.alejobootcampandroid.app.MovieApiStatus
@@ -13,20 +13,18 @@ import com.example.alejobootcampandroid.presentation.ui.home.view.adapters.TopRa
 import com.example.alejobootcampandroid.presentation.ui.home.view.adapters.MovieTrailerAdapter
 import com.example.alejobootcampandroid.databinding.FragmentHomeBinding
 import com.example.alejobootcampandroid.presentation.ui.home.viewmodel.HomeViewModel
-import com.example.alejobootcampandroid.presentation.ui.home.viewmodel.HomeViewModelFactory
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var homeViewModel: HomeViewModel
-    private lateinit var homeViewModelFactory: HomeViewModelFactory
+    private val homeViewModel: HomeViewModel by viewModels()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View
     {
-        homeViewModelFactory = HomeViewModelFactory()
-        homeViewModel = ViewModelProvider(this, homeViewModelFactory).get(HomeViewModel::class.java)
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         homeViewModel.getMovieTrailers()

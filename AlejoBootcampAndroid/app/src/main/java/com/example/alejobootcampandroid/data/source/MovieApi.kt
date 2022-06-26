@@ -6,7 +6,7 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
 
-interface MovieApiService {
+interface MovieApi {
     @GET("list/{id}")
     suspend fun getMoviesList(
         @Path("id") listId : Int?,

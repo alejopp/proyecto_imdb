@@ -10,9 +10,14 @@ import com.example.alejobootcampandroid.data.home.MovieTrailerModel
 import com.example.alejobootcampandroid.data.home.MovieTrailerProvider
 import com.example.alejobootcampandroid.domain.movie.model.TopRatedMovieModel
 import com.example.alejobootcampandroid.domain.use_case.movie.GetTopRatedMovieUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class HomeViewModel : ViewModel() {
+@HiltViewModel
+class HomeViewModel @Inject constructor(
+    private val getTopRatedMovieUseCase: GetTopRatedMovieUseCase
+    ) : ViewModel() {
 
     private val _movieTrailer = MutableLiveData<List<MovieTrailerModel>>()
     val movieTrailer: LiveData<List<MovieTrailerModel>>
@@ -21,8 +26,6 @@ class HomeViewModel : ViewModel() {
     private val _topRatedMovies = MutableLiveData<List<TopRatedMovieModel>>()
     val topRatedMovie: LiveData<List<TopRatedMovieModel>>
         get() = _topRatedMovies
-
-    private val getTopRatedMovieUseCase = GetTopRatedMovieUseCase()
 
     private val _status = MutableLiveData<MovieApiStatus>()
     val status : LiveData<MovieApiStatus>

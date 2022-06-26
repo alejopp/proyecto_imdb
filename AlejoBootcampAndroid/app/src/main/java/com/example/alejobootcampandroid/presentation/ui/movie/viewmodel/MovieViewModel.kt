@@ -7,10 +7,12 @@ import androidx.lifecycle.viewModelScope
 import com.example.alejobootcampandroid.app.MovieApiStatus
 import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.example.alejobootcampandroid.domain.use_case.movie.GetMoviesUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-
-class MovieViewModel() : ViewModel(){
+@HiltViewModel
+class MovieViewModel @Inject constructor(private val getMoviesUseCase: GetMoviesUseCase) : ViewModel(){
 
     private val _movie = MutableLiveData<List<MovieModel>>()
     val movie: LiveData<List<MovieModel>>
@@ -20,7 +22,6 @@ class MovieViewModel() : ViewModel(){
     val status : LiveData<MovieApiStatus>
         get() = _status
 
-    private val getMoviesUseCase = GetMoviesUseCase()
 
     fun getMoviesFromRepository(){
         _status.value = MovieApiStatus.LOADING

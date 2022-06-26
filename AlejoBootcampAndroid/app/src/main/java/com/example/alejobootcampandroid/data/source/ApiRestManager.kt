@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit
 
 object ApiRestManager {
 
-    private val okHttpClient: OkHttpClient = OkHttpClient.Builder()
+/*    private val okHttpClient: OkHttpClient = OkHttpClient.Builder()
         .connectTimeout(30, TimeUnit.SECONDS)
         .writeTimeout(30, TimeUnit.SECONDS)
         .readTimeout(30, TimeUnit.SECONDS)
@@ -21,12 +21,12 @@ object ApiRestManager {
         .setLenient()
         .create()
 
-    fun createApi(): MovieApiService {
+    fun createApi(): MovieApi {
         val builder = Retrofit.Builder()
             .client(okHttpClient)
             .baseUrl(Constants.MOVIE_URL)
             .addConverterFactory(GsonConverterFactory.create(gson))
         val mRetrofit = builder.build()
-        return mRetrofit.create(MovieApiService::class.java)
-    }
+        return mRetrofit.create(MovieApi::class.java)
+    }*/
 }
