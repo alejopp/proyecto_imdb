@@ -9,6 +9,7 @@ buildscript {
     dependencies {
         // Add this line
         classpath 'com.google.gms:google-services:4.3.10'
+        classpath "com.google.dagger:hilt-android-gradle-plugin:2.38.1"
     }
 }
 
@@ -30,6 +31,7 @@ ext {
     retrofitVersion = "2.9.0"
     gsonConverterVersion = "2.9.0"
     interceptorVersion = "4.7.2"
+    hiltVersion = "2.38.1"
 }
 
 task clean(type: Delete) {
