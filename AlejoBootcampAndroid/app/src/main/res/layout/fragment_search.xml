@@ -22,7 +22,7 @@
         app:theme="@style/ThemeOverlay.AppCompat.ActionBar">
 
         <EditText
-            android:id="@+id/searchEditText"
+            android:id="@+id/etv_search_movie"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/dimen_16dp"

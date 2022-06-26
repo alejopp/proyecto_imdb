@@ -14,25 +14,39 @@ import javax.inject.Inject
 @HiltViewModel
 class MovieViewModel @Inject constructor(private val getMoviesUseCase: GetMoviesUseCase) : ViewModel(){
 
-    private val _movie = MutableLiveData<List<MovieModel>>()
-    val movie: LiveData<List<MovieModel>>
-        get() = _movie
+    private val _movies = MutableLiveData<List<MovieModel>>()
+    val movies: LiveData<List<MovieModel>>
+        get() = _movies
 
     private val _status = MutableLiveData<MovieApiStatus>()
     val status : LiveData<MovieApiStatus>
         get() = _status
 
+    private var moviesCopy = emptyList<MovieModel>()
+
+    fun getMoviesByTitle(movieQuery: String){
+        if (movieQuery.isNotEmpty()){
+            _movies.value = moviesCopy.filter { movie ->
+                movie.title.lowercase().contains(movieQuery.lowercase())
+            }
+        }
+        else{
+            _movies.postValue(moviesCopy)
+        }
+
+    }
 
     fun getMoviesFromRepository(){
         _status.value = MovieApiStatus.LOADING
         viewModelScope.launch {
             try {
                 val listResult = getMoviesUseCase()
-                _movie.value = listResult.moviesList
+                _movies.value = listResult.moviesList
+                moviesCopy = listResult.moviesList
                 _status.value = MovieApiStatus.DONE
             } catch (e: Exception) {
                 _status.value = MovieApiStatus.ERROR
-                _movie.value = listOf()
+                _movies.value = listOf()
             }
         }
     }
