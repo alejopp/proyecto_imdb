@@ -32,6 +32,8 @@ ext {
     gsonConverterVersion = "2.9.0"
     interceptorVersion = "4.7.2"
     hiltVersion = "2.38.1"
+    junitVersion = "4.13.2"
+    mockVersion = "1.12.2"
 }
 
 task clean(type: Delete) {
