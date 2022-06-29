@@ -7,8 +7,7 @@ import com.example.alejobootcampandroid.domain.movie.repository.MovieRepository
 import javax.inject.Inject
 
 class MovieRepositoryImpl @Inject constructor(private val api: MovieApi) : MovieRepository {
-
-    override suspend fun getAllMovies(): MovieListResponse {
-        return api.getMoviesList(3,Constants.API_KEY)
+    override suspend fun getAllMovies(listId: Int): MovieListResponse {
+        return api.getMoviesList(listId,Constants.API_KEY)
     }
 }

@@ -38,7 +38,6 @@ class MovieSearchAdapter constructor(private val movieList: List<MovieModel>) :
             binding.tvMovieTitle.text = movieModel.title
             binding.tvYear.text = movieModel.release_date
             Picasso.get().load("${Constants.BASE_IMAGE_URL}${movieModel.backdrop_path}").into(binding.ivMovie)
-            binding.tvStar.text = movieModel.protagonist
             itemView.setOnClickListener{
                 val bundle = bundleOf("movieItem" to movieModel)
                 itemView.findNavController().navigate(R.id.navigation_detail,bundle)
