@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="Usuario">Français</string>
-    <string name="Contrasena">Le mot de passe</string>
-    <string name="Olvidaste_contrasena">Mot de passe oublié</string>
-    <string name="Login">Envoyer</string>
-    <string name="O_podes_ingresar_con">Ou vous pouvez vous connecter avec</string>
-</resources>
