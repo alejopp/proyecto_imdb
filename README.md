@@ -16,6 +16,7 @@ There is an input box where you can filter your task. Each task (also called tod
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-plain-wordmark.svg" width="100" height="100" /> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original-wordmark.svg" width="100" height="100"/>
 
 ## Preview
+<img src="screenshoots/signup_screen.png" width="200" height="400"/> <img src="screenshoots/login_screen.png" width="200" height="400"/> <img src="screenshoots/searchmovie_screen.png" width="200" height="400"/> 
 
 
 
