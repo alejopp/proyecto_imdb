@@ -4,6 +4,12 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+
+    <!-- <manifest> y <application>. Deben aparecer una sola vez -->
+    <!-- <application> debe ser el último dentro del elemento <manifest> -->
+    <!--<uses-feature android:name="android.hardware.sensor.compass" -->
+
+    <!--Contiene atributos que afectan a los demás componentes-->
     <application
         android:name=".AlejoBootcampAndroidApp"
         android:allowBackup="true"

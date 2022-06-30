@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/navigation_search"
-        android:name="com.example.alejobootcampandroid.presentation.ui.movie.search.view.SearchFragment"
+        android:name="com.example.alejobootcampandroid.presentation.ui.movie.search.view.SearchMovieFragment"
         android:label="@string/title_search"
-        tools:layout="@layout/fragment_search" >
+        tools:layout="@layout/fragment_search_movie" >
         <argument
             android:name="userName"
             app:argType="string"

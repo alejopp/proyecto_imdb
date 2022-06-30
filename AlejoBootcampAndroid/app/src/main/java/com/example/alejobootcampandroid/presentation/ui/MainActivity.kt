@@ -3,6 +3,7 @@ package com.example.alejobootcampandroid.presentation.ui
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivitySearchBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         val navView: BottomNavigationView = binding.navView
 
         val navController = findNavController(R.id.nav_host_fragment_activity_search)
@@ -30,7 +32,8 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
 
         navView.setupWithNavController(navController)
+
     }
-
-
 }
+
+

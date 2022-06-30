@@ -9,20 +9,9 @@ import android.view.ViewGroup
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.app.Constants
 import com.example.alejobootcampandroid.databinding.FragmentDetailBinding
-import com.example.alejobootcampandroid.databinding.FragmentSearchBinding
 import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.squareup.picasso.Picasso
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [DetailFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class DetailFragment : Fragment() {
 
     private var _binding: FragmentDetailBinding? = null

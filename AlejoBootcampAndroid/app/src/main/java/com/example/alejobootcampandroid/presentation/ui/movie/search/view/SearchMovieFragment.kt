@@ -15,15 +15,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.app.MovieApiStatus
-import com.example.alejobootcampandroid.databinding.FragmentSearchBinding
+import com.example.alejobootcampandroid.databinding.FragmentSearchMovieBinding
 import com.example.alejobootcampandroid.presentation.ui.movie.view.MovieSearchAdapter
 import com.example.alejobootcampandroid.presentation.ui.movie.viewmodel.MovieViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class SearchFragment : Fragment() {
+class SearchMovieFragment : Fragment() {
 
-    private var _binding: FragmentSearchBinding? = null
+    private var _binding: FragmentSearchMovieBinding? = null
     private val movieViewModel: MovieViewModel by viewModels()
 
     // This property is only valid between onCreateView and
@@ -40,7 +40,7 @@ class SearchFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentSearchBinding.inflate(inflater, container, false)
+        _binding = FragmentSearchMovieBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         //Add Toolbar
@@ -56,7 +56,6 @@ class SearchFragment : Fragment() {
             }
         })
 
-        // Setting search movie recycler view
         movieViewModel.getMoviesFromRepository()
         movieViewModel.movies.observe(viewLifecycleOwner, Observer { movies ->
             binding.rvSearchMovies.also {
@@ -65,7 +64,6 @@ class SearchFragment : Fragment() {
             }
         })
 
-
         return root
     }
 
@@ -73,17 +71,13 @@ class SearchFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.etvSearchMovie.addTextChangedListener(object: TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
-                Log.i("beforeTextChange","$s")
-            }
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
                 movieViewModel.getMoviesByTitle(s.toString())
             }
 
-            override fun afterTextChanged(s: Editable?) {
-                Log.i("afterTextChange","$s")
-            }
+            override fun afterTextChanged(s: Editable?) {}
 
         })
 

@@ -25,6 +25,7 @@ class MovieViewModel @Inject constructor(private val getMoviesUseCase: GetMovies
     private var moviesCopy = emptyList<MovieModel>()
 
     fun getMoviesByTitle(movieQuery: String){
+
         if (movieQuery.isNotEmpty()){
             _movies.value = moviesCopy.filter { movie ->
                 movie.title.lowercase().contains(movieQuery.lowercase())
