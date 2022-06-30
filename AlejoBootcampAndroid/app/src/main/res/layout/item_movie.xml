@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/carView"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/cv_movie_width"
+    android:layout_margin="@dimen/dimen_8dp"
+    cardView:cardCornerRadius="@dimen/dimen_8dp"
+    cardView:cardElevation="@dimen/dimen_8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_movie"
+            android:layout_width="@dimen/iv_itemmovie_width"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            cardView:layout_constraintStart_toStartOf="parent"
+            cardView:layout_constraintTop_toTopOf="parent"
+            tools:background="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/tv_movie_title"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/tv_margin_8"
+            android:padding="@dimen/iv_itemmovie_padding"
+            android:textSize="@dimen/dimen_18sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            cardView:layout_constraintLeft_toRightOf="@id/iv_movie"
+            cardView:layout_constraintRight_toRightOf="parent"
+            cardView:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/full_names" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_year"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/iv_margintop_8"
+            android:textSize="@dimen/dimen_18sp"
+            android:textColor="@color/light_gray"
+            android:padding="@dimen/iv_itemmovie_padding"
+            cardView:layout_constraintStart_toStartOf="@id/tv_movie_title"
+            cardView:layout_constraintTop_toBottomOf="@id/tv_movie_title"
+            tools:text="@string/year_example" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_star"
+            android:layout_width="@dimen/dimen_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tv_margintop_24"
+            android:padding="@dimen/iv_itemmovie_padding"
+            android:textSize="@dimen/dimen_16sp"
+            android:textColor="@color/light_gray"
+            cardView:layout_constraintStart_toStartOf="@id/tv_movie_title"
+            cardView:layout_constraintTop_toBottomOf="@+id/tv_year"
+            tools:text="@string/star_name_example" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

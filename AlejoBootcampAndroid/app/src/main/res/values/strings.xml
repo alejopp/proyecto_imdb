@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">AlejoBootcampAndroid</string>
+    <string name="title_home">Inicio</string>
+    <string name="title_search">Buscar</string>
+    <string name="title_play">Vídeo</string>
+    <string name="txt_title"> IMDb</string>
+    <string name="txt_user"> Usuario </string>
+    <string name="txt_password"> Contraseña </string>
+    <string name="txt_forgot_pwd"> ¿Olvidaste la contraseña? </string>
+    <string name="txt_join_with"> O podes ingresar con</string>
+    <string name="txt_have_account">¿No tienes cuenta? </string>
+    <string name="txt_signup"> Regístrate </string>
+    <string name="txt_guest"> Continuar como invitado </string>
+    <string name="btn_login"> Login </string>
+    <string name="title_activity_search"> Actividad buscar </string>
+    <string name="title_default_user"> Usted </string>
+    <string name="action_back"> Regresar </string>
+    <string name="action_search"> Buscar </string>
+    <string name="default_star"> Daniel Radcliffe, Emma Watson </string>
+    <string name="create_account"> Crear una cuenta </string>
+    <string name="name"> Nombre </string>
+    <string name="email"> Correo electrónco </string>
+    <string name="pwd_restriction"> La contraseña debe contener 8 caracteres </string>
+    <string name="lista_de_seguimiento">Lista de seguimiento</string>
+    <string name="watchlist_description">Crea una lista de seguimiento para no perderte ninguna pelicula o serie de tv.</string>
+    <string name="recently_viewed_title">Vistas recientes</string>
+    <string name="recently_viewed_description">No has visitado ninguna página reientemente.</string>
+    <string name="favourite_people_title">Personas favoritas</string>
+    <string name="favourite_people_description">Aqui van tus personas favoritas</string>
+    <string name="user_button_text">Empieza tu lista de seguimiento</string>
+    <string name="rate_movie">Calificar y obtener recomendaciones</string>
+    <string name="ratings_value">0</string>
+    <string name="ratings">Calificaciones</string>
+    <string name="best_selected">Las mejores selecciones</string>
+    <string name="trailer">Trailer oficial</string>
+    <string name="detail">Detalle</string>
+    <string name="episodes_guide">Guía de episodios</string>
+    <string name="add_to_watchlist">Agregar a mi lista de seguimiento</string>
+    <string name="user">Usuario</string>
+    <string name="user_options_ratings_description"> Calificar y obtener recomendaciones</string>
+    <string name="user_options_ratings_title">Calificaciones</string>
+    <string name="user_options_lists_description">Agregar a listas</string>
+    <string name="user_options_lists_title">Listas</string>
+    <string name="user_options_comments_description">Aún no has hecho comentarios</string>
+    <string name="user_options_comments_title">Comentarios</string>
+    <string name="login">Login</string>
+    <string name="movie_example_text">Queens Gambit</string>
+    <string name="movie_description_example">Ambientada en la Guerra fría; una huérfana llamada Beth Harmon con un don para el ajedrez lucha contra las adicciones mientras...</string>
+    <string name="movie_category_example">Drama</string>
+    <string name="number_of_episodes_example">7 episodios</string>
+    <string name="score_example">7.6</string>
+    <string name="movie_title_example">Light Year</string>
+    <string name="year_example">1900</string>
+    <string name="star_name_example">Buzz Light year</string>
+    <string name="original_title">Título original</string>
+    <string name="film_from">Película de</string>
+    <string name="login_error"> Email o contraseña incorrecta</string>
+    <string name="error"> Error</string>
+    <string name="accept"> Aceptar</string>
+    <string name="success"> OK</string>
+    <string name="user_registered_successfully"> Usuario registrado correctamente</string>
+
+
+
+</resources>
