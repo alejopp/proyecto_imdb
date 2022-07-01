@@ -4,5 +4,5 @@ import com.example.alejobootcampandroid.domain.movie.repository.TopRatedMovieRep
 import javax.inject.Inject
 
 class GetTopRatedMovieUseCase @Inject constructor(private val topRatedMovieRepository: TopRatedMovieRepository) {
-    suspend operator fun invoke() = topRatedMovieRepository.getAllToRatedMovies()
+    suspend operator fun invoke() = topRatedMovieRepository.getAllTopRatedMovies()
 }

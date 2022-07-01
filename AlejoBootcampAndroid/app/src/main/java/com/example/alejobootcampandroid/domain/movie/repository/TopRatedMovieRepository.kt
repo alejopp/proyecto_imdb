@@ -1,7 +1,7 @@
 package com.example.alejobootcampandroid.domain.movie.repository
 
-import com.example.alejobootcampandroid.data.movie.model.MovieTopRatedListResponse
+import com.example.alejobootcampandroid.data.movie.model.TopRatedMovieListResponse
 
 interface TopRatedMovieRepository {
-    suspend fun getAllToRatedMovies(): MovieTopRatedListResponse
+    suspend fun getAllTopRatedMovies(): TopRatedMovieListResponse
 }

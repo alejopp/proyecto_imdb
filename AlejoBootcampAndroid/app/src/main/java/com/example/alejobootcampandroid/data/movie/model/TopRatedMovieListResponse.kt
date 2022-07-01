@@ -4,7 +4,7 @@ import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.example.alejobootcampandroid.domain.movie.model.TopRatedMovieModel
 import com.google.gson.annotations.SerializedName
 
-data class MovieTopRatedListResponse (
+data class TopRatedMovieListResponse (
     @SerializedName("results")
     var topRatedMoviesList: List<TopRatedMovieModel>
 )
