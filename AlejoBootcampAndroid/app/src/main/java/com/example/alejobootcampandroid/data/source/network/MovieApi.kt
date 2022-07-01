@@ -1,4 +1,4 @@
-package com.example.alejobootcampandroid.data.source
+package com.example.alejobootcampandroid.data.source.network
 
 import com.example.alejobootcampandroid.data.movie.model.MovieListResponse
 import com.example.alejobootcampandroid.data.movie.model.TopRatedMovieListResponse

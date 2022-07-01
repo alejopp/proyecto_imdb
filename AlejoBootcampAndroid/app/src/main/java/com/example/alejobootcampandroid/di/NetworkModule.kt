@@ -3,7 +3,7 @@ package com.example.alejobootcampandroid.di
 import com.example.alejobootcampandroid.app.Constants
 import com.example.alejobootcampandroid.data.movie.repository.MovieRepositoryImpl
 import com.example.alejobootcampandroid.data.movie.repository.TopRatedMovieRepositoryImpl
-import com.example.alejobootcampandroid.data.source.MovieApi
+import com.example.alejobootcampandroid.data.source.network.MovieApi
 import com.example.alejobootcampandroid.domain.movie.repository.MovieRepository
 import com.example.alejobootcampandroid.domain.movie.repository.TopRatedMovieRepository
 import dagger.Module

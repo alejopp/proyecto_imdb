@@ -1,4 +1,4 @@
-package com.example.alejobootcampandroid.data.source
+package com.example.alejobootcampandroid.data.source.network
 
 import com.example.alejobootcampandroid.app.Constants
 import com.google.gson.GsonBuilder
