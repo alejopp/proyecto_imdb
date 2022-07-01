@@ -9,7 +9,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/white">
 
         <androidx.appcompat.widget.Toolbar
@@ -113,78 +113,91 @@
             app:layout_constraintVertical_bias="0.0"
             android:src="@drawable/gambito" />
 
-        <ImageView
-            android:id="@+id/iv_detail_movie_frontpage"
-            android:layout_width="@dimen/iv_secondary_image_width"
-            android:layout_height="@dimen/iv_secondary_image_height"
-            android:layout_marginStart="@dimen/dimen_24dp"
-            android:layout_marginTop="@dimen/dimen_24dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_detail_movie_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_detail_movie_trailer"
-            app:layout_constraintVertical_bias="0.0"
-            android:src="@drawable/gambito_portriat" />
+            app:layout_constraintTop_toBottomOf="@id/iv_detail_movie_trailer"
+            app:layout_constraintBottom_toTopOf="@id/v_detail_horizontal_line2"
+            android:layout_marginTop="@dimen/dimen_24dp"
+            >
 
-        <TextView
-            android:id="@+id/tv_detail_movie_description"
-            android:layout_width="@dimen/dimen_0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_16dp"
-            android:layout_marginEnd="@dimen/dimen_24dp"
-            android:lineSpacingExtra="@dimen/dimen_4dp"
-            android:textSize="@dimen/dimen_15sp"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_detail_movie_frontpage"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/bt_detail_category"
-            app:layout_constraintTop_toBottomOf="@+id/bt_detail_category"
-            app:layout_constraintVertical_bias="0.0"
-            android:text="@string/movie_description_example" />
+            <ImageView
+                android:id="@+id/iv_detail_movie_frontpage"
+                android:layout_width="@dimen/iv_secondary_image_width"
+                android:layout_height="@dimen/iv_secondary_image_height"
+                android:layout_marginStart="@dimen/dimen_24dp"
 
-        <TextView
-            android:id="@+id/tv_detail_score"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dimen_4dp"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_detail_star_icon"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/iv_detail_star_icon"
-            app:layout_constraintTop_toTopOf="@+id/iv_detail_star_icon"
-            tools:text="5.0" />
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                android:src="@drawable/gambito_portriat" />
 
-        <ImageView
-            android:id="@+id/iv_detail_star_icon"
-            android:layout_width="@dimen/ic_star_width"
-            android:layout_height="@dimen/ic_star_height"
-            android:layout_marginStart="@dimen/dimen_16dp"
-            android:src="@drawable/ic_star_rating"
-            app:layout_constraintBottom_toBottomOf="@+id/bt_detail_category"
-            app:layout_constraintStart_toEndOf="@+id/bt_detail_category"
-            app:layout_constraintTop_toTopOf="@+id/bt_detail_category" />
+            <TextView
+                android:id="@+id/tv_detail_movie_description"
+                android:layout_width="@dimen/dimen_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_16dp"
+                android:layout_marginEnd="@dimen/dimen_24dp"
+                android:lineSpacingExtra="@dimen/dimen_4dp"
+                android:textSize="@dimen/dimen_15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/bt_detail_category"
+                app:layout_constraintTop_toBottomOf="@+id/bt_detail_category"
+                tools:text="@string/movie_description_example" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/bt_detail_category"
-            style="@style/detail_category_button"
-            android:layout_marginStart="@dimen/dimen_24dp"
-            app:layout_constraintStart_toEndOf="@+id/iv_detail_movie_frontpage"
-            app:layout_constraintTop_toTopOf="@+id/iv_detail_movie_frontpage"
-            app:strokeWidth="@dimen/dimen_2dp"
-            android:text="@string/movie_category_example" />
+            <TextView
+                android:id="@+id/tv_detail_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_4dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_detail_star_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/iv_detail_star_icon"
+                app:layout_constraintTop_toTopOf="@+id/iv_detail_star_icon"
+                tools:text="5.0" />
+
+            <ImageView
+                android:id="@+id/iv_detail_star_icon"
+                android:layout_width="@dimen/ic_star_width"
+                android:layout_height="@dimen/ic_star_height"
+                android:layout_marginStart="@dimen/dimen_16dp"
+                android:src="@drawable/ic_star_rating"
+                app:layout_constraintBottom_toBottomOf="@+id/bt_detail_category"
+                app:layout_constraintStart_toEndOf="@+id/bt_detail_category"
+                app:layout_constraintTop_toTopOf="@+id/bt_detail_category" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_detail_category"
+                style="@style/detail_category_button"
+                android:layout_marginStart="@dimen/dimen_24dp"
+                app:layout_constraintStart_toEndOf="@+id/iv_detail_movie_frontpage"
+                app:layout_constraintTop_toTopOf="@+id/iv_detail_movie_frontpage"
+                app:strokeWidth="@dimen/dimen_2dp"
+                android:text="@string/movie_category_example" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
         <View
             android:id="@+id/v_detail_horizontal_line2"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimen_1dp"
-            android:layout_marginTop="@dimen/dimen_24dp"
+            android:layout_marginTop="@dimen/dimen_32dp"
             android:background="@color/soft_gray"
-            app:layout_constraintBottom_toBottomOf="parent"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/iv_detail_movie_frontpage"
+            app:layout_constraintTop_toBottomOf="@+id/cl_detail_movie_description"
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
@@ -192,13 +205,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimen_24dp"
+            android:layout_marginStart="@dimen/dimen_24dp"
             android:text="@string/episodes_guide"
-            android:textStyle="bold"
             android:textSize="@dimen/dimen_22sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/iv_detail_movie_frontpage"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/v_detail_horizontal_line2"
             app:layout_constraintVertical_bias="0.0" />
 

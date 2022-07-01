@@ -9,7 +9,7 @@ import kotlinx.coroutines.runBlocking
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
-class GetTopRatedMovieUseCase {
+class GetTopRatedMovieUseCaseTest {
 
     @Test
     fun `when the api return an empty list`() = runBlocking {

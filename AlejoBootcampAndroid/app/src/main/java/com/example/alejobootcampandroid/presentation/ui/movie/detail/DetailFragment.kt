@@ -40,7 +40,7 @@ class DetailFragment : Fragment() {
 
     fun setDataOnScreen(){
         // receiving argument from search movie screen
-        val movieItem: MovieModel = arguments?.get("movieItem") as MovieModel
+       val movieItem: MovieModel = arguments?.get("movieItem") as MovieModel
 
         //Set movie title
         binding.tvDetailMovieTitle.text = movieItem.title
@@ -64,9 +64,9 @@ class DetailFragment : Fragment() {
 
         //Set movie overview
         binding.tvDetailMovieDescription.text = movieItem.overview
-
+/*
         //Set number of episodes
-        binding.tvDetailEpisodesValue.text = "# Episodes"
+        binding.tvDetailEpisodesValue.text = "# Episodes"*/
     }
 
 
