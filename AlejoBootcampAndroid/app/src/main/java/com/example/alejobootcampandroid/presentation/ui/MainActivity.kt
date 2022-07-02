@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         navView.setupWithNavController(navController)
 
+        this.deleteDatabase("movie_database")
     }
 }
 

@@ -1,9 +1,6 @@
 package com.example.alejobootcampandroid.data.source.database.dao
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.OnConflictStrategy
-import androidx.room.Query
+import androidx.room.*
 import com.example.alejobootcampandroid.data.source.database.entities.MovieEntity
 
 @Dao
@@ -14,4 +11,7 @@ interface MovieDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAllMovies(movies: List<MovieEntity>)
+
+    @Query("DELETE FROM movie_table")
+    suspend fun deleteAllMovies()
 }

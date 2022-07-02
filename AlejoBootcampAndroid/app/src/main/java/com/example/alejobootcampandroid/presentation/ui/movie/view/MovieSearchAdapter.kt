@@ -1,6 +1,5 @@
 package com.example.alejobootcampandroid.presentation.ui.movie.view
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,8 +35,8 @@ class MovieSearchAdapter constructor(private val movieList: List<MovieModel>) :
 
         fun render(movieModel: MovieModel){
             binding.tvMovieTitle.text = movieModel.title
-            binding.tvYear.text = movieModel.release_date
-            Picasso.get().load("${Constants.BASE_IMAGE_URL}${movieModel.backdrop_path}").into(binding.ivMovie)
+            binding.tvYear.text = movieModel.releaseDate
+            Picasso.get().load("${Constants.BASE_IMAGE_URL}${movieModel.backgroundImage}").into(binding.ivMovie)
             itemView.setOnClickListener{
                 val bundle = bundleOf("movieItem" to movieModel)
                 itemView.findNavController().navigate(R.id.navigation_detail,bundle)
