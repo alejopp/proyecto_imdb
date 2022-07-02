@@ -1,5 +1,6 @@
 package com.example.alejobootcampandroid.domain.movie.model
 
+
 import com.example.alejobootcampandroid.data.movie.model.MovieItem
 import com.google.gson.annotations.SerializedName
 
@@ -62,3 +63,4 @@ class MovieTestBuilder {
         return listOf(build())
     }
 }
+

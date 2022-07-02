@@ -1,11 +1,13 @@
 package com.example.alejobootcampandroid.domain.movie.reposirtory
 
+
 import com.example.alejobootcampandroid.data.source.database.entities.MovieEntity
 import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.example.alejobootcampandroid.domain.movie.model.MovieTestBuilder
 import com.example.alejobootcampandroid.domain.movie.repository.MovieRepository
 
 class MovieRepositoryMock: MovieRepository {
+
     override suspend fun getAllMoviesFromApi(listId: Int): List<MovieModel> {
         val movieTestBuilder = MovieTestBuilder()
         var movieListResponse = emptyList<MovieModel>()
@@ -15,6 +17,7 @@ class MovieRepositoryMock: MovieRepository {
                 movieListResponse
             }
             2 -> {
+
                 movieListResponse = movieTestBuilder.buildList()
             }
             3 -> {
@@ -40,4 +43,5 @@ class MovieRepositoryMock: MovieRepository {
     override suspend fun clearMovies() {
         TODO("Not yet implemented")
     }
+
 }

@@ -1,10 +1,12 @@
 package com.example.alejobootcampandroid.domain.use_case.movie
 
+
 import com.example.alejobootcampandroid.data.movie.model.MovieDto
 import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.example.alejobootcampandroid.domain.movie.model.MovieTestBuilder
 import com.example.alejobootcampandroid.domain.movie.reposirtory.MovieRepositoryMock
 import com.example.alejobootcampandroid.domain.movie.repository.MovieRepository
+
 import io.mockk.impl.annotations.RelaxedMockK
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.*
@@ -32,6 +34,7 @@ class GetMoviesUseCaseTest{
         //Action
         val response = movieRepositoryMockito.getAllMoviesFromApi(1)
 
+
         // Assert
         assertEquals(response,extected)
 
@@ -56,6 +59,7 @@ class GetMoviesUseCaseTest{
         //Action
         val response = movieRepositoryMockito.getAllMoviesFromApi(2)
 
+
         // Assert
         assertEquals(response,expected)
 
@@ -72,7 +76,6 @@ class GetMoviesUseCaseTest{
             movieBuild.setId(3).setTitle("7 días bajo la poceta").setBackdropPath("https://www.google.com").setPosterPath("https://www.google.com").setReleaseDate("2000-06-12").setOriginalTitle("7 días bajo la poceta").setDescription("Un hombre pasa 7 días bajo una poceta").setScore(7.8).build(),
             movieBuild.setId(3).setTitle("Betty la fea, la película").setBackdropPath("https://www.google.com").setPosterPath("https://www.google.com").setReleaseDate("2022-10-09").setOriginalTitle("Betty the movie").setDescription("La historia de como una secretaria fea tiene que luchar para triunfar").setScore(9.9).build()
         )
-
 
         val expected = movieListMock
 

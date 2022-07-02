@@ -22,3 +22,4 @@ fun MovieItem.mapToMovieModel() =
 
 fun MovieEntity.mapToMovieModel() =
     MovieModel(id, title, backgroundImage, posterImage, releaseDate, originalTitle, overview, scoreAverage)
+

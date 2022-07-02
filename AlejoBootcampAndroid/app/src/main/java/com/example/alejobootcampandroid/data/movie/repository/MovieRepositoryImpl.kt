@@ -34,6 +34,4 @@ class MovieRepositoryImpl @Inject constructor(private val api: MovieApi, private
     override suspend fun clearMovies() {
         movieDao.deleteAllMovies()
     }
-
-
 }
