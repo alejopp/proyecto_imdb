@@ -1,14 +1,13 @@
 package com.example.alejobootcampandroid.domain.use_case.movie
 
 
-import android.util.Log
-import com.example.alejobootcampandroid.data.source.database.entities.mapToDatabaseEntity
+import com.example.alejobootcampandroid.data.datasources.database.entities.mapToDatabaseEntity
 import com.example.alejobootcampandroid.domain.movie.model.MovieModel
-import com.example.alejobootcampandroid.domain.movie.repository.MovieRepository
+import com.example.alejobootcampandroid.domain.movie.repository.MoviesRepository
 import javax.inject.Inject
 
 class GetMoviesUseCase @Inject constructor(
-    private val movieRepository: MovieRepository, ) {
+    private val movieRepository: MoviesRepository, ) {
 
     suspend operator fun invoke(listId: Int): List<MovieModel>{
         var movieList = movieRepository.getAllMoviesFromDatabase()

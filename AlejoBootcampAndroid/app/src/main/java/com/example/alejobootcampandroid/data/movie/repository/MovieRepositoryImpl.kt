@@ -2,16 +2,15 @@ package com.example.alejobootcampandroid.data.movie.repository
 
 import com.example.alejobootcampandroid.app.Constants
 import com.example.alejobootcampandroid.data.movie.model.MovieDto
-import com.example.alejobootcampandroid.data.movie.model.MovieItem
-import com.example.alejobootcampandroid.data.source.database.dao.MovieDao
-import com.example.alejobootcampandroid.data.source.database.entities.MovieEntity
-import com.example.alejobootcampandroid.data.source.network.MovieApi
+import com.example.alejobootcampandroid.data.datasources.database.dao.MovieDao
+import com.example.alejobootcampandroid.data.datasources.database.entities.MovieEntity
+import com.example.alejobootcampandroid.data.datasources.remote.MovieApi
 import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.example.alejobootcampandroid.domain.movie.model.mapToMovieModel
-import com.example.alejobootcampandroid.domain.movie.repository.MovieRepository
+import com.example.alejobootcampandroid.domain.movie.repository.MoviesRepository
 import javax.inject.Inject
 
-class MovieRepositoryImpl @Inject constructor(private val api: MovieApi, private val movieDao: MovieDao) : MovieRepository {
+class MovieRepositoryImpl @Inject constructor(private val api: MovieApi, private val movieDao: MovieDao) : MoviesRepository {
 
     override suspend fun getAllMoviesFromApi(listId: Int): List<MovieModel> {
         val response: MovieDto = api.getMoviesList(listId,Constants.API_KEY)

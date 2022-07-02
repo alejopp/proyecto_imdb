@@ -3,7 +3,7 @@ package com.example.alejobootcampandroid.di
 import android.content.Context
 import androidx.room.Room
 import com.example.alejobootcampandroid.app.Constants
-import com.example.alejobootcampandroid.data.source.database.MovieDatabase
+import com.example.alejobootcampandroid.data.datasources.database.MovieDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,4 +23,8 @@ object RoomModule {
     @Singleton
     @Provides
     fun provideMovieDao(db: MovieDatabase) = db.getMovieDao()
+
+    @Singleton
+    @Provides
+    fun provideTopRatedMovieDao(db: MovieDatabase) = db.getTopRatedMovieDao()
 }

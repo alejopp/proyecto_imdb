@@ -3,9 +3,9 @@ package com.example.alejobootcampandroid.di
 import com.example.alejobootcampandroid.app.Constants
 import com.example.alejobootcampandroid.data.movie.repository.MovieRepositoryImpl
 import com.example.alejobootcampandroid.data.movie.repository.TopRatedMovieRepositoryImpl
-import com.example.alejobootcampandroid.data.source.database.dao.MovieDao
-import com.example.alejobootcampandroid.data.source.network.MovieApi
-import com.example.alejobootcampandroid.domain.movie.repository.MovieRepository
+import com.example.alejobootcampandroid.data.datasources.database.dao.MovieDao
+import com.example.alejobootcampandroid.data.datasources.remote.MovieApi
+import com.example.alejobootcampandroid.domain.movie.repository.MoviesRepository
 import com.example.alejobootcampandroid.domain.movie.repository.TopRatedMovieRepository
 import dagger.Module
 import dagger.Provides
@@ -31,7 +31,7 @@ object NetworkModule{
 
     @Provides
     @Singleton
-    fun provideMovieRepository(api: MovieApi, movieDao: MovieDao): MovieRepository {
+    fun provideMovieRepository(api: MovieApi, movieDao: MovieDao): MoviesRepository {
         return MovieRepositoryImpl(api, movieDao)
     }
 

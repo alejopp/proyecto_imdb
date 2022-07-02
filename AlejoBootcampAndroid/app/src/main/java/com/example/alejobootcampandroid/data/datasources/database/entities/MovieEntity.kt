@@ -1,9 +1,8 @@
-package com.example.alejobootcampandroid.data.source.database.entities
+package com.example.alejobootcampandroid.data.datasources.database.entities
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.alejobootcampandroid.data.movie.model.MovieItem
 import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 
 @Entity(tableName = "movie_table")

@@ -3,7 +3,7 @@ package com.example.alejobootcampandroid.data.movie.repository
 
 import com.example.alejobootcampandroid.app.Constants
 import com.example.alejobootcampandroid.data.movie.model.TopRatedMovieListResponse
-import com.example.alejobootcampandroid.data.source.network.MovieApi
+import com.example.alejobootcampandroid.data.datasources.remote.MovieApi
 import com.example.alejobootcampandroid.domain.movie.repository.TopRatedMovieRepository
 import javax.inject.Inject
 

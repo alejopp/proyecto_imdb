@@ -2,7 +2,7 @@ package com.example.alejobootcampandroid.domain.movie.model
 
 
 import com.example.alejobootcampandroid.data.movie.model.MovieItem
-import com.example.alejobootcampandroid.data.source.database.entities.MovieEntity
+import com.example.alejobootcampandroid.data.datasources.database.entities.MovieEntity
 import java.io.Serializable
 
 

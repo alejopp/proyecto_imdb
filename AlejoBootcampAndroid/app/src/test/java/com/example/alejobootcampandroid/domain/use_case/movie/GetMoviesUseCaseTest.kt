@@ -4,7 +4,7 @@ import com.example.alejobootcampandroid.data.movie.model.MovieDto
 import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.example.alejobootcampandroid.domain.movie.model.MovieTestBuilder
 import com.example.alejobootcampandroid.domain.movie.reposirtory.MovieRepositoryMock
-import com.example.alejobootcampandroid.domain.movie.repository.MovieRepository
+import com.example.alejobootcampandroid.domain.movie.repository.MoviesRepository
 import io.mockk.impl.annotations.RelaxedMockK
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.*
@@ -13,7 +13,7 @@ import org.junit.Test
 class GetMoviesUseCaseTest{
 
     @RelaxedMockK
-    private lateinit var movieRepository: MovieRepository
+    private lateinit var movieRepository: MoviesRepository
 
     lateinit var getMoviesUseCase: GetMoviesUseCase
 

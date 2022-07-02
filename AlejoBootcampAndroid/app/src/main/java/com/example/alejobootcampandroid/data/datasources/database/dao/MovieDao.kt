@@ -1,7 +1,7 @@
-package com.example.alejobootcampandroid.data.source.database.dao
+package com.example.alejobootcampandroid.data.datasources.database.dao
 
 import androidx.room.*
-import com.example.alejobootcampandroid.data.source.database.entities.MovieEntity
+import com.example.alejobootcampandroid.data.datasources.database.entities.MovieEntity
 
 @Dao
 interface MovieDao {
