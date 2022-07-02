@@ -1,5 +1,9 @@
 package com.example.alejobootcampandroid.domain.movie.model
 
+
+import com.example.alejobootcampandroid.data.movie.model.MovieItem
+import com.google.gson.annotations.SerializedName
+
 class MovieTestBuilder {
     var id = 1
     var title: String = "Eternals"
@@ -50,11 +54,13 @@ class MovieTestBuilder {
         return this
     }
 
-    fun build(): MovieModel{
-        return MovieModel(id,title,backdrop_path,poster_path,release_date,original_title,overview,vote_average)
+    fun build(): MovieModel {
+        return MovieModel(id,
+            title,original_title,overview, poster_path,release_date,title,vote_average)
     }
 
     fun buildList(): List<MovieModel>{
         return listOf(build())
     }
 }
+

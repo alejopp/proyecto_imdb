@@ -4,4 +4,5 @@ data class TopRatedMovieModel(
      val id: Int,
      val title: String,
      val vote_average: Number,
-     val poster_path: String)
+     val poster_path: String,
+     val overview: String)

@@ -30,11 +30,6 @@ class SearchMovieFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
-    //Recycler variables
-    private var recyclerView: RecyclerView? = null
-    private var recyclerViewAdapter: MovieSearchAdapter? = null
-    private var movieList = mutableListOf<MovieModel>()
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
