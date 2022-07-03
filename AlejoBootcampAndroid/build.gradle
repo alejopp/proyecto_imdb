@@ -4,7 +4,8 @@ buildscript {
     repositories {
         // Check that you have the following line (if not, add it):
         google()  // Google's Maven repository
-        jcenter()
+        mavenCentral()
+
     }
     dependencies {
         // Add this line
@@ -23,7 +24,8 @@ allprojects {
     repositories {
         // Check that you have the following line (if not, add it):
          google()  // Google's Maven repository
-        jcenter()
+        mavenCentral()
+
     }
 }
 
@@ -34,6 +36,7 @@ ext {
     hiltVersion = "2.38.1"
     junitVersion = "4.13.2"
     mockVersion = "1.12.2"
+    roomVersion = "2.4.2"
 }
 
 task clean(type: Delete) {

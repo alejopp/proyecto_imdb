@@ -1,7 +1,6 @@
 package com.example.alejobootcampandroid.presentation.ui.movie.detail
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -40,33 +39,33 @@ class DetailFragment : Fragment() {
 
     fun setDataOnScreen(){
         // receiving argument from search movie screen
-        val movieItem: MovieModel = arguments?.get("movieItem") as MovieModel
+       val movieItem: MovieModel = arguments?.get("movieItem") as MovieModel
 
         //Set movie title
         binding.tvDetailMovieTitle.text = movieItem.title
 
         //Set movie original title
-        binding.tvDetailOriginalTitle.text = "${movieItem.original_title} (${getString(R.string.original_title)})"
+        binding.tvDetailOriginalTitle.text = "${movieItem.originalTitle} (${getString(R.string.original_title)})"
 
         //Set release date
-        binding.tvDetailMovieYear.text = "${getString(R.string.film_from)} ${movieItem.release_date}"
+        binding.tvDetailMovieYear.text = "${getString(R.string.film_from)} ${movieItem.releaseDate}"
 
         // Set image background
-        Picasso.get().load("${Constants.BASE_IMAGE_URL}${movieItem.backdrop_path}")
+        Picasso.get().load("${Constants.BASE_IMAGE_URL}${movieItem.backgroundImage}")
             .into(binding.ivDetailMovieTrailer)
 
         //Set poster image
-        Picasso.get().load("${Constants.BASE_IMAGE_URL}${movieItem.poster_path}")
+        Picasso.get().load("${Constants.BASE_IMAGE_URL}${movieItem.posterImage}")
             .into(binding.ivDetailMovieFrontpage)
 
         //Set movie score
-        binding.tvDetailScore.text = movieItem.vote_average.toString()
+        binding.tvDetailScore.text = movieItem.scoreAverage.toString()
 
         //Set movie overview
         binding.tvDetailMovieDescription.text = movieItem.overview
-
+/*
         //Set number of episodes
-        binding.tvDetailEpisodesValue.text = "# Episodes"
+        binding.tvDetailEpisodesValue.text = "# Episodes"*/
     }
 
 

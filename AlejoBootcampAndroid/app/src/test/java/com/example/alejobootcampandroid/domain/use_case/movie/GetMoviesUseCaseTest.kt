@@ -1,19 +1,15 @@
 package com.example.alejobootcampandroid.domain.use_case.movie
 
-import android.util.Log
-import com.example.alejobootcampandroid.data.movie.model.MovieListResponse
+
+import com.example.alejobootcampandroid.data.movie.model.MovieDto
 import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.example.alejobootcampandroid.domain.movie.model.MovieTestBuilder
 import com.example.alejobootcampandroid.domain.movie.reposirtory.MovieRepositoryMock
 import com.example.alejobootcampandroid.domain.movie.repository.MovieRepository
-import io.mockk.MockKAnnotations
-import io.mockk.coEvery
-import io.mockk.coVerify
+
 import io.mockk.impl.annotations.RelaxedMockK
 import kotlinx.coroutines.runBlocking
-import org.junit.Assert
 import org.junit.Assert.*
-import org.junit.Before
 import org.junit.Test
 
 class GetMoviesUseCaseTest{
@@ -33,10 +29,11 @@ class GetMoviesUseCaseTest{
     fun `when the api send an empty list`() = runBlocking{
         //Arrange
         val movieRepositoryMockito = MovieRepositoryMock()
-        val extected = MovieListResponse(emptyList())
+        val extected = MovieDto(emptyList())
 
         //Action
-        val response = movieRepositoryMockito.getAllMovies(1)
+        val response = movieRepositoryMockito.getAllMoviesFromApi(1)
+
 
         // Assert
         assertEquals(response,extected)
@@ -57,10 +54,11 @@ class GetMoviesUseCaseTest{
             .setDescription("The Eternals are a team of ancient aliens who have been living on Earth in secret for thousands of years. When an unexpected tragedy forces them out of the shadows, they are forced to reunite against mankind’s most ancient enemy, the Deviants.")
             .setScore(7.7).buildList()
 
-        val expected = MovieListResponse(movieBuild)
+        val expected = movieBuild
 
         //Action
-        val response = movieRepositoryMockito.getAllMovies(2)
+        val response = movieRepositoryMockito.getAllMoviesFromApi(2)
+
 
         // Assert
         assertEquals(response,expected)
@@ -79,11 +77,10 @@ class GetMoviesUseCaseTest{
             movieBuild.setId(3).setTitle("Betty la fea, la película").setBackdropPath("https://www.google.com").setPosterPath("https://www.google.com").setReleaseDate("2022-10-09").setOriginalTitle("Betty the movie").setDescription("La historia de como una secretaria fea tiene que luchar para triunfar").setScore(9.9).build()
         )
 
-
-        val expected = MovieListResponse(movieListMock)
+        val expected = movieListMock
 
         //Action
-        val response = movieRepositoryMockito.getAllMovies(3)
+        val response = movieRepositoryMockito.getAllMoviesFromApi(3)
 
         // Assert
         assertEquals(response,expected)
