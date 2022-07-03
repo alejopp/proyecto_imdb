@@ -17,7 +17,6 @@ class GetMoviesUseCase @Inject constructor(
             movieList
         } else{
             movieList = movieRemoteRepository.getAllMovies(listId)
-            //movieLocalRepository.insertMovies(movieList)
             insertMoviesUseCase(movieList)
             movieList
         }

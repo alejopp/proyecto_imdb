@@ -1,5 +1,6 @@
 package com.example.alejobootcampandroid.data.datasources.remote
 
+import com.example.alejobootcampandroid.data.movie.model.MovieGenresResponse
 import com.example.alejobootcampandroid.data.movie.model.MovieListResponse
 import com.example.alejobootcampandroid.data.movie.model.TopRatedMovieListResponse
 import com.example.alejobootcampandroid.data.movie.model.dto.MovieDto
@@ -20,4 +21,9 @@ interface MovieApiService {
     suspend fun getTopRatedMoviesList(
         @Query("api_key") apiKey: String?
     ): TopRatedMovieListResponse
+
+    @GET("genre/movie/list")
+    suspend fun getMoviesGenresList(
+        @Query("api_key") apiKey: String?
+    ): MovieGenresResponse
 }
