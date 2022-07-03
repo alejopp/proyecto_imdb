@@ -2,15 +2,13 @@ package com.example.alejobootcampandroid.data.datasources.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.example.alejobootcampandroid.data.datasources.database.dao.MovieDao
-import com.example.alejobootcampandroid.data.datasources.database.dao.TopRatedMovieDao
+import com.example.alejobootcampandroid.data.datasources.database.dao.MoviesDao
 import com.example.alejobootcampandroid.data.datasources.database.entities.MovieEntity
+import com.example.alejobootcampandroid.data.datasources.database.entities.TopRatedMovieEntity
 
-@Database(entities = [MovieEntity::class], version = 1)
+@Database(entities = [MovieEntity::class, TopRatedMovieEntity::class], version = 1)
 abstract  class MovieDatabase: RoomDatabase() {
 
-    abstract fun getMovieDao(): MovieDao
-
-    abstract fun getTopRatedMovieDao(): TopRatedMovieDao
+    abstract fun getMovieDao(): MoviesDao
 
 }

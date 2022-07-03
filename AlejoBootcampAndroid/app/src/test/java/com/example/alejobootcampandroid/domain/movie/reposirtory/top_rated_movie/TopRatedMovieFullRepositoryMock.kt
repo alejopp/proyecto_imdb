@@ -2,7 +2,6 @@ package com.example.alejobootcampandroid.domain.movie.reposirtory.top_rated_movi
 
 import com.example.alejobootcampandroid.data.movie.model.TopRatedMovieListResponse
 import com.example.alejobootcampandroid.domain.movie.model.TopRatedMovieTestBuilder
-import com.example.alejobootcampandroid.domain.movie.repository.TopRatedMovieRepository
 
 class TopRatedMovieFullRepositoryMock: TopRatedMovieRepository{
 

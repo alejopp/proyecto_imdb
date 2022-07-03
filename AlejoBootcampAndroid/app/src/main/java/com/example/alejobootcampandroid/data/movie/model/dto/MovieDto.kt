@@ -1,14 +1,8 @@
-package com.example.alejobootcampandroid.data.movie.model
+package com.example.alejobootcampandroid.data.movie.model.dto
 
-import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.google.gson.annotations.SerializedName
 
-data class MovieDto(
-    @SerializedName("items")
-    var moviesList: List<MovieItem>
-)
-
-data class MovieItem(
+class MovieDto (
     @SerializedName("backdrop_path")
     val backgroundImage: String,
     @SerializedName("genre_ids")

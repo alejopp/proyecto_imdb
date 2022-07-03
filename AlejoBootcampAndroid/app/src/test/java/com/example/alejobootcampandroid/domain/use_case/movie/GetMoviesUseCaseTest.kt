@@ -1,10 +1,10 @@
 package com.example.alejobootcampandroid.domain.use_case.movie
 
-import com.example.alejobootcampandroid.data.movie.model.MovieDto
+import com.example.alejobootcampandroid.data.movie.model.MovieListResponse
 import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.example.alejobootcampandroid.domain.movie.model.MovieTestBuilder
-import com.example.alejobootcampandroid.domain.movie.reposirtory.MovieRepositoryMock
-import com.example.alejobootcampandroid.domain.movie.repository.MoviesRepository
+import com.example.alejobootcampandroid.domain.movie.reposirtory.MovieLocalRepositoryMock
+import com.example.alejobootcampandroid.domain.movie.repository.MoviesLocalRepository
 import io.mockk.impl.annotations.RelaxedMockK
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.*
@@ -13,7 +13,7 @@ import org.junit.Test
 class GetMoviesUseCaseTest{
 
     @RelaxedMockK
-    private lateinit var movieRepository: MoviesRepository
+    private lateinit var movieRepository: MoviesLocalRepository
 
     lateinit var getMoviesUseCase: GetMoviesUseCase
 
@@ -26,8 +26,8 @@ class GetMoviesUseCaseTest{
     @Test
     fun `when the api send an empty list`() = runBlocking{
         //Arrange
-        val movieRepositoryMockito = MovieRepositoryMock()
-        val extected = MovieDto(emptyList())
+        val movieRepositoryMockito = MovieLocalRepositoryMock()
+        val extected = MovieListResponse(emptyList())
 
         //Action
         val response = movieRepositoryMockito.getAllMoviesFromApi(1)
@@ -40,7 +40,7 @@ class GetMoviesUseCaseTest{
     @Test
     fun `when the api send a default movie`() = runBlocking{
         //Arrange
-        val movieRepositoryMockito = MovieRepositoryMock()
+        val movieRepositoryMockito = MovieLocalRepositoryMock()
         val movieBuild = MovieTestBuilder()
             .setId(1)
             .setTitle("Eternals")
@@ -65,7 +65,7 @@ class GetMoviesUseCaseTest{
     @Test
     fun `when the api return a completed list of movies`() = runBlocking{
         //Arrange
-        val movieRepositoryMockito = MovieRepositoryMock()
+        val movieRepositoryMockito = MovieLocalRepositoryMock()
         val movieBuild = MovieTestBuilder()
         val movieListMock = listOf<MovieModel>(
             movieBuild.setId(3).setTitle("La última patada del mocho").setBackdropPath("https://www.google.com").setPosterPath("https://www.google.com").setReleaseDate("1980-12-12").setOriginalTitle("La última patada del mocho").setDescription("Un hombre mocho da su última patada").setScore(7.8).build(),

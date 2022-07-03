@@ -1,8 +1,7 @@
 package com.example.alejobootcampandroid.domain.movie.model
 
-
-import com.example.alejobootcampandroid.data.movie.model.MovieItem
 import com.example.alejobootcampandroid.data.datasources.database.entities.MovieEntity
+import com.example.alejobootcampandroid.data.movie.model.dto.MovieDto
 import java.io.Serializable
 
 
@@ -17,8 +16,8 @@ data class MovieModel(
     val scoreAverage: Float
     ): Serializable
 
-fun MovieItem.mapToMovieModel() =
+fun MovieDto.asDomainModel() =
     MovieModel(id, title, backgroundImage, posterImage, releaseDate, originalTitle, overview, scoreAverage)
 
-fun MovieEntity.mapToMovieModel() =
+fun MovieEntity.asDomainModel() =
     MovieModel(id, title, backgroundImage, posterImage, releaseDate, originalTitle, overview, scoreAverage)

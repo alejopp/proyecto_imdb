@@ -42,7 +42,7 @@ class HomeViewModel @Inject constructor(
             _status.value = MovieApiStatus.LOADING
             try {
                 val listResult = getTopRatedMovieUseCase()
-                _topRatedMovies.value = listResult.topRatedMoviesList
+                _topRatedMovies.value = listResult
                 _status.value = MovieApiStatus.DONE
             } catch (e: Exception) {
                 _status.value = MovieApiStatus.ERROR

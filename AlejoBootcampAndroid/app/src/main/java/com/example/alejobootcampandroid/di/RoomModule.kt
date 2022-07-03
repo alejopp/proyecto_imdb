@@ -24,7 +24,4 @@ object RoomModule {
     @Provides
     fun provideMovieDao(db: MovieDatabase) = db.getMovieDao()
 
-    @Singleton
-    @Provides
-    fun provideTopRatedMovieDao(db: MovieDatabase) = db.getTopRatedMovieDao()
 }

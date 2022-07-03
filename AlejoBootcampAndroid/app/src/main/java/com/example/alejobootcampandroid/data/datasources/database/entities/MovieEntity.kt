@@ -17,7 +17,7 @@ data class MovieEntity(
     @ColumnInfo(name = "score_average")val scoreAverage: Float
     )
 
-fun MovieModel.mapToDatabaseEntity() = MovieEntity(
+fun MovieModel.asEntityModel() = MovieEntity(
     id = id,
     title = title,
     backgroundImage = backgroundImage,

@@ -1,12 +1,12 @@
 package com.example.alejobootcampandroid.di
 
 import com.example.alejobootcampandroid.app.Constants
-import com.example.alejobootcampandroid.data.movie.repository.MovieRepositoryImpl
-import com.example.alejobootcampandroid.data.movie.repository.TopRatedMovieRepositoryImpl
-import com.example.alejobootcampandroid.data.datasources.database.dao.MovieDao
-import com.example.alejobootcampandroid.data.datasources.remote.MovieApi
-import com.example.alejobootcampandroid.domain.movie.repository.MoviesRepository
-import com.example.alejobootcampandroid.domain.movie.repository.TopRatedMovieRepository
+import com.example.alejobootcampandroid.data.movie.repositoies.MoviesLocalRepositoryImpl
+import com.example.alejobootcampandroid.data.datasources.database.dao.MoviesDao
+import com.example.alejobootcampandroid.data.datasources.remote.MovieApiService
+import com.example.alejobootcampandroid.data.movie.repositoies.MoviesRemoteRepositoryImpl
+import com.example.alejobootcampandroid.domain.movie.repository.MoviesLocalRepository
+import com.example.alejobootcampandroid.domain.movie.repository.MoviesRemoteRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -21,24 +21,23 @@ object NetworkModule{
 
     @Provides
     @Singleton
-    fun provideMovieApi(): MovieApi {
+    fun provideMovieApi(): MovieApiService {
         return Retrofit.Builder()
             .baseUrl(Constants.MOVIE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create(MovieApi::class.java)
+            .create(MovieApiService::class.java)
     }
 
     @Provides
     @Singleton
-    fun provideMovieRepository(api: MovieApi, movieDao: MovieDao): MoviesRepository {
-        return MovieRepositoryImpl(api, movieDao)
+    fun provideMoviesLocalRepository(moviesDao: MoviesDao): MoviesLocalRepository {
+        return MoviesLocalRepositoryImpl( moviesDao)
     }
 
     @Provides
     @Singleton
-    fun provideTopRatedMovieRepository(api: MovieApi): TopRatedMovieRepository {
-        return TopRatedMovieRepositoryImpl(api)
+    fun provideMoviesRemoteRepository(apiService: MovieApiService): MoviesRemoteRepository {
+        return MoviesRemoteRepositoryImpl(apiService)
     }
-
 }

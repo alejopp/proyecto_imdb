@@ -1,18 +1,20 @@
 package com.example.alejobootcampandroid.data.datasources.remote
 
-import com.example.alejobootcampandroid.data.movie.model.MovieDto
+import com.example.alejobootcampandroid.data.movie.model.MovieListResponse
 import com.example.alejobootcampandroid.data.movie.model.TopRatedMovieListResponse
+import com.example.alejobootcampandroid.data.movie.model.dto.MovieDto
+import com.example.alejobootcampandroid.data.movie.model.dto.TopRatedMovieDto
 
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
 
-interface MovieApi {
+interface MovieApiService {
     @GET("list/{id}")
     suspend fun getMoviesList(
         @Path("id") listId : Int?,
         @Query("api_key") apiKey: String?
-    ): MovieDto
+    ): MovieListResponse
 
     @GET("movie/top_rated")
     suspend fun getTopRatedMoviesList(
