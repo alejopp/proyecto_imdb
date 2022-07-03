@@ -9,19 +9,19 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.example.alejobootcampandroid.R
-import com.example.alejobootcampandroid.databinding.ActivitySearchBinding
+import com.example.alejobootcampandroid.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivitySearchBinding
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.Theme_PracticeGroupApplication)
         super.onCreate(savedInstanceState)
-        binding = ActivitySearchBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 

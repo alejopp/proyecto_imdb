@@ -41,7 +41,7 @@ class MovieViewModel @Inject constructor(private val getMoviesUseCase: GetMovies
         _status.value = MovieApiStatus.LOADING
         viewModelScope.launch {
             try {
-                val listResult = getMoviesUseCase(1)
+                val listResult = getMoviesUseCase(3)
                 _movies.value = listResult
                 moviesCopy = listResult
                 _status.value = MovieApiStatus.DONE

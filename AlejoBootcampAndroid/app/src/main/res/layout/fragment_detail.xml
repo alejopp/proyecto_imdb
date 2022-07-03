@@ -37,7 +37,7 @@
                 android:gravity="center"
                 android:padding="@dimen/margin_bottom_8"
                 android:textSize="@dimen/dimen_24sp"
-                android:text="@string/movie_example_text" />
+                tools:text="@string/movie_example_text" />
         </androidx.appcompat.widget.Toolbar>
 
         <View
@@ -86,7 +86,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tv_detail_movie_title"
             app:layout_constraintTop_toBottomOf="@+id/v_detail_vertical_line1"
-            android:text="The queens Gambit (título original)" />
+            tools:text="The queens Gambit (título original)" />
 
         <TextView
             android:id="@+id/tv_detail_movie_year"
@@ -99,7 +99,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tv_detail_movie_title"
             app:layout_constraintTop_toBottomOf="@+id/tv_detail_original_title"
-            android:text="Miniserie de TV 2020-2020 16" />
+            tools:text="Miniserie de TV 2020-2020 16" />
 
         <ImageView
             android:id="@+id/iv_detail_movie_trailer"
@@ -113,18 +113,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_detail_movie_year"
             app:layout_constraintVertical_bias="0.0"
-            android:src="@drawable/gambito" />
+            tools:src="@drawable/gambito" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_detail_movie_description"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_24dp"
+            app:layout_constraintBottom_toTopOf="@id/v_detail_horizontal_line2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/iv_detail_movie_trailer"
-            app:layout_constraintBottom_toTopOf="@id/v_detail_horizontal_line2"
-            android:layout_marginTop="@dimen/dimen_24dp"
-            >
+            app:layout_constraintTop_toBottomOf="@id/iv_detail_movie_trailer">
 
             <ImageView
                 android:id="@+id/iv_detail_movie_frontpage"
@@ -139,7 +138,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
-                android:src="@drawable/gambito_portriat" />
+                tools:src="@drawable/gambito_portriat" />
 
             <TextView
                 android:id="@+id/tv_detail_movie_description"
@@ -161,8 +160,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen_4dp"
                 app:layout_constraintBottom_toBottomOf="@+id/iv_detail_star_icon"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/iv_detail_star_icon"
                 app:layout_constraintTop_toTopOf="@+id/iv_detail_star_icon"
                 tools:text="5.0" />
@@ -181,10 +178,10 @@
                 android:id="@+id/bt_detail_category"
                 style="@style/detail_category_button"
                 android:layout_marginStart="@dimen/dimen_24dp"
+                android:text="@string/movie_category_example"
                 app:layout_constraintStart_toEndOf="@+id/iv_detail_movie_frontpage"
                 app:layout_constraintTop_toTopOf="@+id/iv_detail_movie_frontpage"
-                app:strokeWidth="@dimen/dimen_2dp"
-                android:text="@string/movie_category_example" />
+                app:strokeWidth="@dimen/dimen_2dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -205,8 +202,8 @@
             android:id="@+id/tv_detail_episode_guide"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_24dp"
             android:layout_marginStart="@dimen/dimen_24dp"
+            android:layout_marginTop="@dimen/dimen_24dp"
             android:text="@string/episodes_guide"
             android:textSize="@dimen/dimen_22sp"
             android:textStyle="bold"
@@ -221,12 +218,12 @@
             android:id="@+id/tv_detail_episodes_value"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@string/number_of_episodes_example"
             app:layout_constraintBottom_toBottomOf="@+id/tv_detail_episode_guide"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.6"
             app:layout_constraintStart_toEndOf="@+id/tv_detail_episode_guide"
-            app:layout_constraintTop_toTopOf="@+id/tv_detail_episode_guide"
-            android:text="@string/number_of_episodes_example" />
+            app:layout_constraintTop_toTopOf="@+id/tv_detail_episode_guide" />
 
         <ImageView
             android:id="@+id/iv_detail_arrow_forward_icon"

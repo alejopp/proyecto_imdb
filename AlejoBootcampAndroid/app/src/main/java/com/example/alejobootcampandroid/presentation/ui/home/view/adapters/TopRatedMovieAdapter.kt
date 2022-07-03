@@ -28,9 +28,9 @@ class TopRatedMovieAdapter(val topRatedMoviesList: List<TopRatedMovieModel>):
     inner class BestSelectionViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val binding = ItemBestSelectionsBinding.bind(itemView)
         fun render(bestSelectionItem: TopRatedMovieModel) {
-            binding.tvHomeMovieScore.text = bestSelectionItem.vote_average.toString()
+            binding.tvHomeMovieScore.text = bestSelectionItem.scoreAverage.toString()
             binding.tvHomeBestselectionMovieTitle.text = bestSelectionItem.title
-            Picasso.get().load("${Constants.BASE_IMAGE_URL}${bestSelectionItem.poster_path}")
+            Picasso.get().load("${Constants.BASE_IMAGE_URL}${bestSelectionItem.posterImage}")
                 .into(binding.ivHomeBestSelection)
         }
 
