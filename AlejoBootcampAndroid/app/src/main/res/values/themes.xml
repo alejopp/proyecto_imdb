@@ -24,4 +24,10 @@
     <style name="SplashTheme" parent="Theme.PracticeGroupApplication">
         <item name="android:windowBackground">@drawable/splash_screen</item>
     </style>
+
+    <style name="Theme.PracticeGroupApplication.NoActionbar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
 </resources>
