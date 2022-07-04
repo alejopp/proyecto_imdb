@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.app.Constants
 import com.example.alejobootcampandroid.databinding.FragmentDetailBinding
@@ -35,6 +36,13 @@ class DetailFragment : Fragment() {
 
         //Fill screen's elements
         setDataOnScreen()
+
+        //Set arrow back event
+        binding.toolbarDetail.setOnMenuItemClickListener{ arrowBack ->
+            onOptionsItemSelected(arrowBack).also {
+                findNavController().navigate(R.id.action_detail_to_search)
+            }
+        }
     }
 
     private fun setDataOnScreen(){

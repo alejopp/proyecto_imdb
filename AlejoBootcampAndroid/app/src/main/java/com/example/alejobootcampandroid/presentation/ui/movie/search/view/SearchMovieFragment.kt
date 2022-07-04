@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alejobootcampandroid.domain.movie.model.MovieModel
@@ -37,20 +38,7 @@ class SearchMovieFragment : Fragment() {
     ): View {
         _binding = FragmentSearchMovieBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-        //Add Toolbar
-        val toolbar = binding.toolbarSearchFragment
-        toolbar.inflateMenu(R.menu.top_bar_menu)
-
-        // Watching the status from api's call
-/*        movieViewModel.status.observe(viewLifecycleOwner, Observer { status ->
-            Log.i("INFO", "Status: $status")
-            when(status){
-                MovieApiStatus.LOADING -> binding.ivSearchStatus.visibility = View.VISIBLE
-                MovieApiStatus.DONE -> binding.ivSearchStatus.visibility = View.GONE
-            }
-        })*/
-
+        
         movieViewModel.getMoviesFromRepository()
         movieViewModel.movies.observe(viewLifecycleOwner, Observer { movies ->
             binding.rvSearchMovies.also {
@@ -65,6 +53,7 @@ class SearchMovieFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //Set search bar action event
         binding.etvSearchMovie.addTextChangedListener(object: TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
@@ -75,7 +64,6 @@ class SearchMovieFragment : Fragment() {
             override fun afterTextChanged(s: Editable?) {}
 
         })
-
     }
 
     override fun onDestroyView() {

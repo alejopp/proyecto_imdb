@@ -9,6 +9,7 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.app.Constants
+import com.example.alejobootcampandroid.app.DateFormatter
 import com.example.alejobootcampandroid.databinding.ItemMovieBinding
 import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.squareup.picasso.Picasso
@@ -36,7 +37,7 @@ class MovieSearchAdapter constructor(private val movieList: List<MovieModel>) :
 
         fun render(movieModel: MovieModel){
             binding.tvMovieTitle.text = movieModel.title
-            binding.tvYear.text = movieModel.releaseDate
+            binding.tvYear.text = DateFormatter.getYear(movieModel.releaseDate)
             Picasso.get().load("${Constants.BASE_IMAGE_URL}${movieModel.backgroundImage}").into(binding.ivMovie)
             itemView.setOnClickListener{
                 val bundle = bundleOf("movieItem" to movieModel)
