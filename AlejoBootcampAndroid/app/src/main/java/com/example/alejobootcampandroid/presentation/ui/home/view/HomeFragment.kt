@@ -34,12 +34,12 @@ class HomeFragment : Fragment() {
             }
         })
 
-        homeViewModel.status.observe(viewLifecycleOwner, Observer { status ->
+/*        homeViewModel.status.observe(viewLifecycleOwner, Observer { status ->
             when(status){
                 MovieApiStatus.LOADING -> binding.ivHomeStatus.visibility = View.VISIBLE
                 MovieApiStatus.DONE -> binding.ivHomeStatus.visibility = View.GONE
             }
-        })
+        })*/
 
         homeViewModel.getTopRatedMoviesFromRepository()
         homeViewModel.topRatedMovie.observe(viewLifecycleOwner, Observer { topRatedMovies ->

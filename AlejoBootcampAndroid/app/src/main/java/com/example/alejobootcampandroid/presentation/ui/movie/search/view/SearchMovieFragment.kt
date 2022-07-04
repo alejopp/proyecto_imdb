@@ -43,13 +43,13 @@ class SearchMovieFragment : Fragment() {
         toolbar.inflateMenu(R.menu.top_bar_menu)
 
         // Watching the status from api's call
-        movieViewModel.status.observe(viewLifecycleOwner, Observer { status ->
+/*        movieViewModel.status.observe(viewLifecycleOwner, Observer { status ->
             Log.i("INFO", "Status: $status")
             when(status){
                 MovieApiStatus.LOADING -> binding.ivSearchStatus.visibility = View.VISIBLE
                 MovieApiStatus.DONE -> binding.ivSearchStatus.visibility = View.GONE
             }
-        })
+        })*/
 
         movieViewModel.getMoviesFromRepository()
         movieViewModel.movies.observe(viewLifecycleOwner, Observer { movies ->
