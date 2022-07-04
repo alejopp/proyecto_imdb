@@ -6,6 +6,7 @@ buildscript {
         // Check that you have the following line (if not, add it):
         google()  // Google's Maven repository
         mavenCentral()
+
     }
     dependencies {
         // Add this line
@@ -26,6 +27,7 @@ allprojects {
         // Check that you have the following line (if not, add it):
          google()  // Google's Maven repository
         mavenCentral()
+
     }
 }
 

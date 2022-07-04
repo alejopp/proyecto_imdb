@@ -90,8 +90,6 @@ dependencies {
     implementation 'androidx.room:room-ktx:2.4.2'
     implementation "androidx.core:core-ktx:1.8.0"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-
-
 }
 
 kapt {
@@ -100,4 +98,5 @@ kapt {
 
 repositories {
     mavenCentral()
+
 }
