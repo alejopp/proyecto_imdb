@@ -19,10 +19,6 @@ class HomeViewModel @Inject constructor(
     private val getTopRatedMovieUseCase: GetTopRatedMovieUseCase
     ) : ViewModel() {
 
-    private val _movieTrailer = MutableLiveData<List<MovieTrailerModel>>()
-    val movieTrailer: LiveData<List<MovieTrailerModel>>
-        get() = _movieTrailer
-
     private val _topRatedMovies = MutableLiveData<List<TopRatedMovieModel>>()
     val topRatedMovie: LiveData<List<TopRatedMovieModel>>
         get() = _topRatedMovies
@@ -31,9 +27,6 @@ class HomeViewModel @Inject constructor(
     val status : LiveData<MovieApiStatus>
         get() = _status
 
-    fun getMovieTrailers(){
-        _movieTrailer.value = MovieTrailerProvider.movieTrailerList
-    }
 
     fun getTopRatedMoviesFromRepository(){
         Log.i("INFO","Entro aquí")

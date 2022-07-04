@@ -79,7 +79,7 @@
     <dimen name="iv_secondary_image_width">110dp</dimen>
     <dimen name="ic_star_width">35dp</dimen>
     <dimen name="iv_itemmovie_width">90dp</dimen>
-
+    <dimen name="collapsivetoolbar_height">300dp</dimen>
 
 
 </resources>

@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.app.MovieApiStatus
 import com.example.alejobootcampandroid.presentation.ui.home.view.adapters.TopRatedMovieAdapter
 import com.example.alejobootcampandroid.presentation.ui.home.view.adapters.MovieTrailerAdapter
@@ -27,19 +28,9 @@ class HomeFragment : Fragment() {
     {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        homeViewModel.getMovieTrailers()
-        homeViewModel.movieTrailer.observe(viewLifecycleOwner, Observer { movieTrailers ->
-            binding.rvHomeMovieTrailer.also {
-                it.adapter = MovieTrailerAdapter(movieTrailers)
-            }
-        })
-
-        homeViewModel.status.observe(viewLifecycleOwner, Observer { status ->
-            when(status){
-                MovieApiStatus.LOADING -> binding.ivHomeStatus.visibility = View.VISIBLE
-                MovieApiStatus.DONE -> binding.ivHomeStatus.visibility = View.GONE
-            }
-        })
+        //Add Toolbar
+        val toolbar = binding.tbHomeAppTitle
+        toolbar.setTitle("Title")
 
         homeViewModel.getTopRatedMoviesFromRepository()
         homeViewModel.topRatedMovie.observe(viewLifecycleOwner, Observer { topRatedMovies ->

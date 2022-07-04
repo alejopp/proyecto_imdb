@@ -1,7 +1,7 @@
 package com.example.alejobootcampandroid.domain.movie.model
 
 class TopRatedMovieTestBuilder {
-    var id: Int = 1
+   /* var id: Int = 1
     var title: String = "Schindlers list"
     var vote_average: Number =  8.6
     var poster_path: String = "/loRmRzQXZeqG78TqZuyvSlEQfZb.jpg"
@@ -40,5 +40,5 @@ class TopRatedMovieTestBuilder {
 
     fun buildList(): List<TopRatedMovieModel>{
         return listOf(build())
-    }
+    }*/
 }

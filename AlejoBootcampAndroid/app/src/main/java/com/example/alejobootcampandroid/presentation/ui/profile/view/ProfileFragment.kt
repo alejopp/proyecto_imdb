@@ -1,32 +1,26 @@
 package com.example.alejobootcampandroid.presentation.ui.profile.view
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.FragmentProfileBinding
-import com.example.alejobootcampandroid.data.profile.ProfileOptionsProvider
 import com.example.alejobootcampandroid.presentation.ui.profile.view.adapters.ProfileOptionsAdapter
 import com.example.alejobootcampandroid.presentation.ui.profile.viewmodel.ProfileViewModel
-import com.example.alejobootcampandroid.presentation.ui.profile.viewmodel.ProfileViewModelFactory
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class ProfileFragment : Fragment() {
 
     private var _binding: FragmentProfileBinding? = null
     private val binding get() = _binding!! // This property is only valid between onCreateView and onDestroyView.
-    private lateinit var profileViewModelFactory : ProfileViewModelFactory
-    private lateinit var profileViewModel : ProfileViewModel
+    private val profileViewModel : ProfileViewModel by viewModels()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        //Set viewmodel and viewmodel factory
-        profileViewModelFactory = ProfileViewModelFactory()
-        profileViewModel = ViewModelProvider(this,profileViewModelFactory).get(ProfileViewModel::class.java)
 
         //Inflate layout
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
