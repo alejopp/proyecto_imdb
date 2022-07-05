@@ -1,12 +1,8 @@
 package com.example.alejobootcampandroid.presentation.ui
 
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuInflater
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.ActivityMainBinding

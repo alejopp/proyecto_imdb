@@ -3,7 +3,6 @@ package com.example.alejobootcampandroid.data.datasources.database.entities
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.example.alejobootcampandroid.domain.movie.model.TopRatedMovieModel
 
 @Entity(tableName = "top_rated_movie_table")

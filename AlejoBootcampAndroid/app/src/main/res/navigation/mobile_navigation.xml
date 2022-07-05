@@ -7,26 +7,26 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.alejobootcampandroid.presentation.ui.home.view.HomeFragment"
+        android:name="com.example.alejobootcampandroid.presentation.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_search"
-        android:name="com.example.alejobootcampandroid.presentation.ui.movie.search.view.SearchMovieFragment"
+        android:name="com.example.alejobootcampandroid.presentation.ui.search.SearchMovieFragment"
         android:label="@string/title_search"
         tools:layout="@layout/fragment_search_movie" >
     </fragment>
 
     <fragment
         android:id="@+id/navigation_user"
-        android:name="com.example.alejobootcampandroid.presentation.ui.profile.view.ProfileFragment"
+        android:name="com.example.alejobootcampandroid.presentation.ui.profile.ProfileFragment"
         android:label="@string/user"
         tools:layout="@layout/fragment_profile"/>
 
     <fragment
         android:id="@+id/navigation_detail"
-        android:name="com.example.alejobootcampandroid.presentation.ui.movie.detail.DetailFragment"
+        android:name="com.example.alejobootcampandroid.presentation.ui.search.movie.detail.DetailFragment"
         android:label="@string/detail"
         tools:layout="@layout/fragment_detail" >
         <action
@@ -40,7 +40,7 @@
 
     <fragment
         android:id="@+id/navigation_login"
-        android:name="com.example.alejobootcampandroid.presentation.ui.login.view.LoginFragment"
+        android:name="com.example.alejobootcampandroid.presentation.ui.login.LoginFragment"
         android:label="@string/login"
         tools:layout="@layout/fragment_login">
         <action
@@ -54,7 +54,7 @@
 
     <fragment
         android:id="@+id/navigation_signup"
-        android:name="com.example.alejobootcampandroid.presentation.ui.signup.view.SignUp"
+        android:name="com.example.alejobootcampandroid.presentation.ui.signup.SignUp"
         android:label="@string/txt_signup"
         tools:layout="@layout/fragment_sign_up">
         <action

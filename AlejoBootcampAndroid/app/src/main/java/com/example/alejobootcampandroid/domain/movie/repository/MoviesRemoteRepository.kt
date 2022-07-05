@@ -1,7 +1,5 @@
 package com.example.alejobootcampandroid.domain.movie.repository
 
-import com.example.alejobootcampandroid.data.movie.model.MovieListResponse
-import com.example.alejobootcampandroid.data.movie.model.TopRatedMovieListResponse
 import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.example.alejobootcampandroid.domain.movie.model.TopRatedMovieModel
 

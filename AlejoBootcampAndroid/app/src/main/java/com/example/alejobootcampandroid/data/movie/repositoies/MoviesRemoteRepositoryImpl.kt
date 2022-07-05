@@ -1,13 +1,10 @@
 package com.example.alejobootcampandroid.data.movie.repositoies
 
-import android.util.Log
 import com.example.alejobootcampandroid.app.Constants
 import com.example.alejobootcampandroid.data.datasources.remote.MovieApiService
 import com.example.alejobootcampandroid.data.movie.model.MovieListResponse
 import com.example.alejobootcampandroid.data.movie.model.TopRatedMovieListResponse
 import com.example.alejobootcampandroid.data.movie.model.dto.GenreDto
-import com.example.alejobootcampandroid.data.movie.model.dto.MovieDto
-import com.example.alejobootcampandroid.data.movie.model.dto.TopRatedMovieDto
 import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.example.alejobootcampandroid.domain.movie.model.TopRatedMovieModel
 import com.example.alejobootcampandroid.domain.movie.model.asDomainModel
