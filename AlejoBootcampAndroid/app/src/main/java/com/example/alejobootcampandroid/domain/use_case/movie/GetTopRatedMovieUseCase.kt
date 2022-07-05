@@ -12,9 +12,7 @@ class GetTopRatedMovieUseCase @Inject constructor(
 ) {
     suspend operator fun invoke(): List<TopRatedMovieModel>{
        var topRatedMovieList = moviesLocalRepository.getAllTopRatedMovies()
-       return if(topRatedMovieList.isNotEmpty()){
-           topRatedMovieList
-       }else{
+       return topRatedMovieList.ifEmpty {
            topRatedMovieList = moviesRemoteRepository.getAllTopRatedMovies()
            insertTopRatedMoviesUseCase(topRatedMovieList)
            topRatedMovieList

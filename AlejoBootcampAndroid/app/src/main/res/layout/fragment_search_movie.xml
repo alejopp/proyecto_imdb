@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.ui.movie.search.view.SearchMovieFragment">
+    tools:context=".presentation.ui.search.SearchMovieFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar_search_fragment"
         android:layout_width="@dimen/dimen_0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
         android:background="@color/white"
         android:minHeight="@dimen/tb_search_toolbar_height"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,15 +24,18 @@
         <EditText
             android:id="@+id/etv_search_movie"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/dimen_16dp"
+            android:layout_height="@dimen/ev_height"
+            android:inputType="text"
             android:background="@drawable/ev_search"
             android:drawableLeft="@drawable/ic_search"
             android:drawablePadding="@dimen/margin_bottom_8"
             android:hint="@string/action_search"
             android:padding="@dimen/margin_bottom_8"
+            android:layout_margin="@dimen/dimen_16dp"
             android:paddingLeft="@dimen/dimen_16dp"
-            android:textColor="@color/light_gray" />
+            android:textColor="@color/light_gray"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="12dp" />
 
     </com.google.android.material.appbar.MaterialToolbar>
 

@@ -3,9 +3,6 @@ package com.example.alejobootcampandroid.data.datasources.remote
 import com.example.alejobootcampandroid.data.movie.model.MovieGenresResponse
 import com.example.alejobootcampandroid.data.movie.model.MovieListResponse
 import com.example.alejobootcampandroid.data.movie.model.TopRatedMovieListResponse
-import com.example.alejobootcampandroid.data.movie.model.dto.MovieDto
-import com.example.alejobootcampandroid.data.movie.model.dto.TopRatedMovieDto
-
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

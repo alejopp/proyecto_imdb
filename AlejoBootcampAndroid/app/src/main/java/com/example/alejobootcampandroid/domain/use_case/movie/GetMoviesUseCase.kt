@@ -13,9 +13,7 @@ class GetMoviesUseCase @Inject constructor(
 
     suspend operator fun invoke(listId: Int): List<MovieModel>{
         var movieList = movieLocalRepository.getAllMovies()
-        return if (movieList.isNotEmpty()){
-            movieList
-        } else{
+        return movieList.ifEmpty {
             movieList = movieRemoteRepository.getAllMovies(listId)
             insertMoviesUseCase(movieList)
             movieList
