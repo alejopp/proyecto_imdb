@@ -24,7 +24,7 @@ class HomeFragment : Fragment() {
 
         //Add Toolbar
         val toolbar = binding.tbHomeAppTitle
-        toolbar.title = "Title"
+        toolbar.title = "IMDb App"
 
         homeViewModel.getTopRatedMoviesFromRepository()
         homeViewModel.topRatedMovie.observe(viewLifecycleOwner) { topRatedMovies ->
