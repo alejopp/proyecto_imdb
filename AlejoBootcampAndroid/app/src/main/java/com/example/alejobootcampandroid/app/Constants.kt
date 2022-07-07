@@ -9,6 +9,7 @@ object Constants {
     const val SUCCESS = "Success"
     const val ERROR = "Error"
 
+
     //ROOM
     const val MOVIE_DATABASE_NAME = "movie_database"
 }

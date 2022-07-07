@@ -53,7 +53,8 @@ class LoginFragment : Fragment() {
                     val dialog: AlertDialog = builder.create()
                     dialog.show()
                 } else {
-                    findNavController().navigate(R.id.navigation_user)
+                    findNavController().navigate(
+                        R.id.navigation_user, bundleOf("email" to binding.etvUserEmail.text.toString()))
                 }
             }
         }
