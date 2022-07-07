@@ -1,15 +1,13 @@
 package com.example.alejobootcampandroid.presentation.ui.signup
 
-import android.content.Context
-import android.util.Log
-import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.alejobootcampandroid.app.Constants
-import com.example.alejobootcampandroid.app.Constants.MESSAGE
-import com.example.alejobootcampandroid.app.Constants.TITLE
+import com.example.alejobootcampandroid.utils.Constants.EMAIL
+import com.example.alejobootcampandroid.utils.Constants.MESSAGE
+import com.example.alejobootcampandroid.utils.Constants.NAME
+import com.example.alejobootcampandroid.utils.Constants.TITLE
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -42,7 +40,7 @@ class SignUpViewModel @Inject constructor() : ViewModel() {
 
     private fun saveInFirestore(userName: String, userEmail: String) {
         db.collection("users").document(userEmail).set(
-            hashMapOf("name" to userName, "email" to userEmail)
+            hashMapOf(NAME to userName, EMAIL to userEmail)
         )
     }
 }

@@ -8,8 +8,8 @@ import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alejobootcampandroid.R
-import com.example.alejobootcampandroid.app.Constants
-import com.example.alejobootcampandroid.app.DateFormatter
+import com.example.alejobootcampandroid.utils.Constants
+import com.example.alejobootcampandroid.utils.DateFormatter
 import com.example.alejobootcampandroid.databinding.ItemMovieBinding
 import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.squareup.picasso.Picasso

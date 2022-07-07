@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.alejobootcampandroid.R
-import com.example.alejobootcampandroid.app.Constants
+import com.example.alejobootcampandroid.utils.Constants
 import com.example.alejobootcampandroid.databinding.FragmentDetailBinding
 import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.squareup.picasso.Picasso
@@ -32,7 +32,11 @@ class DetailFragment : Fragment() {
 
         //Fill screen's elements
         setDataOnScreen()
+        listeners()
 
+    }
+
+    fun listeners(){
         //Set arrow back event
         binding.toolbarDetail.setOnMenuItemClickListener{ arrowBack ->
             onOptionsItemSelected(arrowBack).also {
@@ -73,9 +77,6 @@ class DetailFragment : Fragment() {
 
         binding.btDetailCategory.text = movieItem.genre
 
-/*
-        //Set number of episodes
-        binding.tvDetailEpisodesValue.text = "# Episodes"*/
     }
 
 

@@ -1,6 +1,6 @@
 package com.example.alejobootcampandroid.di
 
-import com.example.alejobootcampandroid.app.Constants
+import com.example.alejobootcampandroid.utils.Constants
 import com.example.alejobootcampandroid.data.movie.repositoies.MoviesLocalRepositoryImpl
 import com.example.alejobootcampandroid.data.datasources.database.dao.MoviesDao
 import com.example.alejobootcampandroid.data.datasources.remote.MovieApiService

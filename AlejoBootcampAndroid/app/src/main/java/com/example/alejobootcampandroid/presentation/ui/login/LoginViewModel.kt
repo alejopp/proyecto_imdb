@@ -3,12 +3,9 @@ package com.example.alejobootcampandroid.presentation.ui.login
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.navigation.fragment.findNavController
-import com.example.alejobootcampandroid.R
-import com.example.alejobootcampandroid.app.Constants.MESSAGE
-import com.example.alejobootcampandroid.app.Constants.TITLE
+import com.example.alejobootcampandroid.utils.Constants.MESSAGE
+import com.example.alejobootcampandroid.utils.Constants.TITLE
 import com.google.firebase.auth.FirebaseAuth
-import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

@@ -1,6 +1,6 @@
 package com.example.alejobootcampandroid.data.movie.repositoies
 
-import com.example.alejobootcampandroid.app.Constants
+import com.example.alejobootcampandroid.utils.Constants
 import com.example.alejobootcampandroid.data.datasources.remote.MovieApiService
 import com.example.alejobootcampandroid.data.movie.model.MovieListResponse
 import com.example.alejobootcampandroid.data.movie.model.TopRatedMovieListResponse

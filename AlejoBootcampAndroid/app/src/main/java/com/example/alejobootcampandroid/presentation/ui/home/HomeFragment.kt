@@ -1,7 +1,6 @@
 package com.example.alejobootcampandroid.presentation.ui.home
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,8 +10,7 @@ import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
 import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.alejobootcampandroid.R
-import com.example.alejobootcampandroid.app.Constants.APP_TITLE
+import com.example.alejobootcampandroid.utils.Constants.APP_TITLE
 import com.example.alejobootcampandroid.databinding.FragmentHomeBinding
 import com.example.alejobootcampandroid.presentation.ui.home.adapters.TopRatedMovieAdapter
 import dagger.hilt.android.AndroidEntryPoint
