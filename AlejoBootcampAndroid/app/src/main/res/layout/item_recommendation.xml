@@ -15,7 +15,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white">
+        android:background="?attr/colorSecondaryVariant">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
@@ -36,6 +36,7 @@
                 android:id="@+id/tv_user_rate_movie"
                 android:layout_width="@dimen/dimen_0dp"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:layout_marginStart="@dimen/dimen_8dp"
                 android:layout_marginTop="@dimen/dimen_16dp"
                 android:layout_marginEnd="@dimen/dimen_8dp"
@@ -54,6 +55,7 @@
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimen_8dp"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -65,6 +67,7 @@
         <TextView
             android:id="@+id/tv_user_ratings_value"
             android:layout_width="@dimen/dimen_0dp"
+            android:textColor="@color/black"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimen_8dp"
             android:layout_marginBottom="@dimen/dimen_16dp"

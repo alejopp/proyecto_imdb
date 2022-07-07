@@ -3,10 +3,12 @@ package com.example.alejobootcampandroid.presentation.ui.profile
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.alejobootcampandroid.data.profile.ProfileOptionsModel
 import com.example.alejobootcampandroid.data.profile.ProfileOptionsProvider
 import com.google.firebase.firestore.FirebaseFirestore
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
@@ -32,9 +34,12 @@ class ProfileViewModel @Inject constructor() : ViewModel() {
     }
 
     fun getUsername(email: String){
-        db.collection(USERS_COLLECTION).document(email).get().addOnSuccessListener{
-            _userName.value = it.get(USER_NAME) as String?
+        viewModelScope.launch{
+            db.collection(USERS_COLLECTION).document(email).get().addOnSuccessListener{
+                _userName.value = it.get(USER_NAME) as String?
+            }
         }
+
     }
 
 }

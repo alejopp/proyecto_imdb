@@ -4,17 +4,17 @@ class ProfileOptionsProvider {
     companion object{
         val userOptionsList = listOf(
             ProfileOptionsModel(
-                    "Example text",
+                    "Calificar y obtener recomendaciones",
                     "Calificaciones",
                 0
             ),
             ProfileOptionsModel(
-                "Example tex 2",
+                "Agregar a listas",
                 "Listas",
                 0
             ),
             ProfileOptionsModel(
-                "Example text 3",
+                "Aun no tienes comentarios",
                 "Comentarios",
                 0
             )

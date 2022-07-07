@@ -8,6 +8,7 @@ object Constants {
     const val TITLE = "title"
     const val SUCCESS = "Success"
     const val ERROR = "Error"
+    const val APP_TITLE = "IMDb App"
 
 
     //ROOM
