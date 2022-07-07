@@ -9,9 +9,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.alejobootcampandroid.R
-import com.example.alejobootcampandroid.app.Constants.MESSAGE
-import com.example.alejobootcampandroid.app.Constants.SUCCESS
-import com.example.alejobootcampandroid.app.Constants.TITLE
+import com.example.alejobootcampandroid.utils.Constants.MESSAGE
+import com.example.alejobootcampandroid.utils.Constants.SUCCESS
+import com.example.alejobootcampandroid.utils.Constants.TITLE
 import com.example.alejobootcampandroid.databinding.FragmentSignUpBinding
 import com.example.alejobootcampandroid.utils.UserDataValidation
 import com.google.android.material.bottomnavigation.BottomNavigationView

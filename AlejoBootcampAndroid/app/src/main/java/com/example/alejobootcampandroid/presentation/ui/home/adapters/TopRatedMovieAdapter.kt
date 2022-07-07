@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alejobootcampandroid.R
-import com.example.alejobootcampandroid.app.Constants
+import com.example.alejobootcampandroid.utils.Constants
 import com.example.alejobootcampandroid.databinding.ItemBestSelectionsBinding
 import com.example.alejobootcampandroid.domain.movie.model.TopRatedMovieModel
 import com.squareup.picasso.Picasso

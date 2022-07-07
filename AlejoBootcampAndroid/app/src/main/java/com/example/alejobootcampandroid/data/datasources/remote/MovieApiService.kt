@@ -24,3 +24,6 @@ interface MovieApiService {
         @Query("api_key") apiKey: String?
     ): MovieGenresResponse
 }
+
+
+

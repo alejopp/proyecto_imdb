@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.alejobootcampandroid.app.MovieApiStatus
+import com.example.alejobootcampandroid.utils.MovieApiStatus
 import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.example.alejobootcampandroid.domain.use_case.movie.GetMoviesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
