@@ -35,14 +35,14 @@ class ProfileFragment : Fragment() {
         //Setting username in bottom navbar
         menuBottomNavbar = activity?.findViewById<BottomNavigationView>(R.id.nav_view)?.menu
 
-        email = arguments?.getString("email") as String
+        email = arguments?.getString("email") ?: ""
 
         observers()
     }
 
     fun observers(){
         //Setting username in top profile screen
-        profileViewModel.getUsername(email)
+        if (email.isNotEmpty()){  profileViewModel.getUsername(email) }
         profileViewModel.userName.observe(viewLifecycleOwner) { username ->
             binding.tvUserUsername.text = username
             menuBottomNavbar?.findItem(R.id.navigation_user)?.title = username
