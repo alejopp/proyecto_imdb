@@ -19,13 +19,8 @@ import javax.inject.Inject
 @HiltViewModel
 class SignUpViewModel @Inject constructor() : ViewModel() {
 
+    private val db = FirebaseFirestore.getInstance()
 
-
-    val db = FirebaseFirestore.getInstance()
-
-    private var _status = MutableLiveData<Boolean>()
-    val status: LiveData<Boolean>
-        get() = _status
     private var _messages = MutableLiveData<HashMap<String,String>>()
     val messages: LiveData<HashMap<String,String>>
         get() = _messages
@@ -37,11 +32,9 @@ class SignUpViewModel @Inject constructor() : ViewModel() {
                 .addOnCompleteListener {
                     if (it.isSuccessful) {
                         saveInFirestore(userName, email)
-                        _status.value = true
-                        _messages.postValue(hashMapOf("title" to "Success","message" to "User registered correctly"))
+                        _messages.postValue(hashMapOf(TITLE to "Success", MESSAGE to "User registered correctly"))
                     }else{
-                        _status.value = false
-                        _messages.postValue(hashMapOf("title" to "Error","message" to "User cannot be registered"))
+                        _messages.postValue(hashMapOf(TITLE to "Error", MESSAGE to "User cannot be registered"))
                     }
                 }
         }

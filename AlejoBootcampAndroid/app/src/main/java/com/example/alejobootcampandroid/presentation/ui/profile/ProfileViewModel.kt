@@ -5,9 +5,19 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.alejobootcampandroid.data.profile.ProfileOptionsModel
 import com.example.alejobootcampandroid.data.profile.ProfileOptionsProvider
-import com.example.alejobootcampandroid.data.profile.ProfileProvider
+import com.google.firebase.firestore.FirebaseFirestore
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class ProfileViewModel : ViewModel() {
+@HiltViewModel
+class ProfileViewModel @Inject constructor() : ViewModel() {
+
+    companion object{
+        const val USERS_COLLECTION = "users"
+        const val USER_NAME = "name"
+    }
+
+    private val db = FirebaseFirestore.getInstance()
 
     private val _profileOptions = MutableLiveData<List<ProfileOptionsModel>>()
     val profileOptions: LiveData<List<ProfileOptionsModel>>
@@ -21,8 +31,10 @@ class ProfileViewModel : ViewModel() {
         _profileOptions.value = ProfileOptionsProvider.userOptionsList
     }
 
-    fun getUsername(){
-        _userName.value = ProfileProvider.userList[0].name
+    fun getUsername(email: String){
+        db.collection(USERS_COLLECTION).document(email).get().addOnSuccessListener{
+            _userName.value = it.get(USER_NAME) as String?
+        }
     }
 
 }

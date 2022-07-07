@@ -2,7 +2,6 @@ package com.example.alejobootcampandroid.presentation.ui.signup
 
 import android.app.AlertDialog
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.app.Constants.MESSAGE
+import com.example.alejobootcampandroid.app.Constants.SUCCESS
 import com.example.alejobootcampandroid.app.Constants.TITLE
 import com.example.alejobootcampandroid.databinding.FragmentSignUpBinding
 import com.example.alejobootcampandroid.utils.UserDataValidation
@@ -37,17 +37,19 @@ class SignUp : Fragment() {
 
         //Set the Action botton event
         binding.btSignupAction.setOnClickListener {
-            validateForm(binding.etvSignupName.text.toString(),binding.etvSignupEmail.text.toString(),
-                binding.etvSignupPassword.text.toString()
-            )
-            if(binding.tilSignupName.error == null && binding.tilSignupEmail.error == null &&
-                binding.tilSignupPassword.error == null){
-                signUpViewModel.signUp(binding.etvSignupName.text.toString(),binding.etvSignupEmail.text.toString(),
-                    binding.etvSignupPassword.text.toString())
+            with(binding){
+                areAllFieldsFilled(etvSignupName.text.toString(),etvSignupEmail.text.toString(),
+                    etvSignupPassword.text.toString()
+                )
+                if(tilSignupName.error == null && tilSignupEmail.error == null &&
+                    tilSignupPassword.error == null){
+                    signUpViewModel.signUp(etvSignupName.text.toString(),etvSignupEmail.text.toString(),
+                        etvSignupPassword.text.toString())
+                }
             }
         }
 
-        observables()
+        observers()
 
         //Set arrow back event
         binding.toolbarSignup.setOnMenuItemClickListener{ arrowBack ->
@@ -57,15 +59,7 @@ class SignUp : Fragment() {
         }
     }
 
-    private fun observables(){
-        signUpViewModel.status.observe(viewLifecycleOwner){
-            if (it){
-                Log.i("pokemon","true")
-            }else{
-                Log.i("pokemon","false")
-            }
-        }
-
+    private fun observers(){
         signUpViewModel.messages.observe(viewLifecycleOwner){messages ->
             val builder = AlertDialog.Builder(context)
                 .setTitle(messages[TITLE])
@@ -73,10 +67,13 @@ class SignUp : Fragment() {
                 .setPositiveButton(getString(R.string.accept),null)
             val dialog: AlertDialog = builder.create()
             dialog.show()
+            if (messages[TITLE] == SUCCESS){
+                findNavController().navigate(R.id.navigation_home)
+            }
         }
     }
 
-    private fun validateForm(userName: String, email: String, password: String) {
+    private fun areAllFieldsFilled(userName: String, email: String, password: String) {
         with(binding){
             tilSignupName.error = UserDataValidation.isFieldEmpty(userName)
             tilSignupEmail.error = UserDataValidation.isFieldEmpty(email)
