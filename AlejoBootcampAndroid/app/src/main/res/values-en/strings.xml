@@ -56,8 +56,11 @@
     <string name="original_title">Original title</string>
     <string name="film_from">Film from</string>
     <string name="login_error"> Wrong email o password </string>
+    <string name="signup_error">User couldn\'t be registered</string>
+    <string name="signup_success">User registered successfully</string>
     <string name="error"> Error</string>
     <string name="accept"> Accept</string>
     <string name="success"> Success</string>
     <string name="user_registered_successfully"> User registered successfully</string>
+    <string name="empty_error"> Required field</string>
 </resources>
