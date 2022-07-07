@@ -55,10 +55,13 @@
     <string name="original_title">Título original</string>
     <string name="film_from">Película de</string>
     <string name="login_error"> Email o contraseña incorrecta</string>
+    <string name="signup_error">No se pudo registrar el usuario</string>
+    <string name="signup_success">Usuario registrado exitosamente</string>
     <string name="error"> Error</string>
     <string name="accept"> Aceptar</string>
     <string name="success"> OK</string>
     <string name="user_registered_successfully"> Usuario registrado correctamente</string>
+    <string name="empty_error"> Campo requerido</string>
 
 
 

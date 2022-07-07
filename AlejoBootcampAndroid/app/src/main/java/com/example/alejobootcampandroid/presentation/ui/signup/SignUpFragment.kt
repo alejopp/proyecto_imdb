@@ -2,27 +2,33 @@ package com.example.alejobootcampandroid.presentation.ui.signup
 
 import android.app.AlertDialog
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.alejobootcampandroid.R
+import com.example.alejobootcampandroid.app.Constants.MESSAGE
+import com.example.alejobootcampandroid.app.Constants.TITLE
 import com.example.alejobootcampandroid.databinding.FragmentSignUpBinding
+import com.example.alejobootcampandroid.utils.UserDataValidation
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.firebase.auth.FirebaseAuth
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class SignUp : Fragment() {
 
     private var _binding: FragmentSignUpBinding? = null
     private val binding get() = _binding!!
+    private val signUpViewModel: SignUpViewModel by viewModels()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View
     {
         // Inflate the layout for this fragment
         _binding = FragmentSignUpBinding.inflate(inflater,container,false)
+
         return binding.root
     }
 
@@ -31,50 +37,51 @@ class SignUp : Fragment() {
 
         //Set the Action botton event
         binding.btSignupAction.setOnClickListener {
-            val userName = binding.etvSignupName.text.toString()
-            val bundle = bundleOf("user_name" to userName )
-            val userEmail = binding.etvSignupEmail.text
-            val userPassword = binding.etvSignupPassword.text
-            if(!userEmail.isNullOrEmpty() && !userPassword.isNullOrEmpty()){
-                FirebaseAuth.getInstance()
-                    .createUserWithEmailAndPassword(userEmail.toString(),userPassword.toString())
-                    .addOnCompleteListener {
-                        if (it.isSuccessful){
-                            showSuccessMessage()
-                            findNavController().navigate(R.id.navigation_user, bundle )
-                        }
-                        else{
-                            showErrorMessage()
-                        }
-                    }
+            validateForm(binding.etvSignupName.text.toString(),binding.etvSignupEmail.text.toString(),
+                binding.etvSignupPassword.text.toString()
+            )
+            if(binding.tilSignupName.error == null && binding.tilSignupEmail.error == null &&
+                binding.tilSignupPassword.error == null){
+                signUpViewModel.signUp(binding.etvSignupName.text.toString(),binding.etvSignupEmail.text.toString(),
+                    binding.etvSignupPassword.text.toString())
             }
         }
+
+        observables()
 
         //Set arrow back event
         binding.toolbarSignup.setOnMenuItemClickListener{ arrowBack ->
             onOptionsItemSelected(arrowBack).also {
                 findNavController().navigate(R.id.action_to_navigation_login)
-                //Navigation.createNavigateOnClickListener(R.id.action_to_navigation_login)
             }
         }
     }
 
-    private fun showSuccessMessage() {
-        val builder = AlertDialog.Builder(context)
-            .setTitle("Success")
-            .setMessage("User created successfully")
-            .setPositiveButton(getString(R.string.accept),null)
-        val dialog: AlertDialog = builder.create()
-        dialog.show()
+    private fun observables(){
+        signUpViewModel.status.observe(viewLifecycleOwner){
+            if (it){
+                Log.i("pokemon","true")
+            }else{
+                Log.i("pokemon","false")
+            }
+        }
+
+        signUpViewModel.messages.observe(viewLifecycleOwner){messages ->
+            val builder = AlertDialog.Builder(context)
+                .setTitle(messages[TITLE])
+                .setMessage(messages[MESSAGE])
+                .setPositiveButton(getString(R.string.accept),null)
+            val dialog: AlertDialog = builder.create()
+            dialog.show()
+        }
     }
 
-    private fun showErrorMessage() {
-        val builder = AlertDialog.Builder(context)
-            .setTitle(getString(R.string.error))
-            .setMessage(getString(R.string.login_error))
-            .setPositiveButton(getString(R.string.accept),null)
-        val dialog: AlertDialog = builder.create()
-        dialog.show()
+    private fun validateForm(userName: String, email: String, password: String) {
+        with(binding){
+            tilSignupName.error = UserDataValidation.isFieldEmpty(userName)
+            tilSignupEmail.error = UserDataValidation.isFieldEmpty(email)
+            tilSignupPassword.error = UserDataValidation.isFieldEmpty(password)
+        }
     }
 
     override fun onResume() {
