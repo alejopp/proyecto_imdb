@@ -6,6 +6,8 @@ object Constants {
     const val BASE_IMAGE_URL = "https://image.tmdb.org/t/p/w500"
     const val MESSAGE = "message"
     const val TITLE = "title"
+    const val SUCCESS = "Success"
+    const val ERROR = "Error"
 
     //ROOM
     const val MOVIE_DATABASE_NAME = "movie_database"

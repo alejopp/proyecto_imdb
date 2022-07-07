@@ -2,49 +2,70 @@ package com.example.alejobootcampandroid.presentation.ui.login
 
 import android.app.AlertDialog
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.alejobootcampandroid.R
+import com.example.alejobootcampandroid.app.Constants
+import com.example.alejobootcampandroid.app.Constants.ERROR
+import com.example.alejobootcampandroid.app.Constants.SUCCESS
+import com.example.alejobootcampandroid.app.Constants.TITLE
 import com.example.alejobootcampandroid.databinding.FragmentLoginBinding
+import com.example.alejobootcampandroid.utils.UserDataValidation
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class LoginFragment : Fragment() {
 
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
+    private val loginViewModel: LoginViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
-
         _binding = FragmentLoginBinding.inflate(inflater,container,false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        listeners()
+        observers()
+    }
 
-        //Set the Action botton event
+    private fun observers() {
+        loginViewModel.messages.observe(viewLifecycleOwner) {
+            loginViewModel.messages.observe(viewLifecycleOwner) { messages ->
+                if (messages[TITLE] == ERROR) {
+                    val builder = AlertDialog.Builder(context)
+                        .setTitle(messages[TITLE])
+                        .setMessage(messages[Constants.MESSAGE])
+                        .setPositiveButton(getString(R.string.accept), null)
+                    val dialog: AlertDialog = builder.create()
+                    dialog.show()
+                } else {
+                    findNavController().navigate(R.id.navigation_user)
+                }
+            }
+        }
+    }
+
+    private fun listeners(){
         binding.btLogin.setOnClickListener {
-            val userEmail = binding.etvUserEmail.text
-            val userPassword = binding.etvPassword.text
-            if(!userEmail.isNullOrEmpty() && !userPassword.isNullOrEmpty()){
-                FirebaseAuth.getInstance()
-                    .signInWithEmailAndPassword(userEmail.toString(),userPassword.toString())
-                    .addOnCompleteListener {
-                        if (it.isSuccessful){
-                            findNavController().navigate(R.id.navigation_user )
-                        }
-                        else{
-                            showErrorMessage()
-                        }
-                    }
+            with(binding){
+                areAllFieldsFilled(etvUserEmail.text.toString(), etvPassword.text.toString())
+                if(etvUserEmail.error == null && etvPassword.error == null){
+                    loginViewModel.signIn(etvUserEmail.text.toString(), etvPassword.text.toString())
+                }
             }
         }
 
@@ -57,13 +78,11 @@ class LoginFragment : Fragment() {
         }
     }
 
-    private fun showErrorMessage() {
-        val builder = AlertDialog.Builder(context)
-            .setTitle(getString(R.string.error))
-            .setMessage(getString(R.string.login_error))
-            .setPositiveButton(getString(R.string.accept),null)
-        val dialog: AlertDialog = builder.create()
-        dialog.show()
+    private fun areAllFieldsFilled(email: String, password: String) {
+        with(binding){
+            etvUserEmail.error= UserDataValidation.isFieldEmpty(email)
+            etvPassword.error = UserDataValidation.isFieldEmpty(password)
+        }
     }
 
     override fun onResume() {
@@ -80,6 +99,4 @@ class LoginFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
-
 }
