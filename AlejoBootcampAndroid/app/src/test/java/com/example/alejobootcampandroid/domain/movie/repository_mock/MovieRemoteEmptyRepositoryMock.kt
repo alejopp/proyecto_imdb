@@ -2,9 +2,9 @@ package com.example.alejobootcampandroid.domain.movie.repository_mock
 
 import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.example.alejobootcampandroid.domain.movie.model.TopRatedMovieModel
-import com.example.alejobootcampandroid.domain.movie.repository.MoviesRemoteRepository
+import com.example.alejobootcampandroid.domain.movie.repository.MovieRepository
 
-class MovieRemoteEmptyRepositoryMock: MoviesRemoteRepository {
+class MovieRemoteEmptyRepositoryMock: MovieRepository {
 
     override suspend fun getAllMovies(listId: Int): List<MovieModel> {
         var movieListResponse = listOf<MovieModel>()

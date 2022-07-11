@@ -2,8 +2,6 @@ package com.example.alejobootcampandroid.domain.use_case.movie
 
 import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.example.alejobootcampandroid.domain.movie.repository_mock.MovieRemoteRepositoryMock
-import com.example.alejobootcampandroid.domain.movie.repository.MoviesLocalRepository
-import io.mockk.impl.annotations.RelaxedMockK
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert.*
 import org.junit.Test

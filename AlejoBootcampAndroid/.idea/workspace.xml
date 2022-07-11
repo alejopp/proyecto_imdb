@@ -17,7 +17,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="info" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="AutoImportSettings">
@@ -32,39 +32,15 @@
       <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/AlejoBootcampAndroid.app.unitTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/AlejoBootcampAndroid.app.unitTest.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/app/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/utils/Constants.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/app/DateFormatter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/utils/DateFormatter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/app/MovieApiStatus.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/utils/MovieApiStatus.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/data/datasources/remote/MovieApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/data/datasources/remote/MovieApiService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/data/movie/repositoies/MoviesRemoteRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/data/movie/repositoies/MoviesRemoteRepositoryImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/di/NetworkModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/di/NetworkModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/di/RoomModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/di/RoomModule.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/presentation/ui/home/HomeFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/presentation/ui/home/HomeFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/presentation/ui/home/adapters/TopRatedMovieAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/presentation/ui/home/adapters/TopRatedMovieAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/presentation/ui/login/LoginFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/presentation/ui/login/LoginFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/presentation/ui/login/LoginViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/presentation/ui/login/LoginViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/presentation/ui/search/SearchMovieViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/presentation/ui/search/SearchMovieViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/presentation/ui/search/adapters/SearchMovieAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/presentation/ui/search/adapters/SearchMovieAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/presentation/ui/search/movie/detail/DetailFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/presentation/ui/search/movie/detail/DetailFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/presentation/ui/signup/SignUpFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/presentation/ui/signup/SignUpFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/presentation/ui/signup/SignUpViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/presentation/ui/signup/SignUpViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/alejobootcampandroid/domain/movie/model/MovieTestBuilder.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/alejobootcampandroid/domain/movie/model/TopRatedMovieTestBuilder.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/alejobootcampandroid/domain/movie/reposirtory/MovieLocalRepositoryMock.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/example/alejobootcampandroid/domain/movie/repository_mock/MovieRemoteRepositoryMock.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/alejobootcampandroid/domain/movie/reposirtory/top_rated_movie/TopRatedDefaultMovieRepositoryMock.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/alejobootcampandroid/domain/movie/reposirtory/top_rated_movie/TopRatedMovieEmptyRepositoryMock.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/alejobootcampandroid/domain/movie/reposirtory/top_rated_movie/TopRatedMovieFullRepositoryMock.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/alejobootcampandroid/domain/use_case/movie/GetMoviesUseCaseTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/example/alejobootcampandroid/domain/use_case/movie/GetMoviesUseCaseTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/example/alejobootcampandroid/domain/use_case/movie/GetTopRatedMovieUseCaseTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/example/alejobootcampandroid/domain/use_case/movie/GetTopRatedMovieUseCaseTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/data/movie/repository/MovieRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/alejobootcampandroid/data/movie/repository/MovieRepositoryImpl.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Alejandro\.android\avd\Pixel_API_30.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -178,11 +154,11 @@
       <recent name="com.example.alejobootcampandroid.ui" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.alejobootcampandroid.data.di" />
       <recent name="com.example.alejobootcampandroid.utils" />
       <recent name="com.example.alejobootcampandroid.presentation.ui.search.detail" />
       <recent name="com.example.alejobootcampandroid.presentation.ui.search" />
       <recent name="com.example.alejobootcampandroid.presentation.ui.search.adapters" />
-      <recent name="com.example.alejobootcampandroid.presentation.ui.profile" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.alejobootcampandroid.domain" />
@@ -201,7 +177,7 @@
       <recent name="com.example.alejobootcampandroid" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GetTopRatedMovieUseCaseTest">
+  <component name="RunManager" selected="Android App.app">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="AlejoBootcampAndroid.app" />
       <option name="DEPLOY" value="true" />
