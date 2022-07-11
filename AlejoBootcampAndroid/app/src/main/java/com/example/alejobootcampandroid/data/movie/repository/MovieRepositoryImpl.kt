@@ -13,6 +13,8 @@ import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.example.alejobootcampandroid.domain.movie.model.TopRatedMovieModel
 import com.example.alejobootcampandroid.domain.movie.model.asDomainModel
 import com.example.alejobootcampandroid.domain.movie.repository.MovieRepository
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 class MovieRepositoryImpl @Inject constructor(
@@ -22,43 +24,56 @@ class MovieRepositoryImpl @Inject constructor(
 
     override suspend fun getAllMoviesFromApi(listId: Int): List<MovieModel> {
         val genresIds: List<GenreDto> = getMovieGenres()
-        val response: MovieListResponse = api.getMoviesList(listId, Constants.API_KEY)
-        return response.moviesList.map { movieDto ->
-            movieDto.asDomainModel(genresIds)
+        return withContext(Dispatchers.IO) {
+            val response: MovieListResponse = api.getMoviesList(listId, Constants.API_KEY)
+            response.moviesList.map { movieDto ->
+                movieDto.asDomainModel(genresIds)
+            }
         }
     }
 
     override suspend fun getAllTopRatedMoviesFromApi(): List<TopRatedMovieModel> {
-        val response: TopRatedMovieListResponse = api.getTopRatedMoviesList(Constants.API_KEY)
-        return response.topRatedMoviesList.map { topRatedMovieDto ->
-            topRatedMovieDto.asDomainModel()
+        return withContext(Dispatchers.IO){
+            val response: TopRatedMovieListResponse = api.getTopRatedMoviesList(Constants.API_KEY)
+            response.topRatedMoviesList.map { topRatedMovieDto ->
+                topRatedMovieDto.asDomainModel()
+            }
         }
     }
 
     override suspend fun getAllMoviesFromDatabase(): List<MovieModel> {
-        val response: List<MovieEntity> = movieDao.getAllMovies()
-        return response.map { movieEntity ->
-            movieEntity.asDomainModel()
+        return withContext(Dispatchers.IO){
+            val response: List<MovieEntity> = movieDao.getAllMovies()
+            response.map { movieEntity ->
+                movieEntity.asDomainModel()
+            }
         }
     }
 
-    override suspend fun insertMoviesIntoDatabase(movies: List<MovieModel>) {
+    override suspend fun insertMoviesIntoDatabase(movies: List<MovieModel>)
+    = withContext(Dispatchers.IO){
         movieDao.insertAllMovies(movies.map { it.asEntityModel() })
     }
 
     override suspend fun getAllTopRatedMoviesFromDatabase(): List<TopRatedMovieModel> {
-        val response: List<TopRatedMovieEntity> = movieDao.getAllTopRatedMoviesFromDatabase()
-        return response.map {topRatedMovie ->
-            topRatedMovie.asDomainModel()}
+        return withContext(Dispatchers.IO){
+            val response: List<TopRatedMovieEntity> = movieDao.getAllTopRatedMoviesFromDatabase()
+            response.map {topRatedMovie ->
+                topRatedMovie.asDomainModel()}
+        }
     }
 
-    override suspend fun insertTopRatedMoviesIntoDatabase(movies: List<TopRatedMovieModel>) {
+    override suspend fun insertTopRatedMoviesIntoDatabase(
+        movies: List<TopRatedMovieModel>) = withContext(Dispatchers.IO) {
         movieDao.insertTopRatedMoviesIntoDatabase(movies.map { topRatedMovieModel ->
             topRatedMovieModel.asEntityModel() })
     }
 
     private suspend fun getMovieGenres(): List<GenreDto>{
-        val response = api.getMoviesGenresList(Constants.API_KEY)
-        return response.genres
+        return withContext(Dispatchers.IO){
+            val response = api.getMoviesGenresList(Constants.API_KEY)
+            response.genres
+        }
+
     }
 }
