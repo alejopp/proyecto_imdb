@@ -21,7 +21,7 @@
             android:id="@+id/iv_home_best_selection"
             android:layout_width="@dimen/dimen_0dp"
             android:layout_height="@dimen/dimen_0dp"
-            android:src="@drawable/light_year"
+            tools:src="@tools:sample/backgrounds/scenic"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toTopOf="@+id/gl_home_best_70"
             app:layout_constraintEnd_toEndOf="parent"

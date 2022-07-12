@@ -62,7 +62,7 @@
     <string name="success"> OK</string>
     <string name="user_registered_successfully"> Usuario registrado correctamente</string>
     <string name="empty_error"> Campo requerido</string>
-
+    <string name="stranger_things">Stranger things</string>
 
 
 </resources>

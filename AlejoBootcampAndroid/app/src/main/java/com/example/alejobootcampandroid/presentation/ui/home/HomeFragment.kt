@@ -27,30 +27,12 @@ class HomeFragment : Fragment() {
     {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        //Add Toolbar
-        val toolbar = binding.tbHomeAppTitle
-        toolbar.title = APP_TITLE
-
-        observers()
-        listeners()
+        observe()
 
         return binding.root
     }
 
-    private fun listeners() {
-        binding.sbHomeSwitchTheme.setOnCheckedChangeListener{ _, isChecked ->
-            if(isChecked){
-                Toast.makeText(context, "night", Toast.LENGTH_LONG).show()
-                AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_YES)
-            }
-            else{
-                Toast.makeText(context, "day", Toast.LENGTH_LONG).show()
-                AppCompatDelegate.setDefaultNightMode(MODE_NIGHT_NO)
-            }
-        }
-    }
-
-    fun observers(){
+    fun observe(){
         homeViewModel.getTopRatedMoviesFromRepository()
         homeViewModel.topRatedMovie.observe(viewLifecycleOwner) { topRatedMovies ->
             binding.rvHomeBestSelected.also {
