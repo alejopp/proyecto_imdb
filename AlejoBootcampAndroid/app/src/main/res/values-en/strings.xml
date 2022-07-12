@@ -63,4 +63,5 @@
     <string name="success"> Success</string>
     <string name="user_registered_successfully"> User registered successfully</string>
     <string name="empty_error"> Required field</string>
+    <string name="stranger_things">Stranger things</string>
 </resources>
