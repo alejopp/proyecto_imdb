@@ -64,13 +64,13 @@
     <dimen name="cl_height_150dp">150dp</dimen>
     <dimen name="rv_height_medium">150dp</dimen>
     <dimen name="tb_search_toolbar_height">64dp</dimen>
-    <dimen name="cv_height_normal">400dp</dimen>
+    <dimen name="cv_height_normal">290dp</dimen>
     <dimen name="bt_detail_add_watch_list_height">70dp</dimen>
     <dimen name="iv_signup_imdblogo_height">100dp</dimen>
 
     <!-- View widths -->
     <dimen name="iv_signup_imdblogo_width">120dp</dimen>
-    <dimen name="cv_width_normal">180dp</dimen>
+    <dimen name="cv_width_normal">130dp</dimen>
     <dimen name="cv_movie_width">128dp</dimen>
     <dimen name="iv_movie_poster_width">150dp</dimen>
     <dimen name="cl_width_150dp">150dp</dimen>
@@ -81,6 +81,7 @@
     <dimen name="ic_star_width">35dp</dimen>
     <dimen name="iv_itemmovie_width">90dp</dimen>
     <dimen name="collapsivetoolbar_height">300dp</dimen>
+    <dimen name="movie_poster_width">130dp</dimen>
 
 
 </resources>
