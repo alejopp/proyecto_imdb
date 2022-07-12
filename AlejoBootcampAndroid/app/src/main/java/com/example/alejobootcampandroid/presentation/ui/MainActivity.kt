@@ -7,6 +7,8 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.shape.CornerFamily
+import com.google.android.material.shape.MaterialShapeDrawable
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -26,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
         this.deleteDatabase("movie_database")
+
     }
 }
 

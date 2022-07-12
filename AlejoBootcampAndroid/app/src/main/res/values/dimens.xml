@@ -4,6 +4,7 @@
     <dimen name="iv_itemmovie_padding">2dp</dimen>
     <dimen name="iv_margintop_8">8dp</dimen>
     <dimen name="tv_margintop_24">24dp</dimen>
+    <dimen name="bottom_navbar_corner">40dp</dimen>
     <dimen name="text_margin">16dp</dimen>
     <dimen name="civ_login_marginbottom">88dp</dimen>
     <dimen name="iv_signup_imdblogo_margintop">150dp</dimen>
