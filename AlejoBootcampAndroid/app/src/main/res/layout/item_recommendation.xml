@@ -3,14 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="@dimen/cl_width_150dp"
+    android:layout_width="@dimen/cv_profile_user_options_outer_width"
     android:layout_height="wrap_content"
     app:cardCornerRadius="@dimen/dimen_4dp"
-    app:cardElevation="@dimen/dimen_4dp"
-    android:layout_marginEnd="@dimen/dimen_8dp"
+    app:cardElevation="@dimen/dimen_8dp"
+    android:layout_marginEnd="@dimen/dimen_12dp"
     android:layout_marginStart="@dimen/dimen_8dp"
     android:layout_marginTop="@dimen/dimen_8dp"
-    android:layout_marginBottom="@dimen/dimen_24dp">
+    android:layout_marginBottom="@dimen/dimen_32dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -20,10 +20,10 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout2"
             android:layout_width="@dimen/dimen_0dp"
-            android:layout_height="@dimen/cl_height_150dp"
-            android:layout_marginStart="@dimen/dimen_8dp"
-            android:layout_marginTop="@dimen/dimen_8dp"
-            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:layout_height="@dimen/cv_profile_user_options_height"
+            android:layout_marginStart="@dimen/dimen_12dp"
+            android:layout_marginTop="@dimen/dimen_12dp"
+            android:layout_marginEnd="@dimen/dimen_12dp"
             android:background="@color/smooth_gray"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -67,7 +67,7 @@
         <TextView
             android:id="@+id/tv_user_ratings_value"
             android:layout_width="@dimen/dimen_0dp"
-            android:textColor="@color/black"
+            android:textColor="@color/soft_gray"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimen_8dp"
             android:layout_marginBottom="@dimen/dimen_16dp"

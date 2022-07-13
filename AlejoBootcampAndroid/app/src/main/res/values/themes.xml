@@ -8,7 +8,7 @@
         <item name="colorOnSurface">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/gray</item>
-        <item name="colorSecondaryVariant">@color/smooth_gray</item>
+        <item name="colorSecondaryVariant">@color/white</item>
         <item name="colorOnSecondary">@color/black</item>
         <item name="colorOnSecondaryContainer">@color/black</item>
         <item name="colorSecondaryContainer">@color/gold_yellow</item>
