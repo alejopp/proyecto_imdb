@@ -61,7 +61,7 @@
     <dimen name="ic_arrow_forward_height">30dp</dimen>
     <dimen name="iv_login_imdblogo_height">100dp</dimen>
     <dimen name="cl_movie_trailer_height">380dp</dimen>
-    <dimen name="cl_height_150dp">150dp</dimen>
+    <dimen name="cv_profile_user_options_height">120dp</dimen>
     <dimen name="rv_height_medium">150dp</dimen>
     <dimen name="tb_search_toolbar_height">64dp</dimen>
     <dimen name="cv_height_normal">290dp</dimen>
@@ -73,7 +73,7 @@
     <dimen name="cv_width_normal">130dp</dimen>
     <dimen name="cv_movie_width">128dp</dimen>
     <dimen name="iv_movie_poster_width">150dp</dimen>
-    <dimen name="cl_width_150dp">150dp</dimen>
+    <dimen name="cv_profile_user_options_outer_width">180dp</dimen>
     <dimen name="iv_login_logo_width">200dp</dimen>
     <dimen name="ic_arrow_forward_width">35dp</dimen>
     <dimen name="ic_star_height">30dp</dimen>
