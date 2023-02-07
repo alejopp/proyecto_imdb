@@ -4,8 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.alejobootcampandroid.data.profile.ProfileOptionsModel
+import com.example.alejobootcampandroid.domain.model.ProfileOptionsModel
 import com.example.alejobootcampandroid.data.profile.ProfileOptionsProvider
+import com.example.alejobootcampandroid.data.repository.UserRepositoryImpl
 import com.google.firebase.firestore.FirebaseFirestore
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -30,7 +31,7 @@ class ProfileViewModel @Inject constructor() : ViewModel() {
         get() = _userName
 
     fun getProfileOptions(){
-        _profileOptions.value = ProfileOptionsProvider.userOptionsList
+        _profileOptions.value = UserRepositoryImpl.userOptionsList
     }
 
     fun getUsername(email: String){

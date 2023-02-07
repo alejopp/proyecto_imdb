@@ -2,7 +2,6 @@ package com.example.alejobootcampandroid.domain.movie.repository_mock
 
 import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.example.alejobootcampandroid.domain.movie.model.TopRatedMovieModel
-import com.example.alejobootcampandroid.domain.movie.repository.MovieRepository
 
 class MovieRemoteRepositoryMock: MovieRepository {
 

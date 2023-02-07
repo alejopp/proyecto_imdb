@@ -10,18 +10,15 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.alejobootcampandroid.databinding.FragmentSearchMovieBinding
-import com.example.alejobootcampandroid.presentation.ui.search.adapters.SearchMovieAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class SearchMovieFragment : Fragment() {
 
     private var _binding: FragmentSearchMovieBinding? = null
-    private val searchMovieViewModel: SearchMovieViewModel by viewModels()
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
+
+    private val searchMovieViewModel: SearchMovieViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,16 +27,21 @@ class SearchMovieFragment : Fragment() {
     ): View {
         _binding = FragmentSearchMovieBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        
+
+
+        observeViewModel()
         searchMovieViewModel.getMoviesFromRepository()
+
+        return root
+    }
+
+    private fun observeViewModel() {
         searchMovieViewModel.movies.observe(viewLifecycleOwner) { movies ->
             binding.rvSearchMovies.also {
                 it.layoutManager = LinearLayoutManager(requireContext())
-                it.adapter = SearchMovieAdapter(movies)
+                it.adapter = movies?.let { movie -> SearchMovieAdapter(movie) }
             }
         }
-
-        return root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

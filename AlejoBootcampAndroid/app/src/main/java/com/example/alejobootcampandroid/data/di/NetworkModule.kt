@@ -1,10 +1,7 @@
 package com.example.alejobootcampandroid.data.di
 
 import com.example.alejobootcampandroid.utils.Constants
-import com.example.alejobootcampandroid.data.datasources.database.dao.MovieDao
-import com.example.alejobootcampandroid.data.datasources.remote.MovieApiService
-import com.example.alejobootcampandroid.data.movie.repository.MovieRepositoryImpl
-import com.example.alejobootcampandroid.domain.movie.repository.MovieRepository
+import com.example.alejobootcampandroid.data.source.remote.MovieApiService
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
@@ -43,9 +40,5 @@ object NetworkModule{
             .create(MovieApiService::class.java)
     }
 
-    @Provides
-    @Singleton
-    fun provideMoviesRepository(apiService: MovieApiService, movieDao: MovieDao): MovieRepository {
-        return MovieRepositoryImpl(apiService, movieDao)
-    }
+
 }

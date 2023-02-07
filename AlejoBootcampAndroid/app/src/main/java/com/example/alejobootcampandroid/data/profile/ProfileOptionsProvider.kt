@@ -1,5 +1,7 @@
 package com.example.alejobootcampandroid.data.profile
 
+import com.example.alejobootcampandroid.domain.model.ProfileOptionsModel
+
 class ProfileOptionsProvider {
     companion object{
         val userOptionsList = listOf(

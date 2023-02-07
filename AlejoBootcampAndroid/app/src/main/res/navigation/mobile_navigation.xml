@@ -26,7 +26,7 @@
 
     <fragment
         android:id="@+id/navigation_detail"
-        android:name="com.example.alejobootcampandroid.presentation.ui.search.movie.detail.DetailFragment"
+        android:name="com.example.alejobootcampandroid.presentation.ui.search.MovieDetailFragment"
         android:label="@string/detail"
         tools:layout="@layout/fragment_detail" >
         <action
