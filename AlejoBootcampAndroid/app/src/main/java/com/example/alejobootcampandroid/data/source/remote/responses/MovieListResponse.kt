@@ -1,6 +1,6 @@
-package com.example.alejobootcampandroid.data.movie.model
+package com.example.alejobootcampandroid.data.source.remote.responses
 
-import com.example.alejobootcampandroid.data.movie.model.dto.MovieDto
+import com.example.alejobootcampandroid.data.source.remote.dto.MovieDto
 import com.google.gson.annotations.SerializedName
 
 data class MovieListResponse(

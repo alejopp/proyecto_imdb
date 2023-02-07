@@ -1,79 +1,68 @@
-package com.example.alejobootcampandroid.data.movie.repository
+package com.example.alejobootcampandroid.data.repository
 
+import com.example.alejobootcampandroid.data.mappers.asDomainModel
+import com.example.alejobootcampandroid.data.mappers.asEntityModel
+import com.example.alejobootcampandroid.data.source.ResponseStatus
 import com.example.alejobootcampandroid.data.source.local.dao.MovieDao
-import com.example.alejobootcampandroid.data.source.local.entities.MovieEntity
-import com.example.alejobootcampandroid.data.source.local.entities.TopRatedMovieEntity
 import com.example.alejobootcampandroid.data.source.local.entities.asEntityModel
-import com.example.alejobootcampandroid.utils.Constants
+import com.example.alejobootcampandroid.data.source.makeRepositoryCall
 import com.example.alejobootcampandroid.data.source.remote.MovieApiService
-import com.example.alejobootcampandroid.data.movie.model.MovieListResponse
-import com.example.alejobootcampandroid.data.movie.model.TopRatedMovieListResponse
-import com.example.alejobootcampandroid.data.movie.model.dto.GenreDto
-import com.example.alejobootcampandroid.domain.movie.model.MovieModel
-import com.example.alejobootcampandroid.domain.movie.model.TopRatedMovieModel
-import com.example.alejobootcampandroid.domain.movie.model.asDomainModel
-import com.example.alejobootcampandroid.domain.movie.repository.MovieRepository
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
+import com.example.alejobootcampandroid.data.source.remote.dto.GenreDto
+import com.example.alejobootcampandroid.data.source.remote.responses.MovieGenresResponse
+import com.example.alejobootcampandroid.domain.model.MovieModel
+import com.example.alejobootcampandroid.domain.model.TopRatedMovieModel
+import com.example.alejobootcampandroid.domain.model.asDomainModel
+import com.example.alejobootcampandroid.domain.repository.MovieRepository
+import com.example.alejobootcampandroid.utils.Constants
 import javax.inject.Inject
 
 class MovieRepositoryImpl @Inject constructor(
     private val api: MovieApiService,
     private val movieDao: MovieDao
-): MovieRepository {
+) : MovieRepository {
 
-    override suspend fun getAllMoviesFromApi(listId: Int): List<MovieModel> {
-        val genresIds: List<GenreDto> = getMovieGenres()
-        return withContext(Dispatchers.IO) {
-            val response: MovieListResponse = api.getMoviesList(listId, Constants.API_KEY)
-            response.moviesList.map { movieDto ->
-                movieDto.asDomainModel(genresIds)
+    override suspend fun getMovies(listId: Int): ResponseStatus<List<MovieModel>> =
+        makeRepositoryCall {
+            val genresIds: List<GenreDto> = getMovieGenres()
+            if (movieDao.getAllMovies().isEmpty()) {
+                api.getMoviesList(listId, Constants.API_KEY).moviesList.map { movieDto ->
+                    movieDto.asDomainModel(genresIds)
+                }.also { movies ->
+                    movieDao.insertAllMovies(movies.map { movie ->
+                        movie.asEntityModel()
+                    })
+                }
+            } else {
+                movieDao.getAllMovies().map { movieEntity ->
+                    movieEntity.asDomainModel()
+                }
             }
         }
-    }
 
-    override suspend fun getAllTopRatedMoviesFromApi(): List<TopRatedMovieModel> {
-        return withContext(Dispatchers.IO){
-            val response: TopRatedMovieListResponse = api.getTopRatedMoviesList(Constants.API_KEY)
-            response.topRatedMoviesList.map { topRatedMovieDto ->
-                topRatedMovieDto.asDomainModel()
+    override suspend fun getTopRatedMovies(): ResponseStatus<List<TopRatedMovieModel>> =
+        makeRepositoryCall {
+            if (movieDao.getTopRatedMovies().isEmpty()) {
+                api.getTopRatedMoviesList(Constants.API_KEY).topRatedMoviesList.map {  topRatedMovieDto ->
+                    topRatedMovieDto.asDomainModel()
+                }.also { topRatedMovies ->
+                    movieDao.insertTopRatedMovies(topRatedMovies.map { topRatedMovie ->
+                    topRatedMovie.asEntityModel()})
+                }
+            } else {
+                movieDao.getTopRatedMovies().map { topRatedMovieEntity ->
+                    topRatedMovieEntity.asDomainModel()
+                }
             }
         }
-    }
 
-    override suspend fun getAllMoviesFromDatabase(): List<MovieModel> {
-        return withContext(Dispatchers.IO){
-            val response: List<MovieEntity> = movieDao.getAllMovies()
-            response.map { movieEntity ->
-                movieEntity.asDomainModel()
-            }
+    private suspend fun getMovieGenres(): List<GenreDto> {
+        var response: MovieGenresResponse? = null
+        try {
+            response = api.getMoviesGenresList(Constants.API_KEY)
+        } catch (e: Exception) {
+            println(e.message)
         }
+        return response?.genres ?: emptyList()
     }
 
-    override suspend fun insertMoviesIntoDatabase(movies: List<MovieModel>)
-    = withContext(Dispatchers.IO){
-        movieDao.insertAllMovies(movies.map { it.asEntityModel() })
-    }
-
-    override suspend fun getAllTopRatedMoviesFromDatabase(): List<TopRatedMovieModel> {
-        return withContext(Dispatchers.IO){
-            val response: List<TopRatedMovieEntity> = movieDao.getAllTopRatedMoviesFromDatabase()
-            response.map {topRatedMovie ->
-                topRatedMovie.asDomainModel()}
-        }
-    }
-
-    override suspend fun insertTopRatedMoviesIntoDatabase(
-        movies: List<TopRatedMovieModel>) = withContext(Dispatchers.IO) {
-        movieDao.insertTopRatedMoviesIntoDatabase(movies.map { topRatedMovieModel ->
-            topRatedMovieModel.asEntityModel() })
-    }
-
-    private suspend fun getMovieGenres(): List<GenreDto>{
-        return withContext(Dispatchers.IO){
-            val response = api.getMoviesGenresList(Constants.API_KEY)
-            response.genres
-        }
-
-    }
 }

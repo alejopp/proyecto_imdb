@@ -1,4 +1,4 @@
-package com.example.alejobootcampandroid.presentation.ui.search.adapters
+package com.example.alejobootcampandroid.presentation.ui.search
 
 
 import android.view.LayoutInflater

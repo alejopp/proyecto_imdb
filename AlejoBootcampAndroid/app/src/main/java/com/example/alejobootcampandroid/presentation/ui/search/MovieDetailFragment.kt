@@ -1,4 +1,4 @@
-package com.example.alejobootcampandroid.presentation.ui.search.movie.detail
+package com.example.alejobootcampandroid.presentation.ui.search
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,7 +12,7 @@ import com.example.alejobootcampandroid.databinding.FragmentDetailBinding
 import com.example.alejobootcampandroid.domain.model.MovieModel
 import com.squareup.picasso.Picasso
 
-class DetailFragment : Fragment() {
+class MovieDetailFragment : Fragment() {
 
     private var _binding: FragmentDetailBinding? = null
     private val binding get() = _binding!!
@@ -32,11 +32,11 @@ class DetailFragment : Fragment() {
 
         //Fill screen's elements
         setDataOnScreen()
-        listeners()
+        listenEvents()
 
     }
 
-    fun listeners(){
+    private fun listenEvents(){
         //Set arrow back event
         binding.toolbarDetail.setOnMenuItemClickListener{ arrowBack ->
             onOptionsItemSelected(arrowBack).also {

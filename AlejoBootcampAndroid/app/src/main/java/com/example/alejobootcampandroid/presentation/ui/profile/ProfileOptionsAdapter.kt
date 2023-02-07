@@ -1,4 +1,4 @@
-package com.example.alejobootcampandroid.presentation.ui.profile.adapters
+package com.example.alejobootcampandroid.presentation.ui.profile
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.ItemRecommendationBinding
-import com.example.alejobootcampandroid.data.profile.ProfileOptionsModel
+import com.example.alejobootcampandroid.domain.model.ProfileOptionsModel
 
 class ProfileOptionsAdapter(private val userOptionsList : List<ProfileOptionsModel>): RecyclerView.Adapter<ProfileOptionsAdapter.UserOptionsViewHolder>() {
 

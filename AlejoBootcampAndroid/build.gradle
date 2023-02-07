@@ -39,6 +39,7 @@ ext {
     junitVersion = "4.13.2"
     mockVersion = '1.12.4'
     roomVersion = "2.4.2"
+    activityVersion = "1.6.1"
 }
 
 task clean(type: Delete) {

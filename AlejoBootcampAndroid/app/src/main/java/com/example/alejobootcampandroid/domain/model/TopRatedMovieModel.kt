@@ -1,4 +1,4 @@
-package com.example.alejobootcampandroid.domain.movie.model
+package com.example.alejobootcampandroid.domain.model
 
 import com.example.alejobootcampandroid.data.source.local.entities.TopRatedMovieEntity
 import com.example.alejobootcampandroid.data.source.remote.dto.TopRatedMovieDto

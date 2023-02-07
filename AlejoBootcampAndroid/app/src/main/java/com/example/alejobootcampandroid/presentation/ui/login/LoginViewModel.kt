@@ -16,6 +16,10 @@ class LoginViewModel @Inject constructor(): ViewModel() {
     val messages: LiveData<HashMap<String, String>>
         get() = _messages
 
+    private val authStateListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
+        value = firebaseAuth.currentUser
+    }
+
     fun signIn(email: String, password: String ){
         FirebaseAuth.getInstance()
             .signInWithEmailAndPassword(email, password)
@@ -27,5 +31,9 @@ class LoginViewModel @Inject constructor(): ViewModel() {
                     _messages.postValue(hashMapOf(TITLE to "Error", MESSAGE to "Wrong email or password"))
                 }
             }
+    }
+
+    fun signOut(){
+
     }
 }

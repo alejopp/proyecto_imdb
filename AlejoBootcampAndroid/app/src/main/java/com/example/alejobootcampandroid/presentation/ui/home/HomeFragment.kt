@@ -4,15 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatDelegate
-import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_NO
-import androidx.appcompat.app.AppCompatDelegate.MODE_NIGHT_YES
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.alejobootcampandroid.utils.Constants.APP_TITLE
 import com.example.alejobootcampandroid.databinding.FragmentHomeBinding
-import com.example.alejobootcampandroid.presentation.ui.home.adapters.TopRatedMovieAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -27,16 +21,18 @@ class HomeFragment : Fragment() {
     {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        observe()
+        observeViewModel()
 
         return binding.root
     }
 
-    fun observe(){
+    private fun observeViewModel(){
         homeViewModel.getTopRatedMoviesFromRepository()
         homeViewModel.topRatedMovie.observe(viewLifecycleOwner) { topRatedMovies ->
-            binding.rvHomeBestSelected.also {
-                it.adapter = TopRatedMovieAdapter(topRatedMovies)
+            if (topRatedMovies != null){
+                binding.rvHomeBestSelected.also {
+                    it.adapter = TopRatedMovieAdapter(topRatedMovies)
+                }
             }
         }
     }

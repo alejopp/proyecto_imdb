@@ -3,7 +3,7 @@ package com.example.alejobootcampandroid.data.di
 import android.content.Context
 import androidx.room.Room
 import com.example.alejobootcampandroid.utils.Constants
-import com.example.alejobootcampandroid.data.datasources.database.MovieDatabase
+import com.example.alejobootcampandroid.data.source.local.MovieDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

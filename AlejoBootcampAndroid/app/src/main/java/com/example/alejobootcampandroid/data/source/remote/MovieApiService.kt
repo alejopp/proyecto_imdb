@@ -1,8 +1,8 @@
 package com.example.alejobootcampandroid.data.source.remote
 
-import com.example.alejobootcampandroid.data.movie.model.MovieGenresResponse
-import com.example.alejobootcampandroid.data.movie.model.MovieListResponse
-import com.example.alejobootcampandroid.data.movie.model.TopRatedMovieListResponse
+import com.example.alejobootcampandroid.data.source.remote.responses.MovieGenresResponse
+import com.example.alejobootcampandroid.data.source.remote.responses.MovieListResponse
+import com.example.alejobootcampandroid.data.source.remote.responses.TopRatedMovieListResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query

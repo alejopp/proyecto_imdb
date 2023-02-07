@@ -1,4 +1,4 @@
-package com.example.alejobootcampandroid.data.movie.model.dto
+package com.example.alejobootcampandroid.data.source.remote.dto
 
 import com.google.gson.annotations.SerializedName
 

@@ -1,4 +1,4 @@
-package com.example.alejobootcampandroid.data.movie.model.dto
+package com.example.alejobootcampandroid.data.source.remote.dto
 
 data class GenreDto(
     val id: Int,

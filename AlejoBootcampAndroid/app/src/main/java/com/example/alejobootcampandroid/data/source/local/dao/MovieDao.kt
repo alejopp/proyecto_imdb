@@ -16,8 +16,8 @@ interface MovieDao {
 
     //Top rated movies
     @Query("SELECT * FROM top_rated_movie_table")
-    suspend fun getAllTopRatedMoviesFromDatabase(): List<TopRatedMovieEntity>
+    suspend fun getTopRatedMovies(): List<TopRatedMovieEntity>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertTopRatedMoviesIntoDatabase(topRatedMovies: List<TopRatedMovieEntity>)
+    suspend fun insertTopRatedMovies(topRatedMovies: List<TopRatedMovieEntity>)
 }
