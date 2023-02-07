@@ -11,7 +11,7 @@ import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.utils.Constants
 import com.example.alejobootcampandroid.utils.DateFormatter
 import com.example.alejobootcampandroid.databinding.ItemMovieBinding
-import com.example.alejobootcampandroid.domain.movie.model.MovieModel
+import com.example.alejobootcampandroid.domain.model.MovieModel
 import com.squareup.picasso.Picasso
 
 class SearchMovieAdapter constructor(private val movieList: List<MovieModel>) :

@@ -1,11 +1,11 @@
 package com.example.alejobootcampandroid.data.movie.repository
 
-import com.example.alejobootcampandroid.data.datasources.database.dao.MovieDao
-import com.example.alejobootcampandroid.data.datasources.database.entities.MovieEntity
-import com.example.alejobootcampandroid.data.datasources.database.entities.TopRatedMovieEntity
-import com.example.alejobootcampandroid.data.datasources.database.entities.asEntityModel
+import com.example.alejobootcampandroid.data.source.local.dao.MovieDao
+import com.example.alejobootcampandroid.data.source.local.entities.MovieEntity
+import com.example.alejobootcampandroid.data.source.local.entities.TopRatedMovieEntity
+import com.example.alejobootcampandroid.data.source.local.entities.asEntityModel
 import com.example.alejobootcampandroid.utils.Constants
-import com.example.alejobootcampandroid.data.datasources.remote.MovieApiService
+import com.example.alejobootcampandroid.data.source.remote.MovieApiService
 import com.example.alejobootcampandroid.data.movie.model.MovieListResponse
 import com.example.alejobootcampandroid.data.movie.model.TopRatedMovieListResponse
 import com.example.alejobootcampandroid.data.movie.model.dto.GenreDto

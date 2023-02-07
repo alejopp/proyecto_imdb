@@ -9,7 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.utils.Constants
 import com.example.alejobootcampandroid.databinding.FragmentDetailBinding
-import com.example.alejobootcampandroid.domain.movie.model.MovieModel
+import com.example.alejobootcampandroid.domain.model.MovieModel
 import com.squareup.picasso.Picasso
 
 class DetailFragment : Fragment() {

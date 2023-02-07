@@ -1,8 +1,8 @@
 package com.example.alejobootcampandroid.domain.movie.model
 
-import com.example.alejobootcampandroid.data.datasources.database.entities.MovieEntity
-import com.example.alejobootcampandroid.data.movie.model.dto.GenreDto
-import com.example.alejobootcampandroid.data.movie.model.dto.MovieDto
+import com.example.alejobootcampandroid.data.source.local.entities.MovieEntity
+import com.example.alejobootcampandroid.data.source.remote.dto.GenreDto
+import com.example.alejobootcampandroid.data.source.remote.dto.MovieDto
 import java.io.Serializable
 
 

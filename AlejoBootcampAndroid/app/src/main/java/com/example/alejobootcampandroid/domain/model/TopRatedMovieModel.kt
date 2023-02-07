@@ -1,7 +1,7 @@
 package com.example.alejobootcampandroid.domain.movie.model
 
-import com.example.alejobootcampandroid.data.datasources.database.entities.TopRatedMovieEntity
-import com.example.alejobootcampandroid.data.movie.model.dto.TopRatedMovieDto
+import com.example.alejobootcampandroid.data.source.local.entities.TopRatedMovieEntity
+import com.example.alejobootcampandroid.data.source.remote.dto.TopRatedMovieDto
 
 data class TopRatedMovieModel(
      val id: Int,

@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.utils.Constants
 import com.example.alejobootcampandroid.databinding.ItemBestSelectionsBinding
-import com.example.alejobootcampandroid.domain.movie.model.TopRatedMovieModel
+import com.example.alejobootcampandroid.domain.model.TopRatedMovieModel
 import com.squareup.picasso.Picasso
 
 class TopRatedMovieAdapter(private val topRatedMoviesList: List<TopRatedMovieModel>):
