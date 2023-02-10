@@ -16,10 +16,6 @@ class LoginViewModel @Inject constructor(): ViewModel() {
     val messages: LiveData<HashMap<String, String>>
         get() = _messages
 
-    private val authStateListener = FirebaseAuth.AuthStateListener { firebaseAuth ->
-        value = firebaseAuth.currentUser
-    }
-
     fun signIn(email: String, password: String ){
         FirebaseAuth.getInstance()
             .signInWithEmailAndPassword(email, password)

@@ -4,6 +4,7 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
     id 'dagger.hilt.android.plugin'
+    id 'com.google.firebase.crashlytics'
     id 'kotlin-kapt'
 }
 apply plugin: 'kotlin-android'
@@ -78,7 +79,8 @@ dependencies {
     implementation platform('com.google.firebase:firebase-bom:30.2.0')
     implementation 'com.google.firebase:firebase-auth-ktx'
     implementation 'com.google.firebase:firebase-firestore-ktx'
-
+    implementation 'com.google.firebase:firebase-config-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
 
     //Dagger Hilt
     implementation "com.google.dagger:hilt-android:$hiltVersion"
@@ -98,5 +100,4 @@ kapt {
 
 repositories {
     mavenCentral()
-
 }
