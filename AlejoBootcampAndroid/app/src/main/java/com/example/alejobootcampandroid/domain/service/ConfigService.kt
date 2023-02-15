@@ -1,7 +1,6 @@
 package com.example.alejobootcampandroid.domain.service
 
-/*
 interface ConfigService {
-    val defaultLanguage: String
+    val withJetpackCompose: Boolean
     suspend fun fetchConfiguration()
-}*/
+}
