@@ -3,8 +3,8 @@
 
     <item android:drawable="@color/gold_yellow"/>
     <item
-        android:width="150dp"
-        android:height="150dp"
+        android:width="200dp"
+        android:height="200dp"
         android:gravity="center"
         android:drawable="@drawable/imdb_logo_1"/>
 

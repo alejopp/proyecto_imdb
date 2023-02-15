@@ -15,7 +15,6 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object RepositoryModule {
-
     @Provides
     @Singleton
     fun provideMovieRepository(apiService: MovieApiService, movieDao: MovieDao):  MovieRepository{
@@ -24,7 +23,11 @@ object RepositoryModule {
 
     @Provides
     @Singleton
+<<<<<<< Updated upstream
     fun provideConfigService():  ConfigService {
+=======
+    fun provideConfigService(): ConfigService{
+>>>>>>> Stashed changes
         return ConfigServiceImpl()
     }
 
