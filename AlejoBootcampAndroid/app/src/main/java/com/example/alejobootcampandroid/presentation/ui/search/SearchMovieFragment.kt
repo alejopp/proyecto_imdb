@@ -12,7 +12,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.alejobootcampandroid.SplashViewModel
 import com.example.alejobootcampandroid.databinding.FragmentSearchMovieBinding
-import com.example.alejobootcampandroid.presentation.ui.login.LoginFragment
+import com.example.alejobootcampandroid.databinding.FragmentSearchMovieComposeBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -20,6 +20,9 @@ class SearchMovieFragment : Fragment() {
 
     private var _binding: FragmentSearchMovieBinding? = null
     private val binding get() = _binding!!
+
+    private var _bindingCompose: FragmentSearchMovieComposeBinding? = null
+    private val bindingCompose get() = _bindingCompose!!
 
     private val searchMovieViewModel: SearchMovieViewModel by viewModels()
     private val splashViewModel: SplashViewModel by viewModels()
@@ -34,6 +37,7 @@ class SearchMovieFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSearchMovieBinding.inflate(inflater, container, false)
+        _bindingCompose = FragmentSearchMovieComposeBinding.inflate(inflater, container, false)
         val root: View = binding.root
         observeViewModel()
         searchMovieViewModel.getMoviesFromRepository()
@@ -48,7 +52,11 @@ class SearchMovieFragment : Fragment() {
             }
         }
         splashViewModel.withJetpackCompose.observe(viewLifecycleOwner){ withJetpackCompose ->
-            Log.d(TAG, "With jetpack compose $withJetpackCompose")
+            if(withJetpackCompose){
+                
+            } else {
+
+            }
         }
     }
 

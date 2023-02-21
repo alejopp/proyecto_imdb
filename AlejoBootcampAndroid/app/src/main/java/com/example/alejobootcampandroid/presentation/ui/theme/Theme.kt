@@ -1,8 +1,5 @@
 package com.example.alejobootcampandroid.presentation.ui.theme
 
-
-
-/*
 private val DarkColorPalette = darkColors(
     background = Color.Black,
     surface = Color.White,
@@ -37,4 +34,4 @@ fun AlejoBootcampAndroidAppTheme(darkTheme: Boolean = isSystemInDarkTheme(), con
         typography = Typography,
         content = content
     )
-}*/
+}

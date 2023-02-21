@@ -1,16 +1,18 @@
 package com.example.alejobootcampandroid.presentation.ui.theme
 
+import com.google.type.Color
 
-/*val Purple200 = Color(0xFFBB86FC)
+
+val Purple200 = Color(0xFFBB86FC)
 val Purple500 = Color(0xFF6200EE)
 val Purple700 = Color(0xFF3700B3)
 val Teal200 = Color(0xFF03DAC5)
 val GoldYellow = Color(0xFFF3C518)
 val ImdbLightGray = Color(0xFF989797)
-val ImdbSoftGray = Color(0xFFF4F4F4)*/
+val ImdbSoftGray = Color(0xFFF4F4F4)
+
 
 /*
-<color name="gold_yellow">#f3c518</color>
 <color name="dark_orange">#F55A38</color>
 <color name="gray">#9c9c9c</color>
 <color name="dark_gray">#7C7C7C</color>
@@ -18,4 +20,5 @@ val ImdbSoftGray = Color(0xFFF4F4F4)*/
 <color name="soft_gray">#D5D3D3</color>
 <color name="bt_background_gray">#A09F9F</color>
 <color name="dull_gray">#CC716E6E</color>
-<color name="smooth_gray">#f5f5f5</color>*/
+<color name="smooth_gray">#f5f5f5</color>
+*/
