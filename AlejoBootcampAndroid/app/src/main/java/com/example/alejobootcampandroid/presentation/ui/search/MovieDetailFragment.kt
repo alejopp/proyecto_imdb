@@ -23,17 +23,14 @@ class MovieDetailFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         _binding = FragmentDetailBinding.inflate(inflater, container, false)
-
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         //Fill screen's elements
         setDataOnScreen()
         listenEvents()
-
     }
 
     private fun listenEvents(){
@@ -78,6 +75,4 @@ class MovieDetailFragment : Fragment() {
         binding.btDetailCategory.text = movieItem.genre
 
     }
-
-
 }

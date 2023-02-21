@@ -7,9 +7,13 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.compose.ui.platform.ViewCompositionStrategy
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.SplashViewModel
 import com.example.alejobootcampandroid.databinding.FragmentSearchMovieBinding
 import com.example.alejobootcampandroid.databinding.FragmentSearchMovieComposeBinding
@@ -32,16 +36,45 @@ class SearchMovieFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSearchMovieBinding.inflate(inflater, container, false)
-        _bindingCompose = FragmentSearchMovieComposeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
         observeViewModel()
         searchMovieViewModel.getMoviesFromRepository()
-        return root
+        //TODO apply conditional compose
+/*        binding.composeView.apply {
+            setViewCompositionStrategy(
+                ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed
+            )
+            // Add Jetpack Compose content to this View
+            setContent {
+                AlejoBootcampAndroidAppTheme {
+                    SearchMovieScreen { showMovieDetail() }
+                }
+            }
+        }*/
+        return binding.root
+    }
+
+    private fun showMovieDetail() {
+        findNavController().navigate(R.id.navigation_detail)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        //Set search bar action event
+        binding.etvSearchMovie.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(
+                s: CharSequence?, start: Int, count: Int, after: Int
+            ) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                searchMovieViewModel.getMoviesByTitle(s.toString())
+            }
+
+            override fun afterTextChanged(s: Editable?) {}
+        })
     }
 
     private fun observeViewModel() {
@@ -51,31 +84,11 @@ class SearchMovieFragment : Fragment() {
                 it.adapter = movies?.let { movie -> SearchMovieAdapter(movie) }
             }
         }
-        splashViewModel.withJetpackCompose.observe(viewLifecycleOwner){ withJetpackCompose ->
-            if(withJetpackCompose){
-                
-            } else {
-
-            }
-        }
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        //Set search bar action event
-        binding.etvSearchMovie.addTextChangedListener(object: TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                searchMovieViewModel.getMoviesByTitle(s.toString())
-            }
-            override fun afterTextChanged(s: Editable?) {}
-        })
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
 }

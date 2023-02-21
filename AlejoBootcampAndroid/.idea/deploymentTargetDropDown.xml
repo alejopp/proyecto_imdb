@@ -7,15 +7,23 @@
         <deviceKey>
           <Key>
             <type value="VIRTUAL_DEVICE_PATH" />
+<<<<<<< Updated upstream
             <value value="C:\Users\Alejandro\.android\avd\Pixel_4_API_30.avd" />
+=======
+            <value value="C:\Users\Alejandro\.android\avd\Pixel3API33.avd" />
+>>>>>>> Stashed changes
           </Key>
         </deviceKey>
       </Target>
     </targetSelectedWithDropDown>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <timeTargetWasSelectedWithDropDown value="2023-02-15T04:30:53.192097500Z" />
 =======
     <timeTargetWasSelectedWithDropDown value="2023-02-11T02:27:20.932118700Z" />
+>>>>>>> Stashed changes
+=======
+    <timeTargetWasSelectedWithDropDown value="2023-02-08T23:08:48.478237900Z" />
 >>>>>>> Stashed changes
   </component>
 </project>

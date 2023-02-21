@@ -44,6 +44,5 @@ class SearchMovieAdapter constructor(private val movieList: List<MovieModel>) :
                 itemView.findNavController().navigate(R.id.navigation_detail,bundle)
             }
         }
-
     }
 }

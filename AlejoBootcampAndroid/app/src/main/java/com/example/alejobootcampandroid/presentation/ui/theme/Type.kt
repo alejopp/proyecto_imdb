@@ -1,6 +1,6 @@
 package com.example.alejobootcampandroid.presentation.ui.theme
 
-/*
+
 import androidx.compose.material.Typography
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
@@ -26,4 +26,4 @@ val Typography = Typography(
         fontSize = 16.sp,
         color = Color.LightGray
     ),
-)*/
+)
