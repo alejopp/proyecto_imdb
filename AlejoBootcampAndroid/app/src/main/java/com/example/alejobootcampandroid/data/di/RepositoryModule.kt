@@ -23,11 +23,7 @@ object RepositoryModule {
 
     @Provides
     @Singleton
-<<<<<<< Updated upstream
     fun provideConfigService():  ConfigService {
-=======
-    fun provideConfigService(): ConfigService{
->>>>>>> Stashed changes
         return ConfigServiceImpl()
     }
 
