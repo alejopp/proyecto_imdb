@@ -1,6 +1,5 @@
 package com.example.alejobootcampandroid.data.service
 
-
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.domain.service.ConfigService
 import com.google.firebase.ktx.Firebase
@@ -11,15 +10,16 @@ import kotlinx.coroutines.tasks.await
 
 class ConfigServiceImpl @Inject constructor() : ConfigService {
 
-    companion object{
+    companion object {
         const val WITH_JETPACK_COMPOSE = "with_jetpack_compose"
         const val UPDATE_TIME = 3600L
     }
 
     private val remoteConfig = Firebase.remoteConfig
-     private val configSettings = remoteConfigSettings {
+    private val configSettings = remoteConfigSettings {
         minimumFetchIntervalInSeconds = UPDATE_TIME
     }
+
     init {
         remoteConfig.setConfigSettingsAsync(configSettings)
         remoteConfig.setDefaultsAsync(R.xml.remote_config_defaults)
@@ -28,7 +28,8 @@ class ConfigServiceImpl @Inject constructor() : ConfigService {
     override val withJetpackCompose: Boolean
         get() = remoteConfig.getBoolean(WITH_JETPACK_COMPOSE)
 
-    override suspend fun fetchConfiguration()
-       { remoteConfig.fetchAndActivate().await() }
+    override suspend fun fetchConfiguration() {
+        remoteConfig.fetchAndActivate().await()
+    }
 
 }

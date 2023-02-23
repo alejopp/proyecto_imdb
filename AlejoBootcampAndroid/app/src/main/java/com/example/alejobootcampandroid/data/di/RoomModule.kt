@@ -20,8 +20,8 @@ object RoomModule {
     fun provideRoom(@ApplicationContext contex: Context) =
         Room.databaseBuilder(contex,MovieDatabase::class.java, Constants.MOVIE_DATABASE_NAME).build()
 
-    @Singleton
     @Provides
+    @Singleton
     fun provideMovieDao(db: MovieDatabase) = db.getMovieDao()
 
 }
