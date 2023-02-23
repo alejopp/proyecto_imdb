@@ -63,6 +63,8 @@
     <string name="user_registered_successfully"> Usuario registrado correctamente</string>
     <string name="empty_error"> Campo requerido</string>
     <string name="stranger_things">Stranger things</string>
+    <string name="unknown_host_exception">Error: Unknownn host</string>
+    <string name="network_error">Network error</string>
 
 
 </resources>

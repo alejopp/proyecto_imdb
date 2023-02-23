@@ -2,6 +2,7 @@ package com.example.alejobootcampandroid.presentation.ui.login
 
 import android.app.AlertDialog
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +15,8 @@ import com.example.alejobootcampandroid.utils.Constants
 import com.example.alejobootcampandroid.utils.Constants.ERROR
 import com.example.alejobootcampandroid.utils.Constants.TITLE
 import com.example.alejobootcampandroid.databinding.FragmentLoginBinding
+import com.example.alejobootcampandroid.SplashViewModel
+import com.example.alejobootcampandroid.utils.Constants.EMAIL
 import com.example.alejobootcampandroid.utils.UserDataValidation
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
@@ -25,6 +28,10 @@ class LoginFragment : Fragment() {
     private val binding get() = _binding!!
     private val loginViewModel: LoginViewModel by viewModels()
 
+    companion object{
+        const val TAG = "LoginFragment"
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -35,11 +42,11 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        listeners()
-        observers()
+        setListeners()
+        observeViewModels()
     }
 
-    private fun observers() {
+    private fun observeViewModels() {
         loginViewModel.messages.observe(viewLifecycleOwner) {
             loginViewModel.messages.observe(viewLifecycleOwner) { messages ->
                 if (messages[TITLE] == ERROR) {
@@ -51,13 +58,13 @@ class LoginFragment : Fragment() {
                     dialog.show()
                 } else {
                     findNavController().navigate(
-                        R.id.navigation_user, bundleOf("email" to binding.etvUserEmail.text.toString()))
+                        R.id.navigation_user, bundleOf(EMAIL to binding.etvUserEmail.text.toString()))
                 }
             }
         }
     }
 
-    private fun listeners(){
+    private fun setListeners(){
         binding.btLogin.setOnClickListener {
             with(binding){
                 areAllFieldsFilled(etvUserEmail.text.toString(), etvPassword.text.toString())

@@ -3,9 +3,7 @@
     package="com.example.alejobootcampandroid">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-
-
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <application
         android:name=".AlejoBootcampAndroidApp"
@@ -15,17 +13,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PracticeGroupApplication">
-
         <activity
-            android:name="com.example.alejobootcampandroid.presentation.ui.MainActivity"
-            android:exported="true"
-            android:theme="@style/SplashTheme">
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".presentation.ui.MainActivity"
+            android:exported="true"/>
     </application>
 
 </manifest>

@@ -1,7 +1,7 @@
 package com.example.alejobootcampandroid.domain.use_case.movie
 
-import com.example.alejobootcampandroid.data.movie.model.TopRatedMovieListResponse
-import com.example.alejobootcampandroid.domain.movie.model.TopRatedMovieModel
+import com.example.alejobootcampandroid.data.source.remote.responses.TopRatedMovieListResponse
+import com.example.alejobootcampandroid.domain.model.TopRatedMovieModel
 import com.example.alejobootcampandroid.domain.movie.repository_mock.MovieRemoteEmptyRepositoryMock
 import com.example.alejobootcampandroid.domain.movie.repository_mock.MovieRemoteRepositoryMock
 import kotlinx.coroutines.runBlocking

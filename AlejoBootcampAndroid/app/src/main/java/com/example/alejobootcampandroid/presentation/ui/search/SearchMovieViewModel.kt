@@ -4,8 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.alejobootcampandroid.data.source.ResponseStatus
+import com.example.alejobootcampandroid.domain.model.MovieModel
 import com.example.alejobootcampandroid.utils.MovieApiStatus
-import com.example.alejobootcampandroid.domain.movie.model.MovieModel
 import com.example.alejobootcampandroid.domain.use_case.movie.GetMoviesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -14,12 +15,12 @@ import javax.inject.Inject
 @HiltViewModel
 class SearchMovieViewModel @Inject constructor(private val getMoviesUseCase: GetMoviesUseCase) : ViewModel(){
 
-    private val _movies = MutableLiveData<List<MovieModel>>()
-    val movies: LiveData<List<MovieModel>>
+    private val _movies = MutableLiveData<List<MovieModel>?>()
+    val movies: LiveData<List<MovieModel>?>
         get() = _movies
 
-    private val _status = MutableLiveData<MovieApiStatus>()
-    val status : LiveData<MovieApiStatus>
+    private val _status = MutableLiveData<ResponseStatus<Any>>()
+    val status : LiveData<ResponseStatus<Any>>
         get() = _status
 
     private var moviesCopy = emptyList<MovieModel>()
@@ -38,16 +39,15 @@ class SearchMovieViewModel @Inject constructor(private val getMoviesUseCase: Get
     }
 
     fun getMoviesFromRepository(){
-        _status.value = MovieApiStatus.LOADING
         viewModelScope.launch {
-            try {
-                val listResult = getMoviesUseCase(3)
-                _movies.value = listResult
-                moviesCopy = listResult
-                _status.value = MovieApiStatus.DONE
-            } catch (e: Exception) {
-                _status.value = MovieApiStatus.ERROR
-                _movies.value = listOf()
+            _status.value = ResponseStatus.Loading()
+            val response = getMoviesUseCase(3)
+            if (response is ResponseStatus.Success){
+                _movies.postValue(response.data)
+                _status.value = ResponseStatus.Success(response.data)
+            }
+            if(response is ResponseStatus.Error){
+                _status.postValue(ResponseStatus.Error(response.messageId))
             }
         }
     }

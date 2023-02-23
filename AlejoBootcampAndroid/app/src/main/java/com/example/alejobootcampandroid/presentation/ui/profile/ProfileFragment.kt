@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.databinding.FragmentProfileBinding
-import com.example.alejobootcampandroid.presentation.ui.profile.adapters.ProfileOptionsAdapter
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 

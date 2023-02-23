@@ -7,6 +7,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AlejoBootcampAndroid.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AlejoBootcampAndroid.app.androidTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AlejoBootcampAndroid.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AlejoBootcampAndroid.app.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/AlejoBootcampAndroid.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/AlejoBootcampAndroid.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/proyecto_imdb.AlejoBootcampAndroid.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/proyecto_imdb.AlejoBootcampAndroid.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/proyecto_imdb.AlejoBootcampAndroid.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/proyecto_imdb.AlejoBootcampAndroid.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/proyecto_imdb.AlejoBootcampAndroid.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/proyecto_imdb.AlejoBootcampAndroid.app.unitTest.iml" />
     </modules>
   </component>
 </project>
