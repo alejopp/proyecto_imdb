@@ -1,9 +1,9 @@
 package com.example.alejobootcampandroid.data.service
 
+
 import com.example.alejobootcampandroid.R
 import com.example.alejobootcampandroid.domain.service.ConfigService
 import com.google.firebase.ktx.Firebase
-import com.google.firebase.remoteconfig.ktx.get
 import javax.inject.Inject
 import com.google.firebase.remoteconfig.ktx.remoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
