@@ -6,7 +6,6 @@ import com.example.alejobootcampandroid.domain.repository.MovieRepository
 import javax.inject.Inject
 
 class GetMoviesUseCase @Inject constructor(private val movieRepository: MovieRepository) {
-
     suspend operator fun invoke(listId: Int): ResponseStatus<List<MovieModel>>{
             return movieRepository.getMovies(listId)
     }

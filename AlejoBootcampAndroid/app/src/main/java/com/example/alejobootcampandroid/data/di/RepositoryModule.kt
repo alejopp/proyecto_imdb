@@ -20,7 +20,6 @@ object RepositoryModule {
     fun provideMovieRepository(apiService: MovieApiService, movieDao: MovieDao):  MovieRepository{
         return MovieRepositoryImpl(apiService, movieDao)
     }
-
     @Provides
     @Singleton
     fun provideConfigService(): ConfigService{

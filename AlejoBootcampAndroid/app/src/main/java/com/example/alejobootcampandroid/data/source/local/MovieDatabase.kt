@@ -8,7 +8,6 @@ import com.example.alejobootcampandroid.data.source.local.entities.TopRatedMovie
 
 @Database(entities = [MovieEntity::class, TopRatedMovieEntity::class], version = 1)
 abstract  class MovieDatabase: RoomDatabase() {
-
     abstract fun getMovieDao(): MovieDao
 
 }

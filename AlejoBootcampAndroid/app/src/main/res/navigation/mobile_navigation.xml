@@ -16,6 +16,10 @@
         android:name="com.example.alejobootcampandroid.presentation.ui.search.SearchMovieFragment"
         android:label="@string/title_search"
         tools:layout="@layout/fragment_search_movie" >
+        <argument
+            android:name="with_jetpack_compose"
+            android:defaultValue="true"
+            app:argType="boolean"/>
     </fragment>
 
     <fragment
