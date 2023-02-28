@@ -38,7 +38,6 @@ class SearchMovieFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
-        searchMovieViewModel.getMoviesFromRepository()
         Log.d(TAG, "With JC ${splashViewModel.withJetpackCompose.value}")
         if(args.withJetpackCompose){
             bindingCompose = FragmentSearchMovieComposeBinding.inflate(inflater, container, false)
@@ -67,6 +66,7 @@ class SearchMovieFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        searchMovieViewModel.getMoviesFromRepository()
         if (!args.withJetpackCompose){
             //Set search bar action event
             binding!!.etvSearchMovie.addTextChangedListener(object : TextWatcher {
@@ -88,7 +88,7 @@ class SearchMovieFragment : Fragment() {
         searchMovieViewModel.movies.observe(viewLifecycleOwner) { movies ->
             binding!!.rvSearchMovies.also {
                 it.layoutManager = LinearLayoutManager(requireContext())
-                it.adapter = movies?.let { movie -> SearchMovieAdapter(movie) }
+                it.adapter = movies?.let { movieList -> SearchMovieAdapter(movieList) }
             }
         }
     }

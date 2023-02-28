@@ -24,7 +24,6 @@ class SearchMovieViewModel @Inject constructor(private val getMoviesUseCase: Get
         get() = _status
 
     private var moviesCopy = emptyList<MovieModel>()
-
     fun getMoviesByTitle(movieQuery: String){
 
         if (movieQuery.isNotEmpty()){
@@ -37,7 +36,6 @@ class SearchMovieViewModel @Inject constructor(private val getMoviesUseCase: Get
         }
 
     }
-
     fun getMoviesFromRepository(){
         viewModelScope.launch {
             _status.value = ResponseStatus.Loading()
@@ -51,6 +49,5 @@ class SearchMovieViewModel @Inject constructor(private val getMoviesUseCase: Get
             }
         }
     }
-
 
 }

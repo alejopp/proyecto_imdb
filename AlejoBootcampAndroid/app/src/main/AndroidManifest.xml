@@ -3,7 +3,10 @@
     package="com.example.alejobootcampandroid">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+
 
     <application
         android:name=".AlejoBootcampAndroidApp"
@@ -25,6 +28,11 @@
         <activity
             android:name=".presentation.ui.MainActivity"
             android:exported="true"/>
+        <receiver
+            android:name=".receiver.AlarmReceiver"
+            android:enabled="true"
+            android:exported="false">
+        </receiver>
     </application>
 
 </manifest>
