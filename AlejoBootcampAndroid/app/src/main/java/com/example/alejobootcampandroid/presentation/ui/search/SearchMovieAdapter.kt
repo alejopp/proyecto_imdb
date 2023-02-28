@@ -1,6 +1,7 @@
 package com.example.alejobootcampandroid.presentation.ui.search
 
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,6 +17,10 @@ import com.squareup.picasso.Picasso
 
 class SearchMovieAdapter constructor(private val movieList: List<MovieModel>) :
     RecyclerView.Adapter<SearchMovieAdapter.MyViewHolder>() {
+
+    companion object{
+        const val TAG = "SearchMovieAdapter"
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view = LayoutInflater.from(parent.context)

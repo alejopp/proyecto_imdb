@@ -65,6 +65,10 @@
     <string name="stranger_things">Stranger things</string>
     <string name="unknown_host_exception">Error: Unknownn host</string>
     <string name="network_error">Network error</string>
+    <string name="movie_notification_channel_id">canal_de_películas</string>
+    <string name="notification_title">Recordatorio de película</string>
+    <string name="movie_notification_channel_name">Película</string>
+    <string name="notification_content_format">Es hora de ver %s !</string>
 
 
 </resources>
